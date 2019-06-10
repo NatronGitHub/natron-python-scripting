@@ -10,9 +10,9 @@
 ### Node Graph
 - **[nodeColorChange](/Python_GUI/nodeColorChange/README.md)** : Sets node color for selected nodes.
 
-- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML/README.md)** : Sets node name to be displayed in bold.
+- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML/README.md)** : Sets node name to be displayed in bold in the Node Graph.
 
-- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML/README.md)** : Sets node name to be displayed in italic.
+- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML/README.md)** : Sets node name to be displayed in italic in the Node Graph.
 
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS/README.md)** : Sets FPS for selected 'Read' nodes.
