@@ -1,6 +1,6 @@
 # autoAlpha
 
-Sets alpha to 1 for selected nodes.
+Sets alpha to 1 for selected 'Read' nodes.
 
 ### HOW TO USE IT
 
@@ -9,4 +9,4 @@ Sets alpha to 1 for selected nodes.
 
 ### RESULT
 
-* Selected read nodes have their alpha channel set to 1 (full white).
+* Selected 'Read' nodes have their alpha channel set to 1 (full white).
