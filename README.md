@@ -5,7 +5,7 @@
 ## Natron tools
 
 ### Channel
-- **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 for selected nodes.
+- **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 (full white) for selected nodes.
 
 ### Node Graph
 - **[nodeColorChange](/Python_GUI/nodeColorChange/README.md)** : Sets node color for selected nodes.

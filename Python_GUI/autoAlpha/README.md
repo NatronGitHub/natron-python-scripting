@@ -1,6 +1,6 @@
 # autoAlpha
 
-Sets alpha to 1 for selected 'Read' nodes.
+Sets alpha to 1 (full white) for selected 'Read' nodes.
 
 ### HOW TO USE IT
 
