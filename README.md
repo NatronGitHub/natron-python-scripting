@@ -5,4 +5,4 @@
 ## Available scripts
 
 ### Python_GUI/autoAlpha
- **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Set alpha to 1 for selected nodes.
+- **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 for selected nodes.
