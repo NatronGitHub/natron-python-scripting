@@ -11,6 +11,8 @@ Creates and process a 'Write' node for the selected node.
 * Click 'OK.'
 
 ### NOTE :
+
+# Windows :
 * Viewers have to be installed in the "Program files' folder.
 * mrViewer is v5.0.7
 * DJV is v1.3.0
