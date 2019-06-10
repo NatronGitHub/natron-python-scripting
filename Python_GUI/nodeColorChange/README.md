@@ -1,11 +1,11 @@
 # nodeColorChange
 
-Sets alpha to 1 for selected nodes.
+Sets node color for selected nodes.
 
 ### HOW TO USE IT
 
 * Select nodes.
-* Tools -> Node Graph -> Node(s) Color.
+* Tools -> Node Graph -> Node(s) Color
 * Choose a color in the color dialog box.
 * Click 'OK'.
 
