@@ -4,5 +4,7 @@
 
 ## Available scripts
 
-### Python_GUI/autoAlpha
+### Channel/autoAlpha
 - **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 for selected nodes.
+
+- **[nodeColorChange](/Python_GUI/nodeColorChange/README.md)** : Sets node color for selected nodes.
