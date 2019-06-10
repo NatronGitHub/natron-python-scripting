@@ -19,7 +19,7 @@ Creates and process a 'Write' node for the selected node. and send the result to
 ## Windows :
 * djv_view and mrViewer supported so far.
 * paths to the .exe must be set in the WIN_DJV.txt and WIN_mrViewer.txt
-- Every '\\' must be doubled.
+* every '\\' must be doubled.
 * ex : C:\\\Program Files\\\DJV-1.3.0-win64\\\bin\\\
 
 ## Linux :
