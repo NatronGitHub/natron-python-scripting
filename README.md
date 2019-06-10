@@ -26,8 +26,8 @@
 
 ## Natron scripts
 
-- **[listNatronPath](/Python_GUI/listNatronPath/README.md)** : Lists paths scanned by Natron at startup.
+- **[listNatronPath](/Python_INIT/listNatronPath/README.md)** : Lists paths scanned by Natron at startup.
 
-- **[listPyPlugs](/Python_GUI/listPyPlugs/README.md)** : Lists PyPlugs installed on the system.
+- **[listPyPlugs](/Python_INIT/listPyPlugs/README.md)** : Lists PyPlugs installed on the system.
 
-- **[natronLogo](/Python_GUI/natronLogo/README.md)** : Displays a nice Natron logo in the console ;) .
+- **[natronLogo](/Python_INIT/natronLogo/README.md)** : Displays a nice Natron logo in the console ;) .
