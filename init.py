@@ -22,9 +22,9 @@ from os import*
 #																	#
 #####################################################################
 
-from Python_INIT.listNatronPath import *
-from Python_INIT.listPyPlugs import *
-from Python_INIT.natronLogo import *
+from Python_INIT.listNatronPath.listNatronPath import *
+from Python_INIT.listPyPlugs.listPyPlugs import *
+from Python_INIT.natronLogo.natronLogo import *
 
 			
 
@@ -97,22 +97,26 @@ NatronEngine.natron.setOnProjectLoadedCallback("Project_Callback")
 
 #################### STARTING CONSOLE MESSAGES ####################
 #-----------------------------------------------------------------#
-#natronLogo()
-
-
 
 
 separator = ('------------------------------------------------------------')
 print '\n' + '\n' + separator
 print separator
+print '\n'
+
+natronLogo()
+
+
+print '\n' + '\n' + separator
+print separator
 print '--------------------     INIT.PY     -----------------------'
 print separator
 print separator
-print '\n'
 
 
 # check Natron's version status, version number, x32 or x64 version #
 #-------------------------------------------------------------------#
+print '\n'
 NatronStatus = natron.getNatronDevelopmentStatus()
 NatronVersion = natron.getNatronVersionString()
 binary = 'x64'

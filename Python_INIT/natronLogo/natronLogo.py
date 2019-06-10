@@ -10,7 +10,7 @@ from os import*
 
 # LISTS NATRON PLUGINS PATHS #
 
+
 def natronLogo():
-	print '\n'
-	print '\n'
-	print ''.join(file('/home/natron/.Natron/Python_INIT/logo.txt'))
+	UserPath = os.path.expanduser('~')
+	print ''.join(file( str(UserPath) + '/.Natron/Python_INIT/natronLogo/logo.txt'))
