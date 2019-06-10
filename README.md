@@ -2,7 +2,7 @@
 # Natron python scripts
 ### A collection of Natron python scripts made by the community
 
-## Available scripts
+## Natron tools
 
 ### Channel
 - **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 for selected nodes.
@@ -23,3 +23,11 @@
 - **[diskCache](/Python_GUI/diskCache/README.md)** : Creates and process a 'DiskCache' node for the selected node.
 
 - **[flipbook](/Python_GUI/flipbook/README.md)** : Creates and process a 'Write' node for the selected node. and send the result to an external image viewer. (Windows only as of 10.06.2019)
+
+## Natron scripts
+
+- **[listNatronPath](/Python_GUI/listNatronPath/README.md)** : Lists paths scanned by Natron at startup.
+
+- **[listPyPlugs](/Python_GUI/listPyPlugs/README.md)** : Lists PyPlugs installed on the system.
+
+- **[natronLogo](/Python_GUI/natronLogo/README.md)** : Displays a nice Natron logo in the console ;) .
