@@ -4,7 +4,7 @@ Creates and process a 'Write' node for the selected node.
 
 ### HOW TO USE IT
 
-* Select a nodes.
+* Select a node.
 * Tools -> Render -> flipbook
 * Set In and Out.
 * Select viewer.

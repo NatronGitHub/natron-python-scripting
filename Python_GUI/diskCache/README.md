@@ -4,7 +4,7 @@ Creates and process a 'DiskCache' node for the selected node.
 
 ### HOW TO USE IT
 
-* Select a nodes.
+* Select a node.
 * Tools -> Render -> Disk Cache
 * Set In and Out.
 * Click 'OK.'
