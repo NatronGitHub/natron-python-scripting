@@ -10,13 +10,20 @@ Creates and process a 'Write' node for the selected node.
 * Select viewer.
 * Click 'OK.'
 
-### NOTE :
-
-# Windows :
-* Viewers have to be installed in the "Program files' folder.
-* mrViewer is v5.0.7
-* DJV is v1.3.0
-
 ### RESULT
 
 Creates and process a 'Write' node for the selected node. and send the result to an external image viewer.
+
+### NOTE :
+
+## Windows :
+* djv_view and mrViewer supported so far.
+* paths to the .exe must be set in the WIN_DJV.txt and WIN_mrViewer.txt
+* Every '\' must be doubled.
+- Example : 
+
+## Linux :
+* Not supported yet.
+
+## OSX :
+* Not supported yet.
