@@ -30,4 +30,9 @@
 
 - **[listPyPlugs](/Python_INIT/listPyPlugs/README.md)** : Lists PyPlugs installed on the system.
 
-- **[natronLogo](/Python_INIT/natronLogo/README.md)** : Displays a nice Natron logo in the console ;) .
+- **[natronLogo](/Python_INIT/natronLogo/README.md)** : Displays a nice Natron logo in the console. ;)
+
+## Stylesheets
+
+- **[mainstyle_NUKE](/Stylesheet/mainstyle_NUKE/README.md)** : Mimics Nuke look.
+
