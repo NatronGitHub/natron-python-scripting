@@ -169,10 +169,10 @@ def flipbook():
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
-						viewerPath = 'C:\\Program Files\\DJV-1.3.0-win64\\bin\\'
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt'))
 						currentViewer = 'djv_view.exe'
 					if myPlayer == 1:
-						viewerPath = 'C:\\Program Files\\mrViewer-v5.0.7-Windows-64\\bin\\'
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_mrViewer.txt'))
 						currentViewer = 'mrViewer.exe'
 
 
