@@ -1,6 +1,6 @@
 # flipbook
 
-Creates and process a 'Write' node for the selected node.
+Creates and process a 'Write' node for the selected node, and send the result to an external image sequence viewer.
 
 ### HOW TO USE IT
 
