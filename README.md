@@ -35,7 +35,7 @@ Restart Natron.
 ### Render
 - **[diskCache](/Python_GUI/diskCache/README.md)** : Creates and process a 'DiskCache' node for the selected node.
 
-- **[flipbook](/Python_GUI/flipbook/README.md)** : Creates and process a 'Write' node for the selected node, and send the result to an external image sequence viewer. (Win/Linux)
+- **[flipbook](/Python_GUI/flipbook/README.md)** : Creates and process a 'Write' node for the selected node, and sends the result to an external image sequence viewer. (Win/Linux)
 
 ## Natron snippets
 
