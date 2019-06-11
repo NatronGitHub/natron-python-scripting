@@ -59,13 +59,34 @@ def flipbook():
 	formatList.setDefaultValue("exr")
 	formatList.restoreDefaultValue()
 
-	# creates image viewers list #
-	playerList = dialog.createChoiceParam("choice02","Players : ")
-	playerList.setAddNewLine(False)
-	entries = [ ("DJV", ""),("mrViewer", "") ]
-	playerList.setOptions(entries)
-	playerList.setDefaultValue("mrViewer")
-	playerList.restoreDefaultValue()
+	# creates image viewers list per OS #
+	# ---------------------- Linux ---------------------- #
+	if natron.isLinux() == 1 :
+		playerList = dialog.createChoiceParam("choice02","Players : ")
+		playerList.setAddNewLine(False)
+		entries = [ ("DJV", ""),("mrViewer", "") ]
+		playerList.setOptions(entries)
+		playerList.setDefaultValue("DJV")
+		playerList.restoreDefaultValue()
+
+	# ---------------------- Windows --------------------- #
+	if natron.isWindows() == 1 :
+		playerList = dialog.createChoiceParam("choice02","Players : ")
+		playerList.setAddNewLine(False)
+		entries = [ ("DJV", ""),("mrViewer", "") ]
+		playerList.setOptions(entries)
+		playerList.setDefaultValue("DJV")
+		playerList.restoreDefaultValue()
+
+	# ------------------------ OSX ----------------------- #
+	if natron.isWindows() == 1 :
+		playerList = dialog.createChoiceParam("choice02","Players : ")
+		playerList.setAddNewLine(False)
+		entries = [ ("DJV", "") ]
+		playerList.setOptions(entries)
+		playerList.setDefaultValue("DJV")
+		playerList.restoreDefaultValue()
+
 
 	# Refresh UI #
 	dialog.refreshUserParamsGUI()
@@ -201,17 +222,7 @@ def flipbook():
 				# ---------------------- Mac OSX --------------------- #
 				# ---------------------------------------------------- #
 				if natron.isMacOSX() == 1 :
-
-
-					# rebuild render path #
-					folderPath = str(myUserPath) + '/' + '.Natron/' + 'Temp/' + str(parentLabel)
-
-					# check if output folder exists #
-					if not os.path.exists(folderPath):
-						os.makedirs(folderPath)
-
-					# rebuild full render path + filename #
-					myPath = str(folderPath) + '/' + str(parentLabel) + '.######.' + str(extension)
+					break
 
 
 
@@ -247,8 +258,8 @@ def flipbook():
 
 
 				# print message in console #
-				consoleMessage = str(parentLabel) + '.' + newDigits1 + str(newFirstFrame) + '-' + newDigits2 + str(newLastFrame) + '.' + str(extension)
-				print 'Launching [ ' + str(consoleMessage) +  ' ] in DJV'
+				fullRenderName = str(parentLabel) + '.' + newDigits1 + str(newFirstFrame) + '-' + newDigits2 + str(newLastFrame) + '.' + str(extension)
+				print 'Launching [ ' + str(fullRenderName) +  ' ] in DJV'
 				print userDiskCachePath
 				# go to viewer folder #
 				os.chdir(viewerPath)
@@ -257,12 +268,12 @@ def flipbook():
 
 				# Windows #
 				if natron.isWindows() == 1 :
-					fullRenderPath = str(folderPath) + '\\' + str(consoleMessage)
+					fullRenderPath = str(folderPath) + '\\' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
-					#subprocess.Popen( currentViewer + ' ' + str(folderPath) + '\\' + str(consoleMessage) , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
+				# Linux #
 				if natron.isLinux() == 1 :
-					fullRenderPath = str(folderPath) + '/' + str(consoleMessage)
+					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 				# suppress Write node #
 				# diskWrite.destroy()
