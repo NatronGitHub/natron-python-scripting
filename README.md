@@ -2,7 +2,7 @@
 # Natron python scripts
 ### A collection of Natron python scripts made by the community
 ## Installation
-The scripts can be installed by simply cloning the github repository or download it as a ZIP file.
+The scripts can be installed by simply cloning the github repository, or download it as a ZIP file, by clicking on the top-right green button 'Clone or download'.
 Unzip the content to your .Natron folder.
 
     Windows: "C:\Users\<username>\.Natron"
