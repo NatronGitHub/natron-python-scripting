@@ -17,13 +17,20 @@ Creates and process a 'Write' node for the selected node. and send the result to
 ### NOTE :
 
 ## Windows :
-* djv_view and mrViewer supported so far.
+* djv_view and mrViewer supported.
 * paths to the .exe must be set in the WIN_DJV.txt and WIN_mrViewer.txt
-* every '\\' must be doubled.
-* ex : C:\\\Program Files\\\DJV-1.3.0-win64\\\bin\\\
+* every '\\' must be doubled. [ ex : C:\\\Program Files\\\DJV-1.3.0-win64\\\bin\\\ ]
 
 ## Linux :
-* Not supported yet.
+* djv_view and mrViewer supported.
+* paths to binaries must be set in the LINUX_DJV.txt and LINUX_mrViewer.txt
 
 ## OSX :
 * Not supported yet.
+
+
+### DOWNLOADS :
+
+* djv_view : http://djv.sourceforge.net/Download.html
+* mrViewer : https://sourceforge.net/projects/mrviewer/files/
+* BVIEW    : https://bufsoftware.com/https://bufsoftware.com/download/bview

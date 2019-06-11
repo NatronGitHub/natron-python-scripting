@@ -132,8 +132,16 @@ def flipbook():
 				# ---------------------------------------------------- #
 				if natron.isLinux() == 1 :
 
+					# get diskCachePath from Preferences #
+					userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
+
 					# rebuild render path #
-					folderPath = str(myUserPath) + '/' + '.Natron/' + 'Temp/' + str(parentLabel)
+					if userDiskCachePath == '':
+						# if diskCachePath is empty (default) #
+						folderPath = str(myUserPath) + '/.cache/INRIA/Natron/flipbook_Cache/' + str(parentLabel)
+					else :
+						# if diskCachePath is set to a custom folder #
+						folderPath = str(userDiskCachePath) + '/flipbook_Cache/' + str(parentLabel)
 
 					# check if output folder exists #
 					if not os.path.exists(folderPath):
@@ -141,6 +149,17 @@ def flipbook():
 
 					# rebuild full render path + filename #
 					myPath = str(folderPath) + '/' + str(parentLabel) + '.######.' + str(extension)
+
+					# select which player to use #
+					myPlayer = playerList.getValue()
+					if myPlayer == 0:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_DJV.txt'))
+						currentViewer = 'djv_view.sh'
+						fullViewerPath = viewerPath + currentViewer
+					if myPlayer == 1:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_mrViewer.txt'))
+						currentViewer = 'mrViewer.sh'
+						fullViewerPath = viewerPath + currentViewer
 
 
 				# ---------------------------------------------------- #
@@ -171,9 +190,11 @@ def flipbook():
 					if myPlayer == 0:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt'))
 						currentViewer = 'djv_view.exe'
+						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 1:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_mrViewer.txt'))
 						currentViewer = 'mrViewer.exe'
+						fullViewerPath = viewerPath + currentViewer
 
 
 				# ---------------------------------------------------- #
@@ -233,7 +254,15 @@ def flipbook():
 				os.chdir(viewerPath)
 
 				# launch external viewer #
-				subprocess.Popen( currentViewer + ' ' + str(folderPath) + '\\' + str(consoleMessage) , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
+				# Windows #
+				if natron.isWindows() == 1 :
+					fullRenderPath = str(folderPath) + '\\' + str(consoleMessage)
+					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+					#subprocess.Popen( currentViewer + ' ' + str(folderPath) + '\\' + str(consoleMessage) , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+
+				if natron.isLinux() == 1 :
+					fullRenderPath = str(folderPath) + '/' + str(consoleMessage)
+					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 				# suppress Write node #
 				# diskWrite.destroy()
