@@ -6,8 +6,9 @@ Mimics Nuke look.
 open Natron
 >Edit > Preferences > Appearance
 >>Font : Segoe UI
->>>>Font size : 10
+>>>Font size : 10
 
 ## Linux/OSX :
-* Preferences->Appearance
-* Font size : 10
+open Natron
+>Edit > Preferences > Appearance
+>>Font size : 10
