@@ -7,7 +7,7 @@ Creates and process a 'Write' node for the selected node.
 * Select a node.
 * Tools -> Render -> flipbook
 * Set In and Out.
-* Select viewer.
+* Select viewer app.
 * Click 'OK.'
 
 ### RESULT
