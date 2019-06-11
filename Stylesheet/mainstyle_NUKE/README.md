@@ -5,10 +5,12 @@ Mimics Nuke look.
 ## Windows : 
 open Natron
 >Edit > Preferences > Appearance
->>Font : Segoe UI
->>>Font size : 10
+>>Stylesheet file (.qss) : set path to 'mainstyle_NUKE.qss' file.
+>>>Font : Segoe UI
+>>>>Font size : 10
 
 ## Linux/OSX :
 open Natron
 >Edit > Preferences > Appearance
->>Font size : 10
+>>Stylesheet file (.qss) : set path to 'mainstyle_NUKE.qss' file.
+>>>Font size : 10
