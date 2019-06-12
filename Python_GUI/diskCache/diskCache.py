@@ -33,7 +33,12 @@ def diskCache():
 	
 
 	firstFrame = dialog.createIntParam("firstFrame","In :")
+	defaultFirstFrame = app.getProjectParam('frameRange').get()[0]
+	firstFrame.set(defaultFirstFrame)
+
 	lastFrame = dialog.createIntParam("lastFrame","Out :")
+	defaultLastFrame = app.getProjectParam('frameRange').get()[1]
+	lastFrame.set(defaultLastFrame)
 	lastFrame.setAddNewLine(False)
 
 	line05 = dialog.createStringParam("sep05","")
