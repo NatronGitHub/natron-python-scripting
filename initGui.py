@@ -38,7 +38,6 @@ from Python_GUI.flipbook.flipbook import *
 #																	#
 #####################################################################
 
-
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto Alpha','autoAlpha')
 
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeColorChange')
@@ -61,5 +60,19 @@ print separator
 print '\n'
 
 print '- \'Tools\' user menu added'
+print '\n'
+print '   + Tools/Channel/Auto Alpha'
+print '\n'
+print '   + Tools/Node Graph/Node(s) Color'
+print '   + Tools/Node Graph/Bold Nodes <HTML>'
+print '   + Tools/Node Graph/Italic Nodes <HTML>'
+print '\n'
+print '   + Tools/Time/Read FPS'
+print '   + Tools/Time/Read Frame Range'
+print '\n'
+print '   + Tools/Render/Disk Cache'
+print '   + Tools/Render/Flipbook'
+
+
 print '\n' + '\n' + separator
 print separator + '\n'
