@@ -17,5 +17,11 @@ def nodeBold_HTML():
 
 	for n in selectedNodes:
 		myLabel = n.getLabel()
-		boldLabel = ('<b>') + myLabel
-		n.setLabel(boldLabel)
+
+		# parse existing name #
+		if '<b>' in myLabel:
+			oldLabel = myLabel.replace('<b>', '')
+			n.setLabel(oldLabel)
+		else :
+			boldLabel = '<b>' + myLabel
+			n.setLabel(boldLabel)

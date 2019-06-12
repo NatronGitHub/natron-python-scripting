@@ -17,5 +17,11 @@ def nodeItalic_HTML():
 
 	for n in selectedNodes:
 		myLabel = n.getLabel()
-		boldLabel = ('<i>') + myLabel
-		n.setLabel(boldLabel)
+
+		# parse existing name #
+		if '<i>' in myLabel:
+			oldLabel = myLabel.replace('<i>', '')
+			n.setLabel(oldLabel)
+		else :
+			italicLabel = '<i>' + myLabel
+			n.setLabel(italicLabel)
