@@ -45,7 +45,7 @@ Restart Natron.
 
 - **[natronLogo](/Python_INIT/natronLogo/README.md)** : Displays a nice Natron logo in the console. ;)
 
-# Natron stylesheets
+## Natron stylesheets
 
 - **[mainstyle_NUKE](/Stylesheet/mainstyle_NUKE/README.md)** : Mimics Nuke look.
 

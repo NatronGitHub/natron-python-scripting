@@ -17,5 +17,5 @@ def nodeItalic_HTML():
 
 	for n in selectedNodes:
 		myLabel = n.getLabel()
-		boldLabel = ('<i>') + myLabel + '</i>'
+		boldLabel = ('<i>') + myLabel
 		n.setLabel(boldLabel)
