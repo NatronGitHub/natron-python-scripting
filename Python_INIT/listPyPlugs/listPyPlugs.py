@@ -6,7 +6,6 @@
 import os
 import string
 from NatronEngine import*
-from os import*
 
 # LISTS NATRON PYPLUGS #
 
@@ -14,14 +13,16 @@ def listPyPlugs():
 	fileList = []
 	folderCount = 0
 	fileCount = 0
+	pyplugCount = 0
 
 	myPath = natron.getNatronPath()
 	listIndex = 0
 
 	for p in myPath:
 		currentPath = myPath[listIndex]
+		listIndex += 1
 		folderCount += 1
-		fileList.append('\n' + '\n' + '- IN [ ' + p + ' ] :' + '\n')	
+
 
 		for root, subFolders, files in os.walk(currentPath):
 			for file in files:
@@ -36,10 +37,16 @@ def listPyPlugs():
 								file = file[:-3]
 								fileList.append( '   + ' + file )
 								fileCount +=1
-		listIndex += 1
+
+		print ('\n' + '\n' + '- IN [ ' + p + ' ] :' + ' ' + str(fileCount) + ' PyPlugs')
+
+		print ('\n' + '\n'.join(fileList))
+
+		fileList = []
+		pyplugCount += fileCount
+		fileCount = 0
 		
 
-	print ('\n'.join(fileList))
-	pyplugCount = fileCount - folderCount
-	print ('\n' + '\n' + '- ' + str(pyplugCount) + ' PYPLUGs AVAILABLE ON THE SYSTEM')
-
+	#print ('\n'.join(fileList))
+	#pyplugCount = fileCount - folderCount
+	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUGs AVAILABLE ON THE SYSTEM')
