@@ -9,7 +9,7 @@ from PySide.QtGui import *
 import NatronEngine
 
 
-# DISK CACHE THE SELECTED NODE #
+# CREATES AND PROCESS A 'DISKCACHE' NODE FOR THE SELECTED NODE #
 
 def diskCache():
 
