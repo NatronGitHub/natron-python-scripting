@@ -8,7 +8,7 @@ from NatronGui import *
 from PySide.QtGui import *
 
 
-# SETS A NEW COLOR FOR SELECTED NODES #
+# SETS NODE COLOR FOR SELECTED NODES #
 
 def nodeColorChange():
 

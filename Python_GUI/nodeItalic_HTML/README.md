@@ -1,6 +1,6 @@
 # nodeItalic_HTML
 
-Sets node name to be displayed in italic in the Node Graph.
+Sets selected nodes to be displayed in italic in the Node Graph.
 
 ### HOW TO USE IT
 

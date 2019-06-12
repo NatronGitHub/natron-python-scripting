@@ -8,7 +8,7 @@ from NatronGui import *
 from PySide.QtGui import *
 
 
-# SETS A NEW FRAME RANGE FOR SELECTED NODES #
+# SETS FRAME RANGE FOR SELECTED 'READ' NODES #
 
 def nodeChangeFrameRange():
 

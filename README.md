@@ -23,9 +23,9 @@ Restart Natron.
 ### Node Graph
 - **[nodeColorChange](/Python_GUI/nodeColorChange/README.md)** : Sets node color for selected nodes.
 
-- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML/README.md)** : Sets node name to be displayed in bold in the Node Graph.
+- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML/README.md)** : Sets selected nodes to be displayed in bold in the Node Graph.
 
-- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML/README.md)** : Sets node name to be displayed in italic in the Node Graph.
+- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML/README.md)** : Sets selected nodes to be displayed in italic in the Node Graph.
 
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS/README.md)** : Sets FPS for selected 'Read' nodes.
@@ -35,7 +35,7 @@ Restart Natron.
 ### Render
 - **[diskCache](/Python_GUI/diskCache/README.md)** : Creates and process a 'DiskCache' node for the selected node.
 
-- **[flipbook](/Python_GUI/flipbook/README.md)** : Creates and process a 'Write' node for the selected node, and sends the result to an external image sequence viewer. (Win/Linux)
+- **[flipbook](/Python_GUI/flipbook/README.md)** : Renders and plays the selected node in an external viewer. (Win/Linux)
 
 ## Natron snippets
 

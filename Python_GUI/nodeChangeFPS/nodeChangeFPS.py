@@ -8,7 +8,7 @@ from NatronGui import *
 from PySide.QtGui import *
 
 
-# SETS A NEW FPS FOR SELECTED NODES #
+# SETS FPS FOR SELECTED 'READ' NODES #
 
 def nodeChangeFPS():
 
