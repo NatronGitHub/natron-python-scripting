@@ -38,6 +38,7 @@ Restart Natron.
 - **[flipbook](/Python_GUI/flipbook/README.md)** : Renders and plays the selected node in an external viewer. (Win/Linux)
 
 ## Natron snippets
+- **[addDepthLayer](/Python_INIT/addDepthLayer/README.md)** : Adds 'Depth' layer to Natron.
 
 - **[listNatronPath](/Python_INIT/listNatronPath/README.md)** : Lists paths scanned by Natron at startup.
 
