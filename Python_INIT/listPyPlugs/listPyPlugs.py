@@ -32,13 +32,13 @@ def listPyPlugs():
 				if file != filename1 :
 					if file != filename2 :
 						if file != filename3 :
-							fileList = sorted(fileList)
+							fileList = sorted(fileList, key=lambda s: s.lower())
 							if file.endswith(".py") :
 								file = file[:-3]
 								fileList.append( '   + ' + file )
 								fileCount +=1
 
-		print ('\n' + '\n' + '- IN [ ' + p + ' ] :' + ' ' + str(fileCount) + ' PyPlugs')
+		print ('\n' + '\n' + '- IN [ ' + p + ' ] :' + ' ' + str(fileCount) + ' PyPlug(s)')
 
 		print ('\n' + '\n'.join(fileList))
 
@@ -49,4 +49,4 @@ def listPyPlugs():
 
 	#print ('\n'.join(fileList))
 	#pyplugCount = fileCount - folderCount
-	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUGs AVAILABLE ON THE SYSTEM')
+	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUG(S) AVAILABLE ON THE SYSTEM')

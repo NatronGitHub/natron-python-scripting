@@ -26,7 +26,8 @@ from Python_INIT.listNatronPath.listNatronPath import *
 from Python_INIT.listPyPlugs.listPyPlugs import *
 from Python_INIT.natronLogo.natronLogo import *
 
-			
+
+
 
 # CREATES A NEW DEPTH LAYER #
 #---------------------------#
@@ -150,7 +151,7 @@ listNatronPath()
 
 print '\n' + separator
 
-PyPlugMessage = ("- PYPLUGs LOADED :")
+PyPlugMessage = ("- PYPLUG(S) LOADED :")
 print separator
 print '\n' + PyPlugMessage
 
