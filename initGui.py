@@ -48,7 +48,7 @@ NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
 
 NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()')
-NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()')
+NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
 
 separator = ('------------------------------------------------------------')
