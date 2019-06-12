@@ -44,7 +44,6 @@ def flipbook():
 	lastFrame = dialog.createIntParam("lastFrame","Out :")
 	defaultLastFrame = app.getProjectParam('frameRange').get()[1]
 	lastFrame.set(defaultLastFrame)
-
 	lastFrame.setAddNewLine(False)
 
 	line05 = dialog.createStringParam("sep05","")
