@@ -45,8 +45,5 @@ def listPyPlugs():
 		fileList = []
 		pyplugCount += fileCount
 		fileCount = 0
-		
 
-	#print ('\n'.join(fileList))
-	#pyplugCount = fileCount - folderCount
 	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUG(S) AVAILABLE ON THE SYSTEM')
