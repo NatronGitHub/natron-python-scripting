@@ -6,9 +6,8 @@
 import os
 import sys
 import subprocess
-import string
 
-from NatronEngine import*
+from NatronEngine import *
 from NatronGui import *
 from PySide.QtGui import *
 
@@ -111,7 +110,7 @@ def flipbook():
 
 				# set node name #
 				parentLabel = n.getLabel()
-				diskWrite.setLabel('diskWrite_' + str(parentLabel))
+				diskWrite.setLabel('diskWrite_' + parentLabel)
 
 				# retrieve format choice #
 				myFormat = formatList.getValue()
@@ -139,27 +138,34 @@ def flipbook():
 					# rebuild render path #
 					if userDiskCachePath == '':
 						# if diskCachePath is empty (default) #
-						folderPath = str(myUserPath) + '/.cache/INRIA/Natron/flipbook_Cache/' + str(parentLabel)
+						folderPath = str(myUserPath) + '/.cache/INRIA/Natron/flipbook_Cache/' + parentLabel
 					else :
 						# if diskCachePath is set to a custom folder #
-						folderPath = str(userDiskCachePath) + '/flipbook_Cache/' + str(parentLabel)
+						folderPath = str(userDiskCachePath) + '/flipbook_Cache/' + parentLabel
 
 					# check if output folder exists #
 					if not os.path.exists(folderPath):
 						os.makedirs(folderPath)
 
 					# rebuild full render path + filename #
-					myPath = str(folderPath) + '/' + str(parentLabel) + '.######.' + str(extension)
+					myPath = str(folderPath) + '/' + parentLabel + '.######.' + str(extension)
 
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_DJV.txt'))
 						currentViewer = 'djv_view.sh'
+						viewerLabel = 'DJV'
 						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 1:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_mrViewer.txt'))
+						viewerLabel = 'mrViewer'
 						currentViewer = 'mrViewer.sh'
+						fullViewerPath = viewerPath + currentViewer
+					if myPlayer == 2:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_mrViewer.txt'))
+						viewerLabel = 'pdplayer64'
+						currentViewer = 'PDPLAYER'
 						fullViewerPath = viewerPath + currentViewer
 
 
@@ -174,31 +180,34 @@ def flipbook():
 					# rebuild render path #
 					if userDiskCachePath == '':
 						# if diskCachePath is empty (default) #
-						folderPath = str(myUserPath) + '\\AppData\\Local\\INRIA\\Natron\\flipbook_Cache\\' + str(parentLabel)
+						folderPath = str(myUserPath) + '\\AppData\\Local\\INRIA\\Natron\\flipbook_Cache\\' + parentLabel
 					else :
 						# if diskCachePath is set to a custom folder #
-						folderPath = str(userDiskCachePath) + '\\flipbook_Cache\\' + str(parentLabel)
+						folderPath = str(userDiskCachePath) + '\\flipbook_Cache\\' + parentLabel
 
 					# check if output folder exists #
 					if not os.path.exists(folderPath):
 						os.makedirs(folderPath)
 
 					# rebuild full render path + filename #
-					myPath = str(folderPath) + '\\' + str(parentLabel) + '.######.' + str(extension)
+					myPath = str(folderPath) + '\\' + parentLabel + '.######.' + extension
 
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt') )
 						currentViewer = 'djv_view.exe'
+						viewerLabel = 'DJV'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 					if myPlayer == 1:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_mrViewer.txt'))
 						currentViewer = 'mrViewer.exe'
+						viewerLabel = 'mrViewer'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 					if myPlayer == 2:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_PDPLAYER.txt'))
 						currentViewer = 'pdplayer64.exe'
+						viewerLabel = 'PDPLAYER'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 
 
@@ -242,15 +251,16 @@ def flipbook():
 
 
 				# print message in console #
-				fullRenderName = str(parentLabel) + '.' + newDigits1 + str(newFirstFrame) + '-' + newDigits2 + str(newLastFrame) + '.' + str(extension)
+				fullRenderName = parentLabel + '.' + newDigits1 + str(newFirstFrame) + '-' + newDigits2 + str(newLastFrame) + '.' + str(extension)
 				if myPlayer == 2:
-					fullRenderName = str(parentLabel) + '.' + '######' + '.' + str(extension)
-				print 'Launching [ ' + fullRenderName +  ' ] in DJV'
+					fullRenderName = parentLabel + '.' + '######' + '.' + str(extension)
+
+				os.write(1, '\n' 'Launching [ ' + fullRenderName +  ' ] in ' + viewerLabel + '\n' + '\n')
+
 				# go to viewer folder #
 				os.chdir(viewerPath)
 
 				# launch external viewer #
-
 				# Windows #
 				if natron.isWindows() == 1 :
 					fullRenderPath = str(folderPath) + '\\' + str(fullRenderName)
@@ -260,5 +270,3 @@ def flipbook():
 				if natron.isLinux() == 1 :
 					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
-
-				print ('toto')
