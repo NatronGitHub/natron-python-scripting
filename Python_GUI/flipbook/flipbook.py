@@ -152,17 +152,17 @@ def flipbook():
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_DJV.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/LINUX_DJV.txt'))
 						currentViewer = 'djv_view.sh'
 						viewerLabel = 'DJV'
 						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 1:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_mrViewer.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/LINUX_mrViewer.txt'))
 						viewerLabel = 'mrViewer'
 						currentViewer = 'mrViewer.sh'
 						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 2:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/LINUX_mrViewer.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/LINUX_mrViewer.txt'))
 						viewerLabel = 'pdplayer64'
 						currentViewer = 'PDPLAYER'
 						fullViewerPath = viewerPath + currentViewer
@@ -194,17 +194,17 @@ def flipbook():
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt') )
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/WIN_DJV.txt') )
 						currentViewer = 'djv_view.exe'
 						viewerLabel = 'DJV'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 					if myPlayer == 1:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_mrViewer.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/WIN_mrViewer.txt'))
 						currentViewer = 'mrViewer.exe'
 						viewerLabel = 'mrViewer'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 					if myPlayer == 2:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_PDPLAYER.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/WIN_PDPLAYER.txt'))
 						currentViewer = 'pdplayer64.exe'
 						viewerLabel = 'PDPLAYER'
 						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
@@ -236,17 +236,17 @@ def flipbook():
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX_DJV.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/OSX_DJV.txt'))
 						currentViewer = 'djv_view.app'
 						viewerLabel = 'DJV'
 						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 1:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/OSX.txt'))
 						viewerLabel = 'mrViewer'
 						currentViewer = 'mrViewer.app'
 						fullViewerPath = viewerPath + currentViewer
 					if myPlayer == 2:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/preferences/OSX.txt'))
 						viewerLabel = 'pdplayer64.app'
 						currentViewer = 'PDPLAYER'
 						fullViewerPath = viewerPath + currentViewer
