@@ -12,3 +12,7 @@ Creates and process a 'DiskCache' node for the selected node.
 ### RESULT
 
 * A DiskCache is connected to the selected node, and processed for the user frame range.
+
+### SHORTCUT
+
+* Alt+D

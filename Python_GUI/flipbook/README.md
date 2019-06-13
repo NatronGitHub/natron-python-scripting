@@ -28,6 +28,10 @@ Creates and process a 'Write' node for the selected node. and send the result to
 ## OSX :
 * Not supported yet.
 
+### SHORTCUT
+
+* Alt+D
+
 
 ### DOWNLOADS :
 
