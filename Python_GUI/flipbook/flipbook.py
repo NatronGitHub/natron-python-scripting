@@ -309,6 +309,6 @@ def flipbook():
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
 				# OSX #
-				if natron.MacOSX() == 1 :
+				if natron.isMacOSX() == 1 :
 					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
