@@ -36,4 +36,4 @@ Creates and process a 'Write' node for the selected node. and send the result to
 
 * djv_view : http://djv.sourceforge.net/Download.html
 * mrViewer : https://sourceforge.net/projects/mrviewer/files/
-* BVIEW    : https://bufsoftware.com/https://bufsoftware.com/download/bview
+* PdPlayer : http://pdplayer.com/downloads.html
