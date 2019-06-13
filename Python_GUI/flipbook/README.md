@@ -17,13 +17,12 @@ Creates and process a 'Write' node for the selected node. and send the result to
 ### NOTE :
 
 ## Windows :
-* djv_view and mrViewer supported.
-* paths to the .exe must be set in the WIN_DJV.txt and WIN_mrViewer.txt
-* every '\\' must be doubled. [ ex : C:\\\Program Files\\\DJV-1.3.0-win64\\\bin\\\ ]
+* Supported viewers : djv_view - mrViewer - PdPlayer.
+* paths to the .exe must be set in the WIN_DJV.txt, WIN_mrViewer.txt and WIN_PDPLAYER.txt
 
 ## Linux :
-* djv_view and mrViewer supported.
-* paths to binaries must be set in the LINUX_DJV.txt and LINUX_mrViewer.txt
+* Supported viewers : djv_view - mrViewer - PdPlayer.
+* paths to binaries must be set in the LINUX_DJV.txt, LINUX_mrViewer.txt and LINUX_PDPLAYER.exe
 
 ## OSX :
 * Not supported yet.

@@ -255,12 +255,13 @@ def flipbook():
 				if myPlayer == 2:
 					fullRenderName = parentLabel + '.' + '######' + '.' + str(extension)
 
-				os.write(1, '\n' 'Launching [ ' + fullRenderName +  ' ] in ' + viewerLabel + '\n' + '\n')
+				os.write(1, '\n' 'Opening [ ' + fullRenderName +  ' ] in ' + viewerLabel + '\n' + '\n')
 
 				# go to viewer folder #
 				os.chdir(viewerPath)
 
-				# launch external viewer #
+
+				# ---------------------- launch external viewer --------------------- #
 				# Windows #
 				if natron.isWindows() == 1 :
 					fullRenderPath = str(folderPath) + '\\' + str(fullRenderName)
@@ -268,5 +269,10 @@ def flipbook():
 
 				# Linux #
 				if natron.isLinux() == 1 :
+					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
+					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+
+				# OSX #
+				if natron.MacOSX() == 1 :
 					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
