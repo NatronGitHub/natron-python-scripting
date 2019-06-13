@@ -8,8 +8,8 @@ import string
 from NatronEngine import*
 from os import*
 
-# ADDS 'DEPTH' LAYER #
+# ADDS 'MOTION' LAYER #
 
-def addDepthLayer(app):
-    depthPlane = NatronEngine.ImageLayer( "Depth" , "Depth" , "Z")
+def addMotionLayer(app):
+    depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
     app.addProjectLayer( depthPlane )
