@@ -29,13 +29,19 @@ from Python_INIT.natronLogo.natronLogo import *
 
 
 
-# CREATES A NEW DEPTH LAYER #
+# CREATES A NEW 'DEPTH' LAYER #
 #---------------------------#
 def addDepthLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Depth" , "Depth" , "Z")
 	app.addProjectLayer( depthPlane )
 
-# CREATES A NEW DEPTH LAYER #
+# CREATES A NEW 'MASK' LAYER #
+#---------------------------#
+def addMaskLayer(app):
+	depthPlane = NatronEngine.ImageLayer( "Mask" , "Mask" , "A")
+	app.addProjectLayer( depthPlane )
+
+# CREATES A NEW 'MOTION' LAYER #
 #---------------------------#
 def addMotionLayer(app):
     depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
@@ -95,6 +101,7 @@ def setNodeDefaults(app):
 #-----------------#
 def Project_Callback(app):
 	addDepthLayer(app)
+	addMaskLayer(app)
 	addMotionLayer(app)
 	setNodeDefaults(app)
 
@@ -144,6 +151,7 @@ print separator
 
 print '\n'
 print '- Depth layer added to the viewer'
+print '- Mask layer added to the viewer'
 print '- Motion layer added to the viewer'
 print '\n'
 print separator
