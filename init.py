@@ -29,6 +29,12 @@ from Python_INIT.natronLogo.natronLogo import *
 
 
 
+# CREATES A NEW 'DEEP' LAYER #
+#---------------------------#
+def addDeepLayer(app):
+	depthPlane = NatronEngine.ImageLayer( "Deep" , "Deep" , "FB")
+	app.addProjectLayer( depthPlane )
+
 # CREATES A NEW 'DEPTH' LAYER #
 #---------------------------#
 def addDepthLayer(app):
@@ -150,6 +156,7 @@ print '\n'
 print separator
 
 print '\n'
+print '- Deep layer added to the viewer'
 print '- Depth layer added to the viewer'
 print '- Mask layer added to the viewer'
 print '- Motion layer added to the viewer'
