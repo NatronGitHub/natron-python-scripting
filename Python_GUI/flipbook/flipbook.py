@@ -6,6 +6,7 @@
 import os
 import sys
 import subprocess
+import string
 
 from NatronEngine import*
 from NatronGui import *
@@ -259,5 +260,5 @@ def flipbook():
 				if natron.isLinux() == 1 :
 					fullRenderPath = str(folderPath) + '/' + str(fullRenderName)
 					subprocess.Popen( [fullViewerPath, fullRenderPath] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
-				# suppress Write node #
-				# diskWrite.destroy()
+
+				print ('toto')
