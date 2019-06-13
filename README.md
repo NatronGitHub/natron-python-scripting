@@ -40,6 +40,8 @@ Restart Natron.
 ## Natron snippets
 - **[addDepthLayer](/Python_INIT/addDepthLayer/README.md)** : Adds 'Depth' layer to Natron.
 
+- **[addMotionLayer](/Python_INIT/addMotionLayer/README.md)** : Adds 'Motion' layer to Natron.
+
 - **[listNatronPath](/Python_INIT/listNatronPath/README.md)** : Lists paths scanned by Natron at startup.
 
 - **[listPyPlugs](/Python_INIT/listPyPlugs/README.md)** : Lists PyPlugs installed on the system.
