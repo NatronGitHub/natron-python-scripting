@@ -29,7 +29,7 @@ Creates and process a 'Write' node for the selected node. and send the result to
 
 ### SHORTCUT
 
-* Alt+D
+* Alt+F
 
 
 ### DOWNLOADS :
