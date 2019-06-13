@@ -23,7 +23,11 @@ def flipbook():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
-	# creates UI #
+
+	# ------------------------------------------------------ #
+	# --------------------- UI creation -------------------- #
+	# ------------------------------------------------------ #
+
 	line01 = dialog.createStringParam("sep01","")
 	line01.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	line02 = dialog.createStringParam("sep02","")
