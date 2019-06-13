@@ -242,8 +242,9 @@ def flipbook():
 
 				# print message in console #
 				fullRenderName = str(parentLabel) + '.' + newDigits1 + str(newFirstFrame) + '-' + newDigits2 + str(newLastFrame) + '.' + str(extension)
-				print 'Launching [ ' + str(fullRenderName) +  ' ] in DJV'
-				print userDiskCachePath
+				if myPlayer == 2:
+					fullRenderName = str(parentLabel) + '.' + '######' + '.' + str(extension)
+				print 'Launching [ ' + fullRenderName +  ' ] in DJV'
 				# go to viewer folder #
 				os.chdir(viewerPath)
 
