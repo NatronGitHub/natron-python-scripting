@@ -58,7 +58,7 @@ def flipbook():
 	formatList.setDefaultValue("exr")
 	formatList.restoreDefaultValue()
 
-
+	# creates players list #
 	playerList = dialog.createChoiceParam("choice02","Players : ")
 	playerList.setAddNewLine(False)
 	entries = [ ("DJV", ""),("mrViewer", ""),("PDPLAYER", "") ]
@@ -93,7 +93,7 @@ def flipbook():
 
 		for n in selectedNodes:
 
-			# if more than 1 node have been selected, stop the process #
+			# if more than 1 node is selected, stop the process #
 			if len(selectedNodes) != 1 :
 				break
 
@@ -125,7 +125,6 @@ def flipbook():
 
 
 				# --------------------- check OS --------------------- #
-
 
 				# ---------------------------------------------------- #
 				# ----------------------- Linux ---------------------- #
@@ -215,9 +214,45 @@ def flipbook():
 				# ---------------------- Mac OSX --------------------- #
 				# ---------------------------------------------------- #
 				if natron.isMacOSX() == 1 :
-					break
+
+					# get diskCachePath from Preferences #
+					userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
+
+					# rebuild render path #
+					if userDiskCachePath == '':
+						# if diskCachePath is empty (default) #
+						folderPath = str(myUserPath) + '/.cache/INRIA/Natron/flipbook_Cache/' + parentLabel
+					else :
+						# if diskCachePath is set to a custom folder #
+						folderPath = str(userDiskCachePath) + '/flipbook_Cache/' + parentLabel
+
+					# check if output folder exists #
+					if not os.path.exists(folderPath):
+						os.makedirs(folderPath)
+
+					# rebuild full render path + filename #
+					myPath = str(folderPath) + '/' + parentLabel + '.######.' + str(extension)
+
+					# select which player to use #
+					myPlayer = playerList.getValue()
+					if myPlayer == 0:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX_DJV.txt'))
+						currentViewer = 'djv_view.app'
+						viewerLabel = 'DJV'
+						fullViewerPath = viewerPath + currentViewer
+					if myPlayer == 1:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX.txt'))
+						viewerLabel = 'mrViewer'
+						currentViewer = 'mrViewer.app'
+						fullViewerPath = viewerPath + currentViewer
+					if myPlayer == 2:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/OSX.txt'))
+						viewerLabel = 'pdplayer64.app'
+						currentViewer = 'PDPLAYER'
+						fullViewerPath = viewerPath + currentViewer
 
 
+				# --------------------- setup 'Write' node --------------------- #
 
 				# set Write render path #
 				oldPath = diskWrite.getParam("filename").set(myPath)
@@ -257,11 +292,12 @@ def flipbook():
 
 				os.write(1, '\n' 'Opening [ ' + fullRenderName +  ' ] in ' + viewerLabel + '\n' + '\n')
 
+
+				# ---------------------- launch external viewer --------------------- #
+
 				# go to viewer folder #
 				os.chdir(viewerPath)
 
-
-				# ---------------------- launch external viewer --------------------- #
 				# Windows #
 				if natron.isWindows() == 1 :
 					fullRenderPath = str(folderPath) + '\\' + str(fullRenderName)
