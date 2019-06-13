@@ -1,3 +1,3 @@
 # addDepthLayer
 
-Adds 'Depth' layer to Natron.
+Adds 'Deep' layer to Natron.
