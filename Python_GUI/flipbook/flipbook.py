@@ -58,38 +58,18 @@ def flipbook():
 	formatList.setDefaultValue("exr")
 	formatList.restoreDefaultValue()
 
-	# creates image viewers list per OS #
-	# ---------------------- Linux ---------------------- #
-	if natron.isLinux() == 1 :
-		playerList = dialog.createChoiceParam("choice02","Players : ")
-		playerList.setAddNewLine(False)
-		entries = [ ("DJV", ""),("mrViewer", "") ]
-		playerList.setOptions(entries)
-		playerList.setDefaultValue("DJV")
-		playerList.restoreDefaultValue()
 
-	# ---------------------- Windows --------------------- #
-	if natron.isWindows() == 1 :
-		playerList = dialog.createChoiceParam("choice02","Players : ")
-		playerList.setAddNewLine(False)
-		entries = [ ("DJV", ""),("mrViewer", "") ]
-		playerList.setOptions(entries)
-		playerList.setDefaultValue("DJV")
-		playerList.restoreDefaultValue()
+	playerList = dialog.createChoiceParam("choice02","Players : ")
+	playerList.setAddNewLine(False)
+	entries = [ ("DJV", ""),("mrViewer", ""),("PDPLAYER", "") ]
+	playerList.setOptions(entries)
+	playerList.setDefaultValue("DJV")
+	playerList.restoreDefaultValue()
 
-	# ------------------------ OSX ----------------------- #
-	if natron.isWindows() == 1 :
-		playerList = dialog.createChoiceParam("choice02","Players : ")
-		playerList.setAddNewLine(False)
-		entries = [ ("DJV", "") ]
-		playerList.setOptions(entries)
-		playerList.setDefaultValue("DJV")
-		playerList.restoreDefaultValue()
 
 
 	# Refresh UI #
 	dialog.refreshUserParamsGUI()
-
 
 
 
@@ -208,13 +188,17 @@ def flipbook():
 					# select which player to use #
 					myPlayer = playerList.getValue()
 					if myPlayer == 0:
-						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt'))
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_DJV.txt') )
 						currentViewer = 'djv_view.exe'
-						fullViewerPath = viewerPath + currentViewer
+						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 					if myPlayer == 1:
 						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_mrViewer.txt'))
 						currentViewer = 'mrViewer.exe'
-						fullViewerPath = viewerPath + currentViewer
+						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
+					if myPlayer == 2:
+						viewerPath = ''.join(file( str(myUserPath) + '/.Natron/Python_GUI/flipbook/WIN_PDPLAYER.txt'))
+						currentViewer = 'pdplayer64.exe'
+						fullViewerPath = viewerPath.replace('\\', '\\\\') + '\\' + currentViewer
 
 
 				# ---------------------------------------------------- #
