@@ -1,1 +1,1 @@
-/usr/local/mrViewer-v5.0.7-Linux-64/bin/
+/usr/local/pdplayer_demo_1.0.7.32/bin/
