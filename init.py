@@ -106,6 +106,7 @@ def setNodeDefaults(app):
 # SETUP CALLBACKS #
 #-----------------#
 def Project_Callback(app):
+	addDeepLayer(app)
 	addDepthLayer(app)
 	addMaskLayer(app)
 	addMotionLayer(app)
