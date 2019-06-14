@@ -3,6 +3,7 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
+import os
 from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
@@ -35,6 +36,7 @@ def nodeChangeFPS():
 				nodeFramerate.set(newFPS)
 
 				print ('Read Node(s) set to : ') + str(nodeFramerate.get()) + (' fps.')
+				os.write(1, '\n' + 'Read Node(s) set to : ' + str(nodeFramerate.get()) + ' fps.' + '\n' )
 
 				customFPS = n.getParam("customFps")
 				customFPS.set(1)

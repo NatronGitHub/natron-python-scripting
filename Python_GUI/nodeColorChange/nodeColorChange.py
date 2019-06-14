@@ -3,6 +3,7 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
+import os
 from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
@@ -28,4 +29,5 @@ def nodeColorChange():
 		for n in selectedNodes:
 			n.setColor(newColor[0],newColor[1],newColor[2])
 
-	print ( 'Node(s) color changed to R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) )
+	print ('Node(s) color changed to R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) )
+	os.write( 1, '\n' + 'Node(s) color changed to R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) + '\n' )
