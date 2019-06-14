@@ -16,7 +16,8 @@ def nodeColorChange():
 	dialog = app.createModalDialog()
 
 	# create Color picker box #
-	myColor = dialog.createColorParam("myColor","Color : ",0)
+	myColor = dialog.createColorParam("myColor","Color : ", 0)
+	myColor.set(1,1,1,0)
 
 	dialog.refreshUserParamsGUI()
 
