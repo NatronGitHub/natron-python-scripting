@@ -4,4 +4,4 @@ Set up project default settings.
 
 ### USAGE
 
-* Copy code in the init.py file.
+* Add 'setProjectSettings.py' code to the init.py file.
