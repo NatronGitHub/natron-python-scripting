@@ -1,6 +1,6 @@
 # setProjectSettings
 
-Set up default project settings.
+Set up project default settings.
 
 ### USAGE
 

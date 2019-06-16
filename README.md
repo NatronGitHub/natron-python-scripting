@@ -52,6 +52,8 @@ Restart Natron.
 
 - **[natronLogo](/Python_INIT/natronLogo/README.md)** : Displays a nice Natron logo in the console. ;)
 
+- **[setProjectSettings](/Python_INIT/setProjectSettings/README.md)** : Set up project default settings.
+
 ## Natron stylesheets
 
 - **[mainstyle_NUKE](/Stylesheet/mainstyle_NUKE/README.md)** : Mimics Nuke look.
