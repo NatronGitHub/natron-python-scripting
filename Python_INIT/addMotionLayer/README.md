@@ -4,4 +4,4 @@ Adds 'Motion' layer to Natron.
 
 ### USAGE
 
-* Copy code in the init.py file.
+* Add 'addMotionLayer.py' code to the init.py file.
