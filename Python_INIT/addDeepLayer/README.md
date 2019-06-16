@@ -4,4 +4,4 @@ Adds 'Deep' layer to Natron.
 
 ### USAGE
 
-* Copy code in the init.py file.
+* Add 'addDepthLayer.py' code to the init.py file.
