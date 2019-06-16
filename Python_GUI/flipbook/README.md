@@ -18,7 +18,7 @@ Creates and process a 'Write' node for the selected node. and send the result to
 
 Frames are rendered in the folder specified in : Preferences -> Caching -> Disk cache path.
 Default folder is :
-- Windows : C:/Users/<user>/AppData/Local/INRIA/Natron/cache
+- Windows : C:/Users/user/AppData/Local/INRIA/Natron/cache
 
 ## Windows :
 * Supported viewers : djv_view - mrViewer - PdPlayer.
