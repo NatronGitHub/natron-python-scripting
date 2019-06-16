@@ -13,5 +13,3 @@ from os import*
 def addMotionLayer(app):
     depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
     app.addProjectLayer( depthPlane )
-
-addMotionLayer(app)
