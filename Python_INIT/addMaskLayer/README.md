@@ -4,4 +4,4 @@ Adds 'Mask' layer to Natron.
 
 ### USAGE
 
-* Copy code in the init.py file.
+* Add 'addMaskLayer.py' code to the init.py file.
