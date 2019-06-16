@@ -13,3 +13,5 @@ from os import*
 def addMaskLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Mask" , "Mask" , "A")
 	app.addProjectLayer( depthPlane )
+
+addMaskLayer(app)

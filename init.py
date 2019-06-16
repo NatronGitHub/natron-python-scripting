@@ -30,33 +30,42 @@ from Python_INIT.natronLogo.natronLogo import *
 
 
 # CREATES A NEW 'DEEP' LAYER #
-#---------------------------#
+#----------------------------#
 def addDeepLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Deep" , "Deep" , "FB")
 	app.addProjectLayer( depthPlane )
 
 # CREATES A NEW 'DEPTH' LAYER #
-#---------------------------#
+#-----------------------------#
 def addDepthLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Depth" , "Depth" , "Z")
 	app.addProjectLayer( depthPlane )
 
 # CREATES A NEW 'MASK' LAYER #
-#---------------------------#
+#----------------------------#
 def addMaskLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Mask" , "Mask" , "A")
 	app.addProjectLayer( depthPlane )
 
 # CREATES A NEW 'MOTION' LAYER #
-#---------------------------#
+#------------------------------#
 def addMotionLayer(app):
     depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
     app.addProjectLayer( depthPlane )
 
 
+# SET UP DEFAULT PROJECT SETTINGS #
+#------------------------------#
+def setProjectSettings(app):
+	app.getProjectParam('outputFormat').setValue("HD 1920x1080")
+	app.getProjectParam('autoPreviews').setValue(True)
+	app.getProjectParam('frameRange').setValue(1, 25)
+	app.getProjectParam('lockRange').setValue(True)
+	app.getProjectParam('frameRate').setValue(25)
+	app.getProjectParam('gpuRendering').setValue('Enabled')
 
 
-# DEFINES WHAT HAPPENS AFTER SOME NODE CREATION #
+# DEFINES WHAT HAPPENS AFTER SPECIFIC NODES CREATION #
 #-----------------------------------------------#
 def Node_Callback(thisNode, app, userEdited):
 
@@ -64,18 +73,18 @@ def Node_Callback(thisNode, app, userEdited):
 		thisNode.enablePreview.setValue(1)
 		thisNode.hideInputs.setValue(1)
 
-	elif thisNode.getPluginID() == "net.sf.openfx.Solid" :
+	if thisNode.getPluginID() == "net.sf.openfx.Solid" :
 		thisNode.enablePreview.setValue(1)
 		thisNode.hideInputs.setValue(1)
 
-	elif  thisNode.getPluginID() == "net.sf.openfx.FrameHold":
+	if thisNode.getPluginID() == "net.sf.openfx.FrameHold":
 		currentFrame = app.timelineGetTime()
 		thisNode.firstFrame.setValue(currentFrame)
 
 	#elif thisNode.getPluginID() == "net.sf.openfx.MergePlugin" :
 		#thisNode.bbox.set('b')
 
-	elif thisNode.getPluginID() == "fr.inria.built-in.Read" :
+	if thisNode.getPluginID() == "fr.inria.built-in.Read" :
 		#thisNode.outputComponents.set('RGBA')
 		thisNode.hideInputs.setValue(1)
 		thisNode.outputLayer.set('Color.RGBA')
@@ -111,12 +120,14 @@ def Project_Callback(app):
 	addMaskLayer(app)
 	addMotionLayer(app)
 	setNodeDefaults(app)
+	setProjectSettings(app)
 
 
 NatronEngine.natron.setOnProjectCreatedCallback("Project_Callback")
 NatronEngine.natron.setOnProjectLoadedCallback("Project_Callback")
 
 
+#-----------------------------------------------------------------#
 #################### STARTING CONSOLE MESSAGES ####################
 #-----------------------------------------------------------------#
 

@@ -13,3 +13,5 @@ from os import*
 def addDeepLayer(app):
 	depthPlane = NatronEngine.ImageLayer( "Deep" , "Deep" , "FB")
 	app.addProjectLayer( depthPlane )
+
+addDeepLayer(app)
