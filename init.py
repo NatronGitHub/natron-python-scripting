@@ -59,7 +59,7 @@ def addMotionLayer(app):
 def setProjectSettings(app):
 	app.getProjectParam('outputFormat').setValue("HD 1920x1080")
 	app.getProjectParam('autoPreviews').setValue(True)
-	app.getProjectParam('frameRange').setValue(1, 25)
+	app.getProjectParam('frameRange').set(1, 25)
 	app.getProjectParam('lockRange').setValue(True)
 	app.getProjectParam('frameRate').setValue(25)
 	app.getProjectParam('gpuRendering').setValue('Enabled')
