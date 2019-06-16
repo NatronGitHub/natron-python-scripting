@@ -7,7 +7,9 @@ Lists paths scanned by Natron at startup.
 * Copy 'listNatronPath' folder into the '.Natron/Python_INIT' folder.
 * Add the following lines to the 'init.py' file :
 
-    from Python_INIT.listNatronPath.listNatronPath import *
-    listNatronPath()
+		from Python_INIT.listNatronPath.listNatronPath import *
+		listNatronPath()
+
+
 
 * Restart Natron.
