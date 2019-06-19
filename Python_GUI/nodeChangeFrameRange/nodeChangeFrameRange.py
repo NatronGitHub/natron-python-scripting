@@ -15,7 +15,7 @@ def nodeChangeFrameRange():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
-	# create Color picker box #
+	# create user input fields #
 	firstFrame = dialog.createIntParam("firstFrame","In :")
 	lastFrame = dialog.createIntParam("lastFrame","Out :")
 	lastFrame.setAddNewLine(False)
@@ -23,6 +23,7 @@ def nodeChangeFrameRange():
 
 	dialog.refreshUserParamsGUI()
 
+	# if user press 'OK' #
 	if dialog.exec_():
 		newFirstFrame = dialog.getParam("firstFrame").getValue()
 		newLastFrame = dialog.getParam("lastFrame").getValue()

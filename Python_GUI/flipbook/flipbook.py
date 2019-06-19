@@ -77,7 +77,7 @@ def flipbook():
 
 
 
-	# code executed when OK button is pressed #
+	# if user press 'OK' #
 	if dialog.exec_():
 
 		# retrieves values entered by user #

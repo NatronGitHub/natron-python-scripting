@@ -22,6 +22,7 @@ def nodeColorChange():
 
 	dialog.refreshUserParamsGUI()
 
+	# if user press 'OK' #
 	if dialog.exec_():
 		newColor = dialog.getParam("myColor").get()
 

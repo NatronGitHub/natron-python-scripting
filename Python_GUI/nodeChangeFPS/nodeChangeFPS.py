@@ -23,6 +23,7 @@ def nodeChangeFPS():
 
 	dialog.refreshUserParamsGUI()
 
+	# if user press 'OK' #
 	if dialog.exec_():
 		newFPS = dialog.getParam("fpsInput").get()
 		selectedNodes = app.getSelectedNodes()
