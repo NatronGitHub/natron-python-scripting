@@ -106,7 +106,7 @@ def flipbook():
 				parentPosition = n.getPosition()
 				diskWrite = app.createNode("fr.inria.built-in.Write")
 
-				# connects the Disk Cache node to the selected node, and set graph position. #
+				# connects the diskWrite node to the selected node, and set graph position. #
 				diskWrite.connectInput(0, n)
 
 				# set node position #
