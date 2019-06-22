@@ -23,7 +23,7 @@ def batchRenameNodes():
 	# set dialog margins #
 	dialog.setContentsMargins(0, 0, 10, 10)
 
-	dialog.resize(300, 170 )
+	dialog.resize( 300, 170 )
 
 	# create user input fields #
 	field1 = dialog.createStringParam("renameField","name : ")

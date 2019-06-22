@@ -21,6 +21,8 @@ def nodeChangeFrameRange():
 	# set dialog margins #
 	dialog.setContentsMargins(0, 0, 10, 10)
 
+	dialog.resize( 240, 100 )
+
 	# create Color picker box #
 	firstFrame = dialog.createIntParam("firstFrame","In :")
 	lastFrame = dialog.createIntParam("lastFrame","Out :")
@@ -45,3 +47,5 @@ def nodeChangeFrameRange():
 				oldFirstFrame.set(newFirstFrame)
 				oldLastFrame = n.getParam("lastFrame")
 				oldLastFrame.set(newLastFrame)
+
+nodeChangeFrameRange()

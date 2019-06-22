@@ -69,7 +69,7 @@ def flipbook():
 	playerList.setDefaultValue("DJV")
 	playerList.restoreDefaultValue()
 
-
+	sep02 = dialog.createSeparatorParam("line02","")
 
 	# Refresh UI #
 	dialog.refreshUserParamsGUI()
