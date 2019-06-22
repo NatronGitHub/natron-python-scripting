@@ -3,12 +3,14 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
+import os
+import string
 from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 
 
-# SETS FRAME RANGE FOR SELECTED 'READ' NODES #
+# BATCH RENAME NODES #
 
 def batchRenameNodes():
 
@@ -21,6 +23,8 @@ def batchRenameNodes():
 	# set dialog margins #
 	dialog.setContentsMargins(0, 0, 10, 10)
 
+	dialog.resize(300, 170 )
+
 	# create user input fields #
 	field1 = dialog.createStringParam("renameField","name : ")
 	#field1.setAddNewLine(False)
@@ -32,8 +36,9 @@ def batchRenameNodes():
 
 	line02 = dialog.createSeparatorParam("line02","")
 
-	field3 = dialog.createStringParam("replace","replace : ")
-	#field3.setAddNewLine(False)
+	field3 = dialog.createStringParam("replaceField1","replace : ")
+	field4 = dialog.createStringParam("replaceField2","by : ")	
+	field4.setAddNewLine(False)
 
 	line03 = dialog.createSeparatorParam("line03","")
 
@@ -41,7 +46,36 @@ def batchRenameNodes():
 
 	# if user press 'OK' #
 	if dialog.exec_():
-		print ('toto')
+		selectedNodes = app.getSelectedNodes()
+
+		# we initialize a counter #
+		counter = 0
+		digit = ''
+
+		# we check every selcted node name #
+		for nodes in selectedNodes:
+
+			# we grab current node name #
+			oldName = nodes.getLabel()
+
+			# we grab values entered by user #
+			newName = dialog.getParam("renameField").get()
+			newAdd = dialog.getParam("appendField").get()
+			newReplace1 = dialog.getParam("replaceField1").get()
+			newReplace2 = dialog.getParam("replaceField2").get()
 
 
-batchRenameNodes()
+			if newName != '':
+				oldName = newName
+				digit = counter
+				counter += 1
+
+			if newAdd != '':
+				oldName = str(oldName) + str(newAdd)
+
+			if newReplace1 != '':
+				oldName = oldName.replace( str(newReplace1), str(newReplace2) )
+
+
+			oldName = str(oldName) + str(counter)
+			nodes.setLabel(oldName)
