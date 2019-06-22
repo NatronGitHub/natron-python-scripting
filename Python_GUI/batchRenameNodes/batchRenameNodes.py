@@ -22,24 +22,18 @@ def batchRenameNodes():
 	dialog.setContentsMargins(0, 0, 10, 10)
 
 	# create user input fields #
-	boolean1 = dialog.createBooleanParam("renameBoolean","")
-	boolean1.set(True)
-	field1 = dialog.createStringParam("renameField","rename : ")
-	field1.setAddNewLine(False)
+	field1 = dialog.createStringParam("renameField","name : ")
+	#field1.setAddNewLine(False)
 
 	line01 = dialog.createSeparatorParam("line01","")
 
-	boolean2 = dialog.createBooleanParam("appendBoolean","")
-	boolean2.set(True)
-	field2 = dialog.createStringParam("appendField","add to name : ")
-	field2.setAddNewLine(False)
+	field2 = dialog.createStringParam("appendField","add : ")
+	#field2.setAddNewLine(False)
 
 	line02 = dialog.createSeparatorParam("line02","")
 
-	boolean3 = dialog.createBooleanParam("replaceBoolean","")
-	boolean3.set(True)
 	field3 = dialog.createStringParam("replace","replace : ")
-	field3.setAddNewLine(False)
+	#field3.setAddNewLine(False)
 
 	line03 = dialog.createSeparatorParam("line03","")
 
