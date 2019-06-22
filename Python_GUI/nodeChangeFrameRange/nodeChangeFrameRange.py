@@ -47,5 +47,3 @@ def nodeChangeFrameRange():
 				oldFirstFrame.set(newFirstFrame)
 				oldLastFrame = n.getParam("lastFrame")
 				oldLastFrame.set(newLastFrame)
-
-nodeChangeFrameRange()
