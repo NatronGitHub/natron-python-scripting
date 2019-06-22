@@ -1,6 +1,6 @@
 # openLocation
 
-Opens 'Read' location folder in explorer.
+Opens 'Read' or 'Write' location folder in explorer.
 
 ### HOW TO USE IT
 
@@ -9,7 +9,7 @@ Opens 'Read' location folder in explorer.
 
 ### RESULT
 
-* Opens 'Read' location folder in explorer.
+* Opens 'Read' or 'Write' location folder in explorer.
 
 ### SHORTCUT
 

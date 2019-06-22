@@ -27,7 +27,7 @@ Restart Natron.
 
 - **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML/README.md)** : Sets selected nodes to be displayed in italic in the Node Graph.
 
-- **[openLocation](/Python_GUI/openLocation/README.md)** : Opens 'Read' location folder in explorer.
+- **[openLocation](/Python_GUI/openLocation/README.md)** : Opens 'Read' or 'Write' location folder in explorer.
 
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS/README.md)** : Sets FPS for selected 'Read' nodes.

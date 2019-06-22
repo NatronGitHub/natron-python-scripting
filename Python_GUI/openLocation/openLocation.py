@@ -10,7 +10,7 @@ from NatronEngine import*
 from NatronGui import *
 
 
-# OPEN 'READ' LOCATION FOLDER IN EXPLORER. #
+# OPEN 'READ' OR 'WRITE' LOCATION FOLDER IN EXPLORER. #
 
 def openLocation():
 	app = natron.getGuiInstance(0)
@@ -19,9 +19,10 @@ def openLocation():
 	for n in selectedNodes:
 		myID = n.getPluginID()
 
-		if myID == "fr.inria.built-in.Read" :
+		if myID == "fr.inria.built-in.Read" or myID == "fr.inria.built-in.Write" :
 			myPath = n.getParam('filename').get()
 			myFolder = os.path.split(myPath)[-2]
+	
 
 			# ---------------------------------------------------- #
 			# ---------------------- Windows --------------------- #
