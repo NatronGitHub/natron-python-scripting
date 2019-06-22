@@ -4,7 +4,6 @@
 #Created by Fabrice Fernandez on 17/01/2018.
 
 import os
-from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 
@@ -16,6 +15,12 @@ def nodeChangeFPS():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
+	# set dialog title #
+	dialog.setWindowTitle("Change FPS")
+
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
+
 	# create Color picker box #
 	fpsInput = dialog.createIntParam("fpsInput","New FPS : ")
 	fpsInput.set(25)
@@ -23,7 +28,6 @@ def nodeChangeFPS():
 
 	dialog.refreshUserParamsGUI()
 
-	# if user press 'OK' #
 	if dialog.exec_():
 		newFPS = dialog.getParam("fpsInput").get()
 		selectedNodes = app.getSelectedNodes()

@@ -4,7 +4,7 @@
 #Created by Fabrice Fernandez on 17/01/2018.
 
 import os
-from NatronEngine import*
+#from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 
@@ -16,13 +16,18 @@ def nodeColorChange():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
+	# set dialog title #
+	dialog.setWindowTitle("Change node color")
+
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
+
 	# create Color picker box #
 	myColor = dialog.createColorParam("myColor","Color : ", 0)
 	myColor.set(1,1,1,0)
 
 	dialog.refreshUserParamsGUI()
 
-	# if user press 'OK' #
 	if dialog.exec_():
 		newColor = dialog.getParam("myColor").get()
 
@@ -30,5 +35,5 @@ def nodeColorChange():
 		for n in selectedNodes:
 			n.setColor(newColor[0],newColor[1],newColor[2])
 
-	print ('Node(s) color changed to R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) )
-	os.write( 1, '\n' + 'Node(s) color changed to R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) + '\n' )
+	print ( 1, '\n' + 'Node(s) color changed to [R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) +']' + '\n' )
+	os.write( 1, '\n' + 'Node(s) color changed to [R : ' + str(newColor[0]) + ' , G : ' + str(newColor[1]) + ' , B : ' + str(newColor[2]) +']' + '\n' )

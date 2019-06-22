@@ -3,7 +3,7 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
-from NatronEngine import*
+#from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 
@@ -15,7 +15,13 @@ def nodeChangeFrameRange():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
-	# create user input fields #
+	# set dialog title #
+	dialog.setWindowTitle("Change frame range")
+
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
+
+	# create Color picker box #
 	firstFrame = dialog.createIntParam("firstFrame","In :")
 	lastFrame = dialog.createIntParam("lastFrame","Out :")
 	lastFrame.setAddNewLine(False)
@@ -23,7 +29,6 @@ def nodeChangeFrameRange():
 
 	dialog.refreshUserParamsGUI()
 
-	# if user press 'OK' #
 	if dialog.exec_():
 		newFirstFrame = dialog.getParam("firstFrame").getValue()
 		newLastFrame = dialog.getParam("lastFrame").getValue()

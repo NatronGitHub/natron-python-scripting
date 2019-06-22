@@ -47,8 +47,8 @@ NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold Nodes <HTML>','nodeBold_H
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Open Location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
 
-NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
-NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
+NatronGui.natron.addMenuCommand('Tools/Time/Change Node FPS','nodeChangeFPS()')
+NatronGui.natron.addMenuCommand('Tools/Time/Change Node Frame Range','nodeChangeFrameRange()')
 NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 
 NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)

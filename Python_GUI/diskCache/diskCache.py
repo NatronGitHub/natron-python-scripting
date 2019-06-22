@@ -17,19 +17,17 @@ def diskCache():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
-	# creates UI #
+	# set dialog title #
+	dialog.setWindowTitle("Disk cache")
 
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
+
+	# creates UI #
 	line01 = dialog.createStringParam("sep01","")
 	line01.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	line02 = dialog.createStringParam("sep02","")
 	line02.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
-
-	sep01 = dialog.createSeparatorParam("line03","Disk Cache")
-
-	line03 = dialog.createStringParam("sep03","")
-	line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
-	line04 = dialog.createStringParam("sep04","")
-	line04.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	
 
 	firstFrame = dialog.createIntParam("firstFrame","In :")
@@ -41,10 +39,10 @@ def diskCache():
 	lastFrame.set(defaultLastFrame)
 	lastFrame.setAddNewLine(False)
 
-	line05 = dialog.createStringParam("sep05","")
-	line05.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+	line03 = dialog.createStringParam("sep03","")
+	line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-	sep02 = dialog.createSeparatorParam("line02","")
+	sep01 = dialog.createSeparatorParam("line01","")
 
 	# Refresh UI #
 	dialog.refreshUserParamsGUI()

@@ -7,11 +7,11 @@ import os
 import sys
 import subprocess
 
-from NatronEngine import *
+#from NatronEngine import *
 from NatronGui import *
 from PySide.QtGui import *
 
-import NatronGui
+#import NatronGui
 import NatronEngine
 
 
@@ -23,6 +23,12 @@ def flipbook():
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()
 
+	# set dialog title #
+	dialog.setWindowTitle("Flipbook")
+
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
+
 
 	# ------------------------------------------------------ #
 	# --------------------- UI creation -------------------- #
@@ -32,13 +38,6 @@ def flipbook():
 	line01.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	line02 = dialog.createStringParam("sep02","")
 	line02.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
-
-	sep01 = dialog.createSeparatorParam("line03","Flipbook")
-
-	line03 = dialog.createStringParam("sep03","")
-	line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
-	line04 = dialog.createStringParam("sep04","")
-	line04.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	
 	# creates In/Out user parameters #
 	firstFrame = dialog.createIntParam("firstFrame","In :")
@@ -50,10 +49,10 @@ def flipbook():
 	lastFrame.set(defaultLastFrame)
 	lastFrame.setAddNewLine(False)
 
-	line05 = dialog.createStringParam("sep05","")
-	line05.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+	line03 = dialog.createStringParam("sep03","")
+	line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-	sep02 = dialog.createSeparatorParam("line02","")
+	sep01 = dialog.createSeparatorParam("line01","")
 
 	# creates formats list #
 	formatList = dialog.createChoiceParam("choice01","Format : ")
@@ -77,7 +76,7 @@ def flipbook():
 
 
 
-	# if user press 'OK' #
+	# code executed when OK button is pressed #
 	if dialog.exec_():
 
 		# retrieves values entered by user #
@@ -106,7 +105,7 @@ def flipbook():
 				parentPosition = n.getPosition()
 				diskWrite = app.createNode("fr.inria.built-in.Write")
 
-				# connects the diskWrite node to the selected node, and set graph position. #
+				# connects the Disk Cache node to the selected node, and set graph position. #
 				diskWrite.connectInput(0, n)
 
 				# set node position #
