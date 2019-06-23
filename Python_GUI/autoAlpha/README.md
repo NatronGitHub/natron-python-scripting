@@ -14,7 +14,7 @@ Sets alpha to 1 (full white) for selected 'Read' nodes.
 ### INSTALLATION
 
 * Copy 'autoAlpha' folder in your .Natron folder.
-* Add following lines to your 'initGui.py' file, where <path> is the path to the 'autoAlpha' folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'autoAlpha' folder.
 
 ```
 from <path>.autoAlpha.autoAlpha import *

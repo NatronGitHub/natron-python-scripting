@@ -16,7 +16,7 @@ Renames selected node.
 ### INSTALLATION
 
 * Copy 'batchRenameNodes' folder in your .Natron folder.
-* Add following lines to your 'initGui.py' file, where ``<path>`` is the path to the 'batchRenameNodes' folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'batchRenameNodes' folder.
 
 ```
 from <path>.batchRenameNodes.batchRenameNodes import *
