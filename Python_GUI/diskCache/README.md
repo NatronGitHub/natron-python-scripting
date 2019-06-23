@@ -16,3 +16,13 @@ Creates and process a 'DiskCache' node for the selected node.
 ### SHORTCUT
 
 * Alt+D
+
+### INSTALLATION
+
+* Copy 'diskCache' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'diskCache' folder.
+
+```
+from <path>.diskCache.diskCache import *
+NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+```

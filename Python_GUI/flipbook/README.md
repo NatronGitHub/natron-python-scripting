@@ -43,3 +43,12 @@ Default folder is :
 * djv_view : http://djv.sourceforge.net/Download.html
 * mrViewer : https://sourceforge.net/projects/mrviewer/files/
 * PdPlayer : http://pdplayer.com/downloads.html
+
+### INSTALLATION
+
+* Copy 'flipbook' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'flipbook' folder.
+
+```
+from <path>.flipbook.flipbook import *
+NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
