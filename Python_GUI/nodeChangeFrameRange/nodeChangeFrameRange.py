@@ -21,6 +21,7 @@ def nodeChangeFrameRange():
 	# set dialog margins #
 	dialog.setContentsMargins(0, 0, 10, 10)
 
+	# set window size #
 	dialog.resize( 240, 100 )
 
 	# create Color picker box #
