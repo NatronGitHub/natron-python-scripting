@@ -12,3 +12,12 @@ Sets FPS for selected 'Read' nodes.
 ### RESULT
 
 * Selected nodes have their FPS changed.
+
+### INSTALLATION
+
+* Copy 'nodeChangeFPS' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'nodeChangeFPS' folder.
+
+```
+from <path>.nodeChangeFPS.nodeChangeFPS import *
+NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')

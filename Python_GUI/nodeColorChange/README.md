@@ -12,3 +12,13 @@ Sets node color for selected nodes.
 ### RESULT
 
 * Selected nodes have their color changed.
+
+### INSTALLATION
+
+* Copy 'nodeColorChange' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'nodeColorChange' folder.
+
+```
+from <path>.nodeColorChange.nodeColorChange import *
+NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
+```

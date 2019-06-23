@@ -12,3 +12,13 @@ Sets frame range for selected 'Read' nodes.
 ### RESULT
 
 * Selected nodes have their frame range changed.
+
+### INSTALLATION
+
+* Copy 'nodeChangeFrameRange' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'nodeChangeFrameRange' folder.
+
+```
+from <path>.nodeChangeFrameRange.nodeChangeFrameRange import *
+NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
+```

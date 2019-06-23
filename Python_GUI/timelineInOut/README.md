@@ -11,3 +11,13 @@ Sets timeline In/Out points.
 ### RESULT
 
 * Timeline In/Out points have been changed.
+
+### INSTALLATION
+
+* Copy 'timelineInOut' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'timelineInOut' folder.
+
+```
+from <path>.timelineInOut.timelineInOut import *
+NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
+```
