@@ -25,7 +25,7 @@ from PySide.QtGui import *
 
 from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
 from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
-from Python_GUI.nodeColorChange.nodeColorChange import *
+from Python_GUI.nodeChangeColor.nodeChangeColor import *
 from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
 from Python_GUI.nodeChangeFrameRange.nodeChangeFrameRange import *
 from Python_GUI.autoAlpha.autoAlpha import *
@@ -34,6 +34,7 @@ from Python_GUI.flipbook.flipbook import *
 from Python_GUI.timelineInOut.timelineInOut import *
 from Python_GUI.openLocation.openLocation import *
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
+from Python_GUI.trackerToRoto.trackerToRoto import *
 
 #####################################################################
 #																	#
@@ -43,8 +44,10 @@ from Python_GUI.batchRenameNodes.batchRenameNodes import *
 
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto Alpha','autoAlpha')
 
+NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
+
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeColorChange')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeChangeColor')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold Nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Open Location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)

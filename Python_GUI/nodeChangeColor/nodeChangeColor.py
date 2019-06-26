@@ -11,7 +11,7 @@ from PySide.QtGui import *
 
 # SETS NODE COLOR FOR SELECTED NODES #
 
-def nodeColorChange():
+def nodeChangeColor():
 
 	app = natron.getGuiInstance(0)
 	dialog = app.createModalDialog()

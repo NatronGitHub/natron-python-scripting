@@ -20,6 +20,9 @@ Restart Natron.
 ### Channel
 - **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 (full white) for selected 'Read' nodes.
 
+### Channel
+- **[trackerToRoto](/Python_GUI/trackerToRoto/README.md)** : Generates a 'Roto' out of a selected 'Tracker' node.
+
 ### Node Graph
 - **[batchRenameNodes](/Python_GUI/batchRenameNodes/README.md)** : Renames selected nodes.
 
