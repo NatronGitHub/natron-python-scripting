@@ -1,12 +1,14 @@
 # trackerToRoto
 
-Generates a 'Roto' out of a selected 'Tracker' node.
+Generates a 'Roto' out of a selected 'Tracker' node(s).
 
 ### HOW TO USE IT
 
-* Select a 'Tracker' node.
+* Select one or more 'Tracker' node(s).
 * Tools -> Generate -> Tracker to roto
 * Select 'All' or 'Selected'.
+  - All : generates a roto out of all tracks
+  - Selected : generates a roto out of selected tracks ( at least 3 must be selected )
 * Click 'OK.'
 
 #### Overall
