@@ -47,8 +47,8 @@ def trackerToRoto():
 		currentNode = app.getSelectedNodes()
 
 		# check if more than one node is selected #
-		if len(currentNode) >1 :
-			warning = natron.warningDialog("Warning","Select only one node.")
+		if len(currentNode) <1 :
+			warning = natron.warningDialog("Warning","Select a node.")
 
 		else:
 			for n in currentNode :
@@ -57,6 +57,7 @@ def trackerToRoto():
 				# check if the selected node is a Tracker #
 				if myID != "fr.inria.built-in.Tracker" :
 					warning = natron.warningDialog("Warning","Select a Tracker.")
+					break
 
 				else:					
 					# get 'Tracker' context, that holds all informations about tracks #
@@ -69,6 +70,7 @@ def trackerToRoto():
 						# if less than 3 tracks is selected, display warning message #
 						if len(myTracks) < 3:
 							warning = natron.warningDialog("Warning","Select at least 3 tracks.")
+							break
 
 					# if choice is set to 'All', then use all tracks #
 					else :
