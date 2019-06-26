@@ -4,9 +4,16 @@ Generates a 'Roto' out of a selected 'Tracker' node.
 
 ### HOW TO USE IT
 
+* Select a 'Tracker' node.
 * Tools -> Generate -> Tracker to roto
 * Select 'All' or 'Selected'.
 * Click 'OK.'
+
+#### Overall
+
+* Tracks :
+  - All
+  - Selected
 
 ### RESULT
 
