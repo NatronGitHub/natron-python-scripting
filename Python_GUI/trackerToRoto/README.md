@@ -1,6 +1,6 @@
 # trackerToRoto
 
-Generates a 'Roto' out of a selected 'Tracker' node(s).
+Generates a 'Roto' out of one or multiple 'Tracker' node(s).
 
 ### HOW TO USE IT
 
