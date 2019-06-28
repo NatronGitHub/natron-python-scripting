@@ -36,6 +36,8 @@ from Python_GUI.openLocation.openLocation import *
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.trackerToRoto.trackerToRoto import *
 from Python_GUI.rotoToTracker.rotoToTracker import *
+from Python_GUI.mergeBlendingPlus.mergeBlendingPlus import *
+from Python_GUI.mergeBlendingMinus.mergeBlendingMinus import *
 
 #####################################################################
 #																	#
@@ -53,6 +55,9 @@ NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeChangeColo
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold Nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Open Location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
+
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingPlus', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingMinus', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
