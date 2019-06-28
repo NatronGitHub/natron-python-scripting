@@ -37,7 +37,7 @@ Restart Natron.
 - **[openLocation](/Python_GUI/openLocation/README.md)** : Opens 'Read' or 'Write' location folder in explorer.
 
 ### Other
-- **[mergeBlendinDown](/Python_GUI/mergeBlendingDown/README.md)** : Cycles through 'Merge' blending modes downward.
+- **[mergeBlendingDown](/Python_GUI/mergeBlendingDown/README.md)** : Cycles through 'Merge' blending modes downward.
 
 - **[mergeBlendingUp](/Python_GUI/mergeBlendingUp/README.md)** : Cycles through 'Merge' blending modes upward.
 
