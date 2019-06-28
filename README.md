@@ -36,6 +36,11 @@ Restart Natron.
 
 - **[openLocation](/Python_GUI/openLocation/README.md)** : Opens 'Read' or 'Write' location folder in explorer.
 
+### Other
+- **[mergeBlendingPlus](/Python_GUI/mergeBlendingPlus/README.md)** : Cycles through 'Merge' blending modes downward.
+
+- **[mergeBlendingMinus](/Python_GUI/mergeBlendingMinus/README.md)** : Cycles through 'Merge' blending modes upward.
+
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS/README.md)** : Sets FPS for selected 'Read' nodes.
 
