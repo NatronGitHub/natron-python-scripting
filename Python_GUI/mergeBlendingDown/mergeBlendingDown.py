@@ -1,6 +1,6 @@
 from NatronGui import *
 
-def mergeBlendingPlus():
+def mergeBlendingDown():
 	
 	# get current Natron instance running in memory #
 	app = natron.getGuiInstance(0)
