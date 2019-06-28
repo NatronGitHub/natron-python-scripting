@@ -175,7 +175,7 @@ def trackerToRoto():
 						print ('point ' +  str(pointIndex) + ' :')
 						print '---------------------------------------------------------------'
 
-						while keyCounter <= (nXKeys-1):
+						while keyCounter < (nXKeys):
 
 							# getKeyTime returns a tuple with a boolean value indicating if it succeeded and the keyframe time #
 

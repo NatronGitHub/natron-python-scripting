@@ -35,6 +35,7 @@ from Python_GUI.timelineInOut.timelineInOut import *
 from Python_GUI.openLocation.openLocation import *
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.trackerToRoto.trackerToRoto import *
+from Python_GUI.rotoToTracker.rotoToTracker import *
 
 #####################################################################
 #																	#
@@ -44,6 +45,7 @@ from Python_GUI.trackerToRoto.trackerToRoto import *
 
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto Alpha','autoAlpha')
 
+NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
