@@ -14,6 +14,7 @@ import os
 import string
 from NatronEngine import*
 from os import*
+import NatronEngine
 
 
 #####################################################################
@@ -25,8 +26,7 @@ from os import*
 from Python_INIT.listNatronPath.listNatronPath import *
 from Python_INIT.listPyPlugs.listPyPlugs import *
 from Python_INIT.natronLogo.natronLogo import *
-
-
+from Python_INIT.setPreferences.setPreferences import *
 
 
 # CREATES A NEW 'DEEP' LAYER #
@@ -146,6 +146,13 @@ print '--------------------     INIT.PY     -----------------------'
 print separator
 print separator
 
+# loading user preferences #
+#--------------------------#
+
+print '\n'
+setPreferences()
+print '\n'
+print separator
 
 # check Natron's version status, version number, x32 or x64 version #
 #-------------------------------------------------------------------#
