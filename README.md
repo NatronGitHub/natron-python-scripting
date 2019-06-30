@@ -21,7 +21,7 @@ Restart Natron.
 - **[autoAlpha](/Python_GUI/autoAlpha)** : Sets alpha to 1 (full white) for selected 'Read' nodes.
 
 ### Generate
-- **[rotoToTracker](/Python_GUI/rotoToTracker/README.md)** : Generates a 'Tracker' out of a selected 'Roto' node(s).
+- **[rotoToTracker](/Python_GUI/rotoToTracker)** : Generates a 'Tracker' out of a selected 'Roto' node(s).
 
 - **[trackerToRoto](/Python_GUI/trackerToRoto/README.md)** : Generates a 'Roto' out of a selected 'Tracker' node(s).
 
