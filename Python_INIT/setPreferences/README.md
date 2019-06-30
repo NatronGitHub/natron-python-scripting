@@ -12,4 +12,4 @@ from <path>.setPreferences.setPreferences import *
 setPreferences()
 ```
 
-Copy preferences.txt file to the root of .Natron folder.
+Move preferences.txt file to .Natron folder.
