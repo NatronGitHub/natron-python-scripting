@@ -3,13 +3,13 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
-import os
-import string
-from NatronEngine import*
-from os import*
+
+import NatronEngine
+
 
 # ADDS 'DEEP' LAYER #
 
 def addDeepLayer(app):
+
 	depthPlane = NatronEngine.ImageLayer( "Deep" , "Deep" , "FB")
 	app.addProjectLayer( depthPlane )

@@ -8,7 +8,7 @@ import string
 from NatronEngine import*
 from os import*
 
-# SET UP PROJECT DEFAULT SETTINGS #
+# SET UP DEFAULT PROJECT SETTINGS #
 
 def setProjectSettings(app):
 	app.getProjectParam('outputFormat').setValue("HD 1920x1080")

@@ -26,32 +26,13 @@ import NatronEngine
 from Python_INIT.listNatronPath.listNatronPath import *
 from Python_INIT.listPyPlugs.listPyPlugs import *
 from Python_INIT.natronLogo.natronLogo import *
+
 from Python_INIT.setPreferences.setPreferences import *
 
-
-# CREATES A NEW 'DEEP' LAYER #
-#----------------------------#
-def addDeepLayer(app):
-	depthPlane = NatronEngine.ImageLayer( "Deep" , "Deep" , "FB")
-	app.addProjectLayer( depthPlane )
-
-# CREATES A NEW 'DEPTH' LAYER #
-#-----------------------------#
-def addDepthLayer(app):
-	depthPlane = NatronEngine.ImageLayer( "Depth" , "Depth" , "Z")
-	app.addProjectLayer( depthPlane )
-
-# CREATES A NEW 'MASK' LAYER #
-#----------------------------#
-def addMaskLayer(app):
-	depthPlane = NatronEngine.ImageLayer( "Mask" , "Mask" , "A")
-	app.addProjectLayer( depthPlane )
-
-# CREATES A NEW 'MOTION' LAYER #
-#------------------------------#
-def addMotionLayer(app):
-    depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
-    app.addProjectLayer( depthPlane )
+from Python_INIT.addDeepLayer.addDeepLayer import *
+from Python_INIT.addDepthLayer.addDepthLayer import *
+from Python_INIT.addMaskLayer.addMaskLayer import *
+from Python_INIT.addMotionLayer.addMotionLayer import *
 
 
 # SET UP DEFAULT PROJECT SETTINGS #

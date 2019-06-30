@@ -18,7 +18,7 @@ Restart Natron.
 ## Natron tools
 
 ### Channel
-- **[autoAlpha](/Python_GUI/autoAlpha/README.md)** : Sets alpha to 1 (full white) for selected 'Read' nodes.
+- **[autoAlpha](/Python_GUI/autoAlpha)** : Sets alpha to 1 (full white) for selected 'Read' nodes.
 
 ### Generate
 - **[rotoToTracker](/Python_GUI/rotoToTracker/README.md)** : Generates a 'Tracker' out of a selected 'Roto' node(s).
@@ -28,7 +28,7 @@ Restart Natron.
 ### Node Graph
 - **[batchRenameNodes](/Python_GUI/batchRenameNodes/README.md)** : Renames selected nodes.
 
-- **[nodeColorChange](/Python_GUI/nodeColorChange/README.md)** : Sets node color for selected nodes.
+- **[nodeChangeColor](/Python_GUI/nodeChangeColor/README.md)** : Sets node color for selected nodes.
 
 - **[nodeBold_HTML](/Python_GUI/nodeBold_HTML/README.md)** : Sets selected nodes to be displayed in bold in the Node Graph.
 

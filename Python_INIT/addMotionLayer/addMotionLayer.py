@@ -3,13 +3,13 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 17/01/2018.
 
-import os
-import string
-from NatronEngine import*
-from os import*
+
+import NatronEngine
+
 
 # ADDS 'MOTION' LAYER #
 
 def addMotionLayer(app):
+	
     depthPlane = NatronEngine.ImageLayer( "Motion" , "Motion" , "UV" )
     app.addProjectLayer( depthPlane )
