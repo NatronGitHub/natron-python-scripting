@@ -401,8 +401,152 @@ def setPreferences():
 			del currentParam
 
 
+			#----------------USER INTERFACE----------------#
+
+			# 'Warn when a file changes externally' #
+			newParam = getParamFromFile('[Warn file change]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('warnOnExternalChange')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Promp with file dialog when creating a Write node' #
+			newParam = getParamFromFile('[Prompt Write node]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('writeUseDialog')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Refresh viewer only when editing is finished' #
+			newParam = getParamFromFile('[Refresh viewer]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('renderOnEditingFinished')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Linear color pickers' #
+			newParam = getParamFromFile('[Linear color pickers]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('linearPickers')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Maximum number of open settings panels' #
+			newParam = getParamFromFile('[Max panels]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('maxPanels')
+			currentParam.set(int(newParam))
+
+			del newParam
+			del currentParam
+
+
+			# 'Value increments based on cursor position' #
+			newParam = getParamFromFile('[Value increments]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('cursorPositionAwareFields')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Load workspace embedded within projects' #
+			newParam = getParamFromFile('[Load workspace]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('loadProjectWorkspace')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			#----------------COLOR MANAGEMENT----------------#
+
+
+			# 'Documentation source' #
+			newParam = getParamFromFile('[OCIO config]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('ocioConfig')
+
+			if newParam == 'blender':
+				currentParam.set(0)
+
+			if newParam == 'natron':
+				currentParam.set(1)
+
+			if newParam == 'nuke-default':
+				currentParam.set(2)
+
+			if newParam == 'Custom config':
+				currentParam.set(3)
+
+			del newParam
+			del currentParam
+
+
+			# 'Load workspace embedded within projects' #
+			newParam = getParamFromFile('[OCIO changed]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('warnOCIOChanged')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Load workspace embedded within projects' #
+			newParam = getParamFromFile('[OCIO not default]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('startupCheckOCIO')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+
+
+
 
 
 
 	else:
 		pass
+
+		# save settings #
+	NatronEngine.natron.getSettings().saveSettings()

@@ -1,20 +1,24 @@
-#######################################
-#                                     #
-#          NATRON PREFERENCES         #
-#                                     #
-#######################################
+#############################################
+#                                           #
+#              NATRON PREFERENCES           #
+#                                           #
+#############################################
 
 
-#                General              #
----------------------------------------
+
+---------------------------------------------
+#                  GENERAL                  #
+---------------------------------------------
 [Check updates]: False
 [Auto-save delay]: 5
 [Enable Auto-save]: True
 [Appear to plug-ins as]: Natron
 
 
-#              Threading              #
----------------------------------------
+
+---------------------------------------------
+#                 THREADING                 #
+---------------------------------------------
 [Number render threads]: 0
 [Number parallel renders]: 0
 [Effect thread-pool]: True
@@ -23,29 +27,59 @@
 [Append render to queue]: False
 
 
-#              Rendering              #
----------------------------------------
+
+---------------------------------------------
+#                 RENDERING                 #
+---------------------------------------------
 [Convert NaN values]: True
 [Copy input image]: False
 [RGB components support]: True
 [Concatenation support]: True
 
 
-#            GPU Rendering            #
----------------------------------------
+
+---------------------------------------------
+#               GPU RENDERING               #
+---------------------------------------------
 [No OpenGL contexts]: 2
 [OpenGL rendering]: Disabled If Background
 
 
-#            Project Setup            #
----------------------------------------
+
+---------------------------------------------
+#               PROJECT SETUP               #
+---------------------------------------------
 [First image read]: True
 [Auto-preview]: True
 [Fix file-paths]: True
 [Use drive letters]: True
 
 
-#            Documentation            #
----------------------------------------
+
+---------------------------------------------
+#               DOCUMENTATION               #
+---------------------------------------------
 [Doc source]: Online
 [Doc port]: 0
+
+
+
+---------------------------------------------
+#               USER INTERFACE              #
+---------------------------------------------
+[Warn file change]: True
+[Prompt Write node]: False
+[Refresh viewer]: False
+[Linear color pickers]: True
+[Max panels]: 3
+[Value increments]: True
+[Load workspace]: False
+
+
+
+---------------------------------------------
+#              COLOR MANAGEMENT             #
+---------------------------------------------
+[OCIO config]: blender
+[OCIO changed]: False
+[OCIO not default]: False
