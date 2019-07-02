@@ -51,6 +51,9 @@ Restart Natron.
 
 - **[flipbook](/Python_GUI/flipbook)** : Renders and plays the selected node in an external viewer. (Win/Linux)
 
+### Utils
+- **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp.
+
 ## Natron snippets
 - **[addDeepLayer](/Python_INIT/addDeepLayer)** : Adds 'Deep' layer to Natron.
 
