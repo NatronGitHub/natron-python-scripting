@@ -539,6 +539,72 @@ def setPreferences():
 			del currentParam
 
 
+			#----------------CACHING----------------#
+
+
+			# 'Aggressive caching' #
+			newParam = getParamFromFile('[Aggressive caching]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('aggressiveCaching')
+
+			if 'False' in newParam:
+				currentParam.set(0)
+			if 'True' in newParam:
+				currentParam.set(1)
+
+			del newParam
+			del currentParam
+
+
+			# 'Maximum amount of RAM memory used for caching' #
+			newParam = getParamFromFile('[Caching RAM]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('maxRAMPercent')
+			currentParam.set(int(newParam))
+
+			del newParam
+			del currentParam
+
+
+
+			# 'System RAM to keep free' #
+			newParam = getParamFromFile('[Free RAM]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('unreachableRAMPercent')
+			currentParam.set(int(newParam))
+
+			del newParam
+			del currentParam
+
+
+			# 'System RAM to keep free' #
+			newParam = getParamFromFile('[Max playback]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('maxViewerDiskCache')
+			currentParam.set(int(newParam))
+
+			del newParam
+			del currentParam
+
+
+			# 'System RAM to keep free' #
+			newParam = getParamFromFile('[Max diskcache]: ', preferencesFile)
+			currentParam = NatronEngine.natron.getSettings().getParam('maxDiskCacheNode')
+			currentParam.set(int(newParam))
+
+			del newParam
+			del currentParam
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

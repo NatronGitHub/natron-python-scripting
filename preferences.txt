@@ -90,3 +90,14 @@
 [OCIO config]: blender
 [OCIO changed]: False
 [OCIO not default]: False
+
+
+
+---------------------------------------------
+#                   CACHING                 #
+---------------------------------------------
+[Aggressive caching]: True
+[Caching RAM]: 50
+[Free RAM]: 5
+[Max playback]: 5
+[Max diskcache]: 10

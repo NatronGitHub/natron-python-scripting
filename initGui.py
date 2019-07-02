@@ -38,6 +38,8 @@ from Python_GUI.trackerToRoto.trackerToRoto import *
 from Python_GUI.rotoToTracker.rotoToTracker import *
 from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
 from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
+from Python_GUI.collectFiles.collectFiles import *
+
 
 #####################################################################
 #																	#
@@ -65,6 +67,8 @@ NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 
 NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
+
+NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
 
 
 separator = ('------------------------------------------------------------')
