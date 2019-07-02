@@ -46,4 +46,4 @@ def listPyPlugs():
 		pyplugCount += fileCount
 		fileCount = 0
 
-	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUG(S)/PYTHON SCRIPTS AVAILABLE ON THE SYSTEM')
+	print ('\n' + '- ' + str(pyplugCount) + ' PYPLUGS/PYTHON SCRIPTS AVAILABLE ON THE SYSTEM')
