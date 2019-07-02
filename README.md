@@ -54,6 +54,8 @@ Restart Natron.
 ### Utils
 - **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp.
 
+- **[replacePaths](/Python_GUI/replacePaths)** : Replace path in 'Read' nodes.
+
 ## Natron snippets
 - **[addDeepLayer](/Python_INIT/addDeepLayer)** : Adds 'Deep' layer to Natron.
 

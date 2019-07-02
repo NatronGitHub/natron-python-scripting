@@ -1,6 +1,6 @@
 # replacePaths
 
-Replace paths in 'Read' nodes.
+Replace path in 'Read' nodes.
 
 ### HOW TO USE IT
 
