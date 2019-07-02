@@ -9,7 +9,7 @@ Used to backup a comp.
 
 ### RESULT
 
-Comp and all files used in it are copied to one unique folder.
+Comp and all files used in Node Graph get gathered in one place.
 All 'Read' nodes are relinked to their new file location.
 Opens new folder location.
 
