@@ -39,6 +39,7 @@ from Python_GUI.rotoToTracker.rotoToTracker import *
 from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
 from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
 from Python_GUI.collectFiles.collectFiles import *
+from Python_GUI.replacePaths.replacePaths import *
 
 
 #####################################################################
@@ -65,10 +66,11 @@ NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
 NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 
+NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Replace Paths','replacePaths()')
+
 NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
-
-NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
 
 
 separator = ('------------------------------------------------------------')
@@ -97,6 +99,9 @@ print '   + Tools/Other/Blending mode-'
 print '   +'
 print '   + Tools/Time/Read FPS'
 print '   + Tools/Time/Read Frame Range'
+print '   +'
+print '   + Tools/Utils/Collect Files'
+print '   + Tools/Utils/Replace Paths'
 print '   +'
 print '   + Tools/Render/Disk Cache'
 print '   + Tools/Render/Flipbook'
