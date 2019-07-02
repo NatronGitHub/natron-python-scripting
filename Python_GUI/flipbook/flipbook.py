@@ -7,11 +7,9 @@ import os
 import sys
 import subprocess
 
-#from NatronEngine import *
 from NatronGui import *
 from PySide.QtGui import *
 
-#import NatronGui
 import NatronEngine
 
 

@@ -11,7 +11,7 @@ import subprocess
 import NatronEngine
 from NatronGui import *
 
-# SETS FRAMEHOLD DEFAULT VALUE #
+# GATHERS COMP AND FILES IN ONE PLACE #
 
 def collectFiles():
 
