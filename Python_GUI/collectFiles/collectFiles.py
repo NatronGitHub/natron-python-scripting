@@ -6,6 +6,8 @@
 import os
 import string
 import shutil
+import subprocess
+
 import NatronEngine
 from NatronGui import *
 
@@ -171,6 +173,26 @@ def collectFiles():
 
 	os.chdir(rootFolder)
 	app.saveProjectAs(newProjectName)
+
+	# ---------------------------------------------------- #
+	# ---------------------- Windows --------------------- #
+	# ---------------------------------------------------- #
+	if natron.isWindows() == 1 :
+		os.chdir(rootFolder)
+		subprocess.Popen( ['explorer', '.'] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+
+	# ---------------------------------------------------- #
+	# ----------------------- Linux ---------------------- #
+	# ---------------------------------------------------- #
+	if natron.isLinux() == 1 :
+		subprocess.Popen( ['thunar', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+
+	# ---------------------------------------------------- #
+	# ------------------------ OSX ----------------------- #
+	# ---------------------------------------------------- #
+	if natron.isMacOSX() == 1 :
+		subprocess.Popen( ['explorer', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+
 	app.resetProject()
 
 	newNatronProject = rootFolder + newProjectName + '.ntp'
