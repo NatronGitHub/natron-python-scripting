@@ -77,15 +77,13 @@ def replacePaths():
 			if myID == "fr.inria.built-in.Read" :
 
 				oldPathParamValue = oldPath.getValue()
-				print oldPathParamValue
 
 				newPathParamValue = newPath.getValue()
-				print newPathParamValue
 
 				currentPath = str(currentNode.getParam('filename').get())
-				print 'old path : ' + currentPath
+				print 'Old path : ' + currentPath
 
 				currentPath = currentPath.replace(oldPathParamValue,newPathParamValue)
-				print 'new path : ' + currentPath
+				print 'New path : ' + currentPath
 				
 				oldReadPath = currentNode.getParam('filename').set(currentPath)
