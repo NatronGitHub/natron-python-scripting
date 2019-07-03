@@ -18,182 +18,230 @@ def collectFiles():
 	# get current Natron instance running in memory #
 	app = natron.getGuiInstance(0)
 
-	# we grab current project name #
-	projectName = app.getProjectParam('projectName').get()
-	projectName = os.path.splitext(projectName)[0]
+	#################################################
 
-	# Gives user's home directory
-	myUserPath = os.path.expanduser('~')
+	# create dialog window #
+	dialog = app.createModalDialog()
 
-	# Gives username by splitting path based on OS
-	myUser = os.path.split(myUserPath)[-1]	
+	# set dialog title #
+	dialog.setWindowTitle("Collect files")
 
+	# set dialog margins #
+	dialog.setContentsMargins(0, 0, 10, 10)
 
-	# ---------------------------------------------------- #
-	# ---------------------- Windows --------------------- #
-	# ---------------------------------------------------- #
+	# set window size #
+	dialog.resize( 400, 100 )
 
-	if natron.isWindows() == 1 :
+	# UI creation #
+	line01 = dialog.createStringParam("line01","")
+	line01.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+	line02 = dialog.createStringParam("line02","")
+	line02.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-		# get diskCachePath from Preferences #
-		userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
+	folderLocation = dialog.createPathParam("destFolder","Destination folder : ")
 
-		# build 'Localize' path #
-		if userDiskCachePath == '':
+	# Refresh UI #
+	dialog.refreshUserParamsGUI()
 
-			# if diskCachePath is empty (default) #
-			localizeFolderPath = str(myUserPath) + '\\AppData\\Local\\INRIA\\Natron\\Localize\\'
+	if dialog.exec_():
 
-		else :
-
-			# if diskCachePath is set to a custom folder #
-			localizeFolderPath = str(userDiskCachePath) + '\\Localize\\'
+		#################################################
 
 
-	# ---------------------------------------------------- #
-	# --------------------- Linux/OSX -------------------- #
-	# ---------------------------------------------------- #
+		# we grab current project name #
+		projectName = app.getProjectParam('projectName').get()
+		projectName = os.path.splitext(projectName)[0]
 
-	if natron.isLinux() == 1 or natron.isMacOSX() == 1 :
+		destinationFolder = folderLocation.getValue()
 
-		# get diskCachePath from Preferences #
-		userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
+		if destinationFolder == '' :
+			# Gives user's home directory
+			myUserPath = os.path.expanduser('~')
 
-		# build 'Localize' path #
-		if userDiskCachePath == '':
+		if destinationFolder != '' :
+			myUserPath = destinationFolder
 
-			# if diskCachePath is empty (default) #
-			localizeFolderPath = str(myUserPath) + '/.cache/INRIA/Natron/Localize/'
+		os.write(1,myUserPath)
 
-		else :
-			# if diskCachePath is set to a custom folder #
-			localizeFolderPath = str(userDiskCachePath) + '/Localize/'
-
+		# Gives username by splitting path based on OS
+		#myUser = os.path.split(myUserPath)[-1]	
 
 
-	# check if output folder exists. If not, we create it #
-	if not os.path.exists(localizeFolderPath):
-		os.makedirs(localizeFolderPath)
+		# ---------------------------------------------------- #
+		# ---------------------- Windows --------------------- #
+		# ---------------------------------------------------- #
+
+		if natron.isWindows() == 1 :
+
+			# get diskCachePath from Preferences #
+			userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
+
+			if destinationFolder == '' :
+
+				# build 'Localize' path #
+				if userDiskCachePath == '':
+
+					# if diskCachePath is empty (default) #
+					localizeFolderPath = str(myUserPath) + '\\AppData\\Local\\INRIA\\Natron\\Localize\\'
+
+				else :
+
+					# if diskCachePath is set to a custom folder #
+					localizeFolderPath = str(userDiskCachePath) + '\\Localize\\'
+
+			else :
+				localizeFolderPath = str(myUserPath) + '/'
 
 
-	# we select all nodes #
-	app.selectAllNodes()
+		# ---------------------------------------------------- #
+		# --------------------- Linux/OSX -------------------- #
+		# ---------------------------------------------------- #
 
-	# we get selected nodes #
-	selectedNodes = app.getSelectedNodes()
+		if natron.isLinux() == 1 or natron.isMacOSX() == 1 :
 
-	# we cycle all selected nodes #
-	for currentNode in selectedNodes:
+			# get diskCachePath from Preferences #
+			userDiskCachePath = NatronEngine.natron.getSettings().getParam('diskCachePath').get()
 
-		# get current node ID #
-		nodeID = currentNode.getPluginID()
+			if destinationFolder == '' :
 
-		# if node is not a 'Read' node #
-		if nodeID == 'fr.inria.built-in.Read':
+				# build 'Localize' path #
+				if userDiskCachePath == '':
 
-			# we grab the complete file path #
-			fileCompletePath = currentNode.getParam('filename').get()
+					# if diskCachePath is empty (default) #
+					localizeFolderPath = str(myUserPath) + '/.cache/INRIA/Natron/Localize/'
 
-			# we grab the file name only #
-			fileName = os.path.basename(fileCompletePath)
+				else :
+					# if diskCachePath is set to a custom folder #
+					localizeFolderPath = str(userDiskCachePath) + '/Localize/'
 
-			# we grab the file path #
-			filePath = fileCompletePath.replace(fileName,'')
-
-			# file name without the extension #
-			fileNameNoExt = os.path.splitext(fileName)[0]
+			else :
+				localizeFolderPath = str(myUserPath) + '/'
 
 
-			# ------------------------- #
-			# IF FILE IS NOT A SEQUENCE #
-			# ------------------------- #
 
-			if '#' not in str(fileName):
+		# check if output folder exists. If not, we create it #
+		if not os.path.exists(localizeFolderPath):
+			os.makedirs(localizeFolderPath)
 
-				# a created folder will be named as the file #
-				newFileFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/Sources/' + str(fileNameNoExt)
 
-				# we create the folder #
-				if os.path.exists(newFileFolder):
-					pass
-				else:
-					os.makedirs(newFileFolder)
+		# we select all nodes #
+		app.selectAllNodes()
 
-				# we copy the file #
-				shutil.copy(fileCompletePath,newFileFolder)
+		# we get selected nodes #
+		selectedNodes = app.getSelectedNodes()
 
-				# we get copied file path #
-				newPath = './Sources/'+ str(fileNameNoExt) + '/' + str(fileName)
+		# we cycle all selected nodes #
+		for currentNode in selectedNodes:
 
-				# we grab the file path again #
-				fileCompletePath = currentNode.getParam('filename')
+			# get current node ID #
+			nodeID = currentNode.getPluginID()
+
+			# if node is not a 'Read' node #
+			if nodeID == 'fr.inria.built-in.Read':
+
+				# we grab the complete file path #
+				fileCompletePath = currentNode.getParam('filename').get()
+
+				# we grab the file name only #
+				fileName = os.path.basename(fileCompletePath)
+
+				# we grab the file path #
+				filePath = fileCompletePath.replace(fileName,'')
+
+				# file name without the extension #
+				fileNameNoExt = os.path.splitext(fileName)[0]
+
+
+				# ------------------------- #
+				# IF FILE IS NOT A SEQUENCE #
+				# ------------------------- #
+
+				if '#' not in str(fileName):
+
+					# a created folder will be named as the file #
+					newFileFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/Sources/' + str(fileNameNoExt)
+
+					# we create the folder #
+					if os.path.exists(newFileFolder):
+						pass
+					else:
+						os.makedirs(newFileFolder)
+
+					# we copy the file #
+					shutil.copy(fileCompletePath,newFileFolder)
+
+					# we get copied file path #
+					newPath = './Sources/'+ str(fileNameNoExt) + '/' + str(fileName)
+
+					# we grab the file path again #
+					fileCompletePath = currentNode.getParam('filename')
 			
-				# we set the new file path #
-				fileCompletePath.set(newPath)
+					# we set the new file path #
+					fileCompletePath.set(newPath)
 
 
-			# --------------------- #
-			# IF FILE IS A SEQUENCE #
-			# --------------------- #
+				# --------------------- #
+				# IF FILE IS A SEQUENCE #
+				# --------------------- #
 
-			if '#' in str(fileName):
+				if '#' in str(fileName):
 
-				fileNameNoExt = fileNameNoExt.replace('#','')
-				fileNameNoExt = fileNameNoExt[:-1]
+					fileNameNoExt = fileNameNoExt.replace('#','')
+					fileNameNoExt = fileNameNoExt[:-1]
 
-				# a created folder will be named as the file #
-				newFileFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/Sources/' + str(fileNameNoExt)
+					# a created folder will be named as the file #
+					newFileFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/Sources/' + str(fileNameNoExt)
 
-				# we create the folder #
-				if os.path.exists(newFileFolder):
-					pass
-				else:
-					os.makedirs(newFileFolder)
+					# we create the folder #
+					if os.path.exists(newFileFolder):
+						pass
+					else:
+						os.makedirs(newFileFolder)
 
-				os.chdir(filePath)
-				cwd = os.getcwd()
+					os.chdir(filePath)
+					cwd = os.getcwd()
 				
-				for basename in os.listdir(cwd):
-					if fileNameNoExt in basename:
-						shutil.copy(basename,newFileFolder)
+					for basename in os.listdir(cwd):
+						if fileNameNoExt in basename:
+							shutil.copy(basename,newFileFolder)
 
-				# we get copied file path #
-				newPath = './Sources/'+ str(fileNameNoExt) + '/' + str(fileName)
+					# we get copied file path #
+					newPath = './Sources/'+ str(fileNameNoExt) + '/' + str(fileName)
 
-				# we grab the file path again #
-				fileCompletePath = currentNode.getParam('filename')
+					# we grab the file path again #
+					fileCompletePath = currentNode.getParam('filename')
 			
-				# we set the new file path #
-				fileCompletePath.set(newPath)
+					# we set the new file path #
+					fileCompletePath.set(newPath)
 
-	# we save the project #
-	rootFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/'
-	newProjectName = str(projectName) + '_COLLECT'
+		# we save the project #
+		rootFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/'
+		newProjectName = str(projectName) + '_COLLECT'
 
 
-	os.chdir(rootFolder)
-	app.saveProjectAs(newProjectName)
-
-	# ---------------------------------------------------- #
-	# ---------------------- Windows --------------------- #
-	# ---------------------------------------------------- #
-	if natron.isWindows() == 1 :
 		os.chdir(rootFolder)
-		subprocess.Popen( ['explorer', '.'] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+		app.saveProjectAs(newProjectName)
 
-	# ---------------------------------------------------- #
-	# ----------------------- Linux ---------------------- #
-	# ---------------------------------------------------- #
-	if natron.isLinux() == 1 :
-		subprocess.Popen( ['thunar', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+		# ---------------------------------------------------- #
+		# ---------------------- Windows --------------------- #
+		# ---------------------------------------------------- #
+		if natron.isWindows() == 1 :
+			os.chdir(rootFolder)
+			subprocess.Popen( ['explorer', '.'] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
-	# ---------------------------------------------------- #
-	# ------------------------ OSX ----------------------- #
-	# ---------------------------------------------------- #
-	if natron.isMacOSX() == 1 :
-		subprocess.Popen( ['explorer', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+		# ---------------------------------------------------- #
+		# ----------------------- Linux ---------------------- #
+		# ---------------------------------------------------- #
+		if natron.isLinux() == 1 :
+			subprocess.Popen( ['thunar', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
-	app.resetProject()
+		# ---------------------------------------------------- #
+		# ------------------------ OSX ----------------------- #
+		# ---------------------------------------------------- #
+		if natron.isMacOSX() == 1 :
+			subprocess.Popen( ['explorer', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
-	newNatronProject = rootFolder + newProjectName + '.ntp'
-	app.loadProject(newNatronProject)
+		app.resetProject()
+
+		newNatronProject = rootFolder + newProjectName + '.ntp'
+		app.loadProject(newNatronProject)
