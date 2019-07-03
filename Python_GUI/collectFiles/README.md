@@ -6,6 +6,14 @@ Used to backup a comp.
 ### HOW TO USE IT
 
 * Tools -> Utils -> Collect Files
+* Choose destination folder.
+* If field is left empty, destination folder will be Natron's default cache folder.
+
+```
+- Windows : C:/Users/user/AppData/Local/INRIA/Natron/cache
+- Linux : home/user/.cache/INRIA/Natron
+- OSX : home/user/.cache/INRIA/Natron
+```
 
 ### RESULT
 
@@ -25,3 +33,4 @@ Opens new folder location.
 ```
 from <path>.collectFiles.collectFiles import *
 NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
+```
