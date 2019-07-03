@@ -40,13 +40,14 @@ def collectFiles():
 
 	folderLocation = dialog.createPathParam("destFolder","Destination folder : ")
 
+	#################################################
+
 	# Refresh UI #
 	dialog.refreshUserParamsGUI()
 
+
+
 	if dialog.exec_():
-
-		#################################################
-
 
 		# we grab current project name #
 		projectName = app.getProjectParam('projectName').get()
@@ -60,11 +61,6 @@ def collectFiles():
 
 		if destinationFolder != '' :
 			myUserPath = destinationFolder
-
-		os.write(1,myUserPath)
-
-		# Gives username by splitting path based on OS
-		#myUser = os.path.split(myUserPath)[-1]	
 
 
 		# ---------------------------------------------------- #
