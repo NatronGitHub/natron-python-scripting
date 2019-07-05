@@ -1,6 +1,6 @@
 # connectNodes
 
-Connects a node to another one in the Node Graph.
+Connects one node to another in the Node Graph.
 
 ### HOW TO USE IT
 
