@@ -13,7 +13,7 @@ def connectNodes():
 	firstNode = selectedNodes[0]
 	secondNode = selectedNodes[1]
 
-	if len(selectedNodes) <3 :
+	if len(selectedNodes) == 2 :
 
 		if firstNode.canConnectInput(0,secondNode) == 1:
 			firstNode.connectInput(0,secondNode)
