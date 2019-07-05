@@ -10,7 +10,7 @@ from PySide.QtGui import *
 import NatronEngine
 
 
-# SETS FRAMEHOLD DEFAULT VALUE #
+# REPLACE 'READ' OR 'WRITE' NODE PATH #
 
 def replacePaths():
 
