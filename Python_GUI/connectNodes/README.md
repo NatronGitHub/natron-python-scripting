@@ -23,5 +23,5 @@ Connects one node to another in the Node Graph.
 
 ```
 from <path>.connectNodes.connectNodes import *
-NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','connectNodes()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 ```
