@@ -10,7 +10,7 @@ Connects a node to another one in the Node Graph.
 
 ### RESULT
 
-* First node is connected to the second one if possible.
+* First node is connected to the second if possible.
 
 ### SHORTCUT
 
