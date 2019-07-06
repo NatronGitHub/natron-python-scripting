@@ -28,7 +28,9 @@ Restart Natron.
 ### Node Graph
 - **[batchRenameNodes](/Python_GUI/batchRenameNodes)** : Renames selected nodes.
 
-- **[connectNodes](/Python_GUI/connectNodes)** : Connects one or many nodes to another one in the Node Graph.
+- **[connectNodes](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
+
+- **[connectNodesList](/Python_GUI/connectNodesList)** : Connects nodes to one choosen in the list.
 
 - **[nodeChangeColor](/Python_GUI/nodeChangeColor)** : Sets node color for selected nodes.
 

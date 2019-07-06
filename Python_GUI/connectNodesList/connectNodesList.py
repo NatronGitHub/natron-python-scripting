@@ -1,7 +1,14 @@
+#This Source Code Form is subject to the terms of the Mozilla Public
+#License, v. 2.0. If a copy of the MPL was not distributed with this
+#file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+#Created by Fabrice Fernandez on 06/07/2019.
+
 import NatronEngine
 from NatronGui import *
 from PySide.QtGui import *
 
+
+# CONNECTS NODES TO ONE CHOOSEN IN THE LIST #
 
 def connectNodesList():
 

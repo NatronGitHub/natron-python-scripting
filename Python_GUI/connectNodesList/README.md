@@ -1,16 +1,15 @@
-# connectNodes
+# connectNodesList
 
-Connects one or many nodes to another in the Node Graph.
+Connects node()s to one choosen in the list.
 
 ### HOW TO USE IT
 
 * Select many nodes.
-* Select a final node.
-* Tools -> Node Graph -> Connect nodes
+* Tools -> Node Graph -> Connect nodes list
 
 ### RESULT
 
-* Selected nodes get connected to the last one.
+* Selected nodes get connected to the one choosen in the list.
 
 ### SHORTCUT
 
@@ -18,10 +17,10 @@ Connects one or many nodes to another in the Node Graph.
 
 ### INSTALLATION
 
-* Copy 'connectNodes' folder in your .Natron folder.
-* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'connectNodes' folder.
+* Copy 'connectNodesList' folder in your .Natron folder.
+* Add following lines to your 'initGui.py' file, where ``<path>`` is the location of 'connectNodesList' folder.
 
 ```
-from <path>.connectNodes.connectNodes import *
-NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','connectNodes()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+from <path>.connectNodesList.connectNodesList import *
+NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','connectNodesList()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 ```

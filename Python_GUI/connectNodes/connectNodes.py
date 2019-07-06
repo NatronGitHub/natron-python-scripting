@@ -7,7 +7,7 @@ from NatronEngine import *
 from NatronGui import *
 
 
-# CONNECTS ONE OR MANY NODES TO ANOTHER ONE IN THE NODE GRAPH #
+# CONNECTS NODES TO ANOTHER ONE IN THE NODE GRAPH #
 
 def connectNodes():
 
