@@ -41,7 +41,6 @@ from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
 from Python_GUI.collectFiles.collectFiles import *
 from Python_GUI.replacePaths.replacePaths import *
 from Python_GUI.connectNodes.connectNodes import *
-from Python_GUI.connectNodesReverse.connectNodesReverse import *
 
 
 #####################################################################
@@ -57,7 +56,6 @@ NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto'
 
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes reverse','connectNodesReverse', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeChangeColor')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold Nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')

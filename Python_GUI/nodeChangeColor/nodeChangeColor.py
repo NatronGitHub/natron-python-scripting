@@ -4,7 +4,6 @@
 #Created by Fabrice Fernandez on 23/06/2019.
 
 import os
-#from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 

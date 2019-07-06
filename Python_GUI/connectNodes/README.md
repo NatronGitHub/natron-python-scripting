@@ -1,20 +1,20 @@
 # connectNodes
 
-Connects one node to another in the Node Graph.
+Connects one or many nodes to another one in the Node Graph.
 
 ### HOW TO USE IT
 
-* Select the first node.
-* Select the second node.
+* Select many nodes.
+* Select a final node.
 * Tools -> Node Graph -> Connect nodes
 
 ### RESULT
 
-* First node is connected to the second if possible.
+* Selected nodes get connected to the last one.
 
 ### SHORTCUT
 
-* Y
+* Alt+Y
 
 ### INSTALLATION
 
@@ -23,5 +23,5 @@ Connects one node to another in the Node Graph.
 
 ```
 from <path>.connectNodes.connectNodes import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','connectNodes()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 ```

@@ -1,6 +1,13 @@
+#This Source Code Form is subject to the terms of the Mozilla Public
+#License, v. 2.0. If a copy of the MPL was not distributed with this
+#file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+#Created by Fabrice Fernandez on 06/07/2019.
+
 from NatronEngine import *
 from NatronGui import *
 
+
+# CONNECTS ONE OR MANY NODES TO ANOTHER ONE IN THE NODE GRAPH #
 
 def connectNodes():
 
@@ -10,10 +17,18 @@ def connectNodes():
 	# get selected nodes #
 	selectedNodes = app.getSelectedNodes()
 
-	firstNode = selectedNodes[0]
-	secondNode = selectedNodes[1]
+	numNodes = len(selectedNodes)
 
-	if len(selectedNodes) == 2 :
+	lastIndex = numNodes - 1
 
-		if firstNode.canConnectInput(0,secondNode) == 1:
-			firstNode.connectInput(0,secondNode)
+	lastNode = selectedNodes[lastIndex]
+	counter = 0
+
+	for currentNode in selectedNodes:
+
+		if numNodes >1 :
+			if counter != lastIndex:
+				if currentNode.canConnectInput(0,lastNode) == 1:
+					currentNode.connectInput(0,lastNode)
+
+		counter += 1
