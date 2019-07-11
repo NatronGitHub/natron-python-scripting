@@ -13,10 +13,9 @@ import string
 from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
-import NatronEngine
 
 
-# TRACKER TO ROTO #
+# BATCH RENDER #
 
 def batchRender():
 
@@ -30,63 +29,74 @@ def batchRender():
 	dialog.setContentsMargins(0, 0, 10, 10)
 
 	# set window size #
-	dialog.resize( 800, 200 )
-	#dialog.setFixedSize( 800, 100 )
+	dialog.setFixedSize( 340, 400 )
 
-	# UI creation #
+	########################### UI CREATION ###################################
+
+	# separators #
 	line01 = dialog.createStringParam("line01","")
 	line01.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 	line02 = dialog.createStringParam("line02","")
 	line02.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-	# enable/disable parameter #
-	checkBox0 = dialog.createBooleanParam("check0", "")
-
 	# file path parameter #
 	renderFileParam0 = dialog.createFileParam("projectPath0", "Natron file : ")
-	renderFileParam0.setAddNewLine(False)
 
-	# frame range parameter #
-	renderRangeParam0 = dialog.createIntParam("range0", "Range : ")
-	renderRangeParam0.setAddNewLine(False)
+	# separators #
+	line03 = dialog.createStringParam("line03","")
+	line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+	line04 = dialog.createStringParam("line04","")
+	line04.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-	outputPath0 = dialog.createPathParam("outputPath0", "Output : ")
-	outputPath0.setAddNewLine(False)
+	# range choice parameter #
+	rangeList = dialog.createChoiceParam("rangeChoice","Frame Range : ")
+	rangeList.addOption('Project','')
+	rangeList.addOption('Custom','')
+
+	# if viewer exists in comp, add it to the choice list #
+	app.selectAllNodes()
+	selectedNodes = app.getSelectedNodes()
+	isViewer = 0
+
+	for currentNode in selectedNodes:
+		currentID = currentNode.getPluginID()
+
+		if currentID == 'fr.inria.built-in.Viewer':
+			currentLabel = currentNode.getLabel()
+			rangeList.addOption(str(currentLabel),'')
+
+	app.clearSelection()
+	
+	rangeList.setDefaultValue('Project')
+	rangeList.restoreDefaultValue()
+
+	# separators #
+	line05 = dialog.createStringParam("line05","")
+	line05.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+	line06 = dialog.createStringParam("line06","")
+	line06.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
+
+ 	# IN parameter #
+	inRange = dialog.createIntParam("inRange","Start Frame : ")
+
+ 	# OUT parameter #
+	outRange = dialog.createIntParam("outRange","End Frame : ")
 
 	sep01 = dialog.createSeparatorParam("sep01","")
 
-	#############################################################################
-
-	# enable/disable parameter #
-	checkBox1 = dialog.createBooleanParam("check1", "")
-
-	# file path parameter #
-	renderFileParam1 = dialog.createFileParam("projectPath1", "Natron file : ")
-	renderFileParam1.setAddNewLine(False)
-
-	# frame range parameter #
-	renderRangeParam1 = dialog.createIntParam("range1", "Range : ")
-	renderRangeParam1.setAddNewLine(False)
-
-	sep02 = dialog.createSeparatorParam("sep02","")
-
-	#############################################################################
-
-	# enable/disable parameter #
-	checkBox2 = dialog.createBooleanParam("check2", "")
-
-	# file path parameter #
-	renderFileParam2 = dialog.createFileParam("projectPath2", "Natron file : ")
-	renderFileParam2.setAddNewLine(False)
-
-	# frame range parameter #
-	renderRangeParam2 = dialog.createIntParam("range2", "Range : ")
-	renderRangeParam2.setAddNewLine(False)
+	###########################################################################
 
 	dialog.refreshUserParamsGUI()
 
 
+
 	if dialog.exec_():
 		print 'toto'
+
+
+
+
+
+
 
 batchRender()
