@@ -6,10 +6,15 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 29/06/2019.
 
-#import os
-#import string
+
 import os
+import sys
+import codecs
 import string
+import shutil
+import datetime
+import subprocess
+
 from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
@@ -39,15 +44,18 @@ def backgroundRender():
 	line02 = dialog.createStringParam("line02","")
 	line02.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 
-	# range choice parameter #
+	# CREATE CHOICE LIST #
 	rangeList = dialog.createChoiceParam("rangeChoice","Frame Range : ")
 	rangeList.addOption('Project','')
 	rangeList.addOption('Custom','')
 
+	# CREATE WRITE LIST #
+	writeList = dialog.createChoiceParam("writeChoice","Write : ")
+	writeList.setAddNewLine(False)
+
 	# if a viewer exists in comp, add it to the choice list #
 	app.selectAllNodes()
 	selectedNodes = app.getSelectedNodes()
-	isViewer = 0
 
 	for currentNode in selectedNodes:
 		currentID = currentNode.getPluginID()
@@ -55,6 +63,11 @@ def backgroundRender():
 		if currentID == 'fr.inria.built-in.Viewer':
 			currentLabel = currentNode.getLabel()
 			rangeList.addOption(str(currentLabel),'')
+
+		if currentID == 'fr.inria.built-in.Write':
+			currentLabel = currentNode.getLabel()
+			writeList.addOption(str(currentLabel),'')
+
 
 	app.clearSelection()
 	
@@ -82,81 +95,194 @@ def backgroundRender():
 	# user press OK button 
 	if dialog.exec_():
 
-		# grab current project name #
-		projectName = app.getProjectParam('projectName').get()
-		projectName = os.path.splitext(projectName)[0]
+		################################################
 
-		# save the project #
-		app.saveProjectAs(projectName)
+		os.write( 1,'\n')
+		os.write( 1,'###############################################')
+		os.write( 1,'\n')
+		os.write( 1,'#############  BACKGROUND RENDER  #############')
+		os.write( 1,'\n')
+		os.write( 1,'###############################################')
+		os.write( 1,'\n')
+		os.write( 1,'\n')
 
-		# grab range user choice #
-		userChoice = rangeList.get()
+		# grab current project path #
+		projectPath = app.getProjectParam('projectPath').get()
+
+		if projectPath == '':
+			warning = natron.warningDialog("Warning","Save project first.")
+
+		else :
+
+			#############################################################
+			#####################  SAVE NEW PROJECT #####################
+			#############################################################
+
+			# go to project path #
+			os.chdir(projectPath)
+			cwd = os.getcwd()
+
+			# grab current project name #
+			projectName = app.getProjectParam('projectName').get()
+
+			# grab current project name without the .ntp extension #
+			projectNameNoExt = os.path.splitext(projectName)[0]
+
+			# get date and time #
+			currentDT = datetime.datetime.now()
+			date = currentDT.strftime("%Y-%m-%d_%Hh-%Mmin-%Ssec")
+
+			# set new project name #
+			newProjectName = str(projectNameNoExt) + '_' + str(date) + '.ntp'
+
+			os.write( 1,'\n')
+			os.write( 1, 'Rendered project is : ' + str(newProjectName) )
+			os.write( 1,'\n')
+			os.write( 1,'\n')
+
+			# create temp folder #
+			tempFolder = str(projectPath) + 'bgRenderTemp'
+
+			if os.path.exists(tempFolder):
+				pass
+			else:
+				os.makedirs(tempFolder)
+
+				os.write( 1,'\n')
+				os.write( 1, 'Temp folder created : ' + str(tempFolder))
+				os.write( 1,'\n')
+				os.write( 1,'\n')
+
+			# copy current project in temp folder #
+			shutil.copy(projectName,tempFolder)
+
+			# rename project in temp folder #
+			newProjectOldName = str(tempFolder) + '/' + str(projectName)
+			newProjectNewName = str(tempFolder) + '/' + str(newProjectName)
+
+			os.rename(newProjectOldName,newProjectNewName)
 
 
+			###############################################################
+			##################  GET NATRON INSTALL FOLDER #################
+			###############################################################
+
+			natronFolder = os.path.dirname((sys.executable))
+
+			###############################################################
+
+			# get range user choice #
+			rangeUserChoice = rangeList.get()
 		
-		# 'Project' is selected #
-		if userChoice == 0 :
-			print 'Project frame range selected'
+			# 'Project' is selected #
+			if rangeUserChoice == 0 :
 
-			# get project frame range #
-			frameRange = app.getProjectParam('frameRange').get()
-			inFrame = frameRange[0]
-			outFrame = frameRange[1]
+				# get project frame range #
+				frameRange = app.getProjectParam('frameRange').get()
+				inFrame = frameRange[0]
+				outFrame = frameRange[1]
 
-			print inFrame
-			print outFrame
+				renderRange = str(inFrame) + '-' + str(outFrame)
 
-		# 'Custom' is selected #
-		if userChoice == 1 :
-			print 'Custom frame range selected'
+				os.write( 1,'\n')
+				os.write( 1,'Project frame range selected : ' + str(inFrame) + '-' + str(outFrame) )
+				os.write( 1,'\n')
+				os.write( 1,'\n')
 
-			# get user frame range #
-			inFrame = inRange.get()
-			outFrame = outRange.get()
+			# 'Custom' is selected #
+			if rangeUserChoice == 1 :
+				
+				# get user frame range #
+				inFrame = inRange.get()
+				outFrame = outRange.get()
 
-			print inFrame
-			print outFrame
+				renderRange = str(inFrame) + '-' + str(outFrame)
 
-			renderRange = str(inFrame) + '-' + str(outFrame)
+				os.write( 1,'\n')
+				os.write( 1, 'Custom frame range selected : ' + str(inFrame) + '-' + str(outFrame) )
+				os.write( 1,'\n')
+				os.write( 1,'\n')
 
-		# a 'Viewer' is selected #
-		if userChoice >1 :
-			print 'Viewer frame range selected'
+			# a 'Viewer' is selected #
+			if rangeUserChoice >1 :
 
-			# we grab selected 'viewer' #
-			viewerChoice = rangeList.getOption(userChoice)
+				# we grab selected 'viewer' #
+				viewerChoice = rangeList.getOption(rangeUserChoice)
 
-			# select all nodes in Node Graph #
-			app.selectAllNodes()
-			selectedNodes = app.getSelectedNodes()
+				# select all nodes in Node Graph #
+				app.selectAllNodes()
+				selectedNodes = app.getSelectedNodes()
 
-			# cycle through every selected nodes #
-			for currentNode in selectedNodes:
+				# cycle through every selected nodes #
+				for currentNode in selectedNodes:
 
-				# get current node ID #
-				currentID = currentNode.getPluginID()
+					# get current node ID #
+					currentID = currentNode.getPluginID()
 
-				# if the current node's ID is of 'viewer' type #
-				if currentID == 'fr.inria.built-in.Viewer':
+					# if the current node's ID is of 'viewer' type #
+					if currentID == 'fr.inria.built-in.Viewer':
 
-					# then we grab its 'label' #
-					viewerLabel = currentNode.getLabel()
+						# then we grab its 'label' #
+						viewerLabel = currentNode.getLabel()
 
-					# select it #
-					myViewer = app.getViewer(viewerLabel)
+						# select it #
+						myViewer = app.getViewer(viewerLabel)
 
-					# get its frame range #
-					currentRange = myViewer.getFrameRange()
-					inFrame = currentRange[0]
-					outFrame = currentRange[1]
+						# get its frame range #
+						currentRange = myViewer.getFrameRange()
+						inFrame = currentRange[0]
+						outFrame = currentRange[1]
 
-					print inFrame
-					print outFrame
+						renderRange = str(inFrame) + '-' + str(outFrame)
 
-					app.clearSelection()
+						os.write( 1,'\n')
+						os.write( 1, str(viewerLabel) + ' frame range selected : ' + str(inFrame) + '-' + str(outFrame) )
+						os.write( 1,'\n')
+						os.write( 1,'\n')
 
+						app.clearSelection()
 
+			# get Write user choice #
+			writeUserChoiceIndex = writeList.get()
 
+			if writeUserChoiceIndex == '':
+				warning = natron.warningDialog("Warning","Create a 'Write' node first.")
+			else:
+				writeUserChoiceLabel = writeList.getOption(writeUserChoiceIndex)
 
+				app.selectAllNodes()
+				selectedNodes = app.getSelectedNodes()
+
+				for currentNode in selectedNodes:
+					currentLabel = currentNode.getLabel()
+
+					if currentLabel == writeUserChoiceLabel:
+						fileRenderPath = currentNode.getParam('filename').get()
+
+				app.clearSelection()
+
+				# go to temp folder #
+				os.chdir(tempFolder)
+
+				# Windows #
+				if natron.isWindows() == 1 :
+
+					# set batch file name #
+					batchFileName = str(projectNameNoExt) + '_' + str(date) + '.bat'
+
+					# create batch file #
+					with codecs.open(batchFileName, 'w+', errors="ignore") as batchRender:
+
+						# write instruction in batch file #
+						renderInstruction = 'START ' + str(natronFolder) + '/' + 'NatronRenderer ' + str(newProjectNewName) + ' -w ' + str(writeUserChoiceLabel) + ' ' + str(fileRenderPath) + ' ' + str(renderRange)
+
+						renderInstruction = renderInstruction.replace('/','\\')
+						renderInstruction = renderInstruction.replace('Program Files','"Program Files"')
+
+						batchRender.write('@echo off\n')
+						batchRender.write(str(renderInstruction))
+
+					# run batch file #
+					currentRender = subprocess.call(batchFileName)
 
 backgroundRender()
