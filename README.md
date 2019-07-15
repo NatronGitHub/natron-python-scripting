@@ -56,7 +56,7 @@ Restart Natron.
 - **[replacePaths](/Python_GUI/replacePaths)** : Replace path in 'Read' nodes.
 
 ### Render
-- **[backgroundRender](/Python_GUI/backgroundRender)** : Launch render of current project in background.
+- **[backgroundRender](/Python_GUI/backgroundRender)** : Renders current project in background.
 
 - **[diskCache](/Python_GUI/diskCache)** : Creates and process a 'DiskCache' node for the selected node.
 

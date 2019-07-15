@@ -1,6 +1,6 @@
 # backgroundRender
 
-Launch render of current project in background.
+Renders current project in background.
 
 ### HOW TO USE IT
 
