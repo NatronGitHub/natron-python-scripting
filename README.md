@@ -50,15 +50,17 @@ Restart Natron.
 
 - **[nodeChangeFrameRange](/Python_GUI/nodeChangeFrameRange)** : Sets frame range for selected 'Read' nodes.
 
-### Render
-- **[diskCache](/Python_GUI/diskCache)** : Creates and process a 'DiskCache' node for the selected node.
-
-- **[flipbook](/Python_GUI/flipbook)** : Renders and plays the selected node in an external viewer. (Win/Linux)
-
 ### Utils
 - **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp.
 
 - **[replacePaths](/Python_GUI/replacePaths)** : Replace path in 'Read' nodes.
+
+### Render
+- **[backgroundRender](/Python_GUI/backgroundRender)** : Launch render of current project in background.
+
+- **[diskCache](/Python_GUI/diskCache)** : Creates and process a 'DiskCache' node for the selected node.
+
+- **[flipbook](/Python_GUI/flipbook)** : Renders and plays the selected node in an external viewer. (Win/Linux)
 
 ## Natron snippets
 - **[addDeepLayer](/Python_INIT/addDeepLayer)** : Adds 'Deep' layer to Natron.
