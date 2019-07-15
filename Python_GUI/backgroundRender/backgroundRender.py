@@ -15,7 +15,7 @@ import shutil
 import datetime
 import subprocess
 
-from NatronEngine import*
+import NatronEngine
 from NatronGui import *
 from PySide.QtGui import *
 

@@ -23,26 +23,39 @@ from PySide.QtGui import *
 #																	#
 #####################################################################
 
-from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
-from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
-from Python_GUI.nodeChangeColor.nodeChangeColor import *
-from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
-from Python_GUI.nodeChangeFrameRange.nodeChangeFrameRange import *
+# Tools -> Channel
 from Python_GUI.autoAlpha.autoAlpha import *
-from Python_GUI.diskCache.diskCache import *
-from Python_GUI.flipbook.flipbook import *
-from Python_GUI.timelineInOut.timelineInOut import *
-from Python_GUI.openLocation.openLocation import *
-from Python_GUI.batchRenameNodes.batchRenameNodes import *
-from Python_GUI.trackerToRoto.trackerToRoto import *
+
+# Tools -> Generate
 from Python_GUI.rotoToTracker.rotoToTracker import *
-from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
-from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
-from Python_GUI.collectFiles.collectFiles import *
-from Python_GUI.replacePaths.replacePaths import *
+from Python_GUI.trackerToRoto.trackerToRoto import *
+
+# Tools -> Node Graph
+from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.connectNodes.connectNodes import *
 from Python_GUI.connectNodesList.connectNodesList import *
+from Python_GUI.nodeChangeColor.nodeChangeColor import *
+from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
+from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
+from Python_GUI.openLocation.openLocation import *
 
+# Tools -> Other
+from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
+from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
+
+# Tools -> Time
+from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
+from Python_GUI.nodeChangeFrameRange.nodeChangeFrameRange import *
+from Python_GUI.timelineInOut.timelineInOut import *
+
+# Tools -> Utils
+from Python_GUI.collectFiles.collectFiles import *
+from Python_GUI.replacePaths.replacePaths import *
+
+# Tools -> Render
+from Python_GUI.backgroundRender.backgroundRender import *
+from Python_GUI.diskCache.diskCache import *
+from Python_GUI.flipbook.flipbook import *
 
 #####################################################################
 #																	#
@@ -73,6 +86,7 @@ NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
 NatronGui.natron.addMenuCommand('Tools/Utils/Replace Paths','replacePaths()')
 
+NatronGui.natron.addMenuCommand('Tools/Render/Background Render','backgroundRender()')
 NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
