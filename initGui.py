@@ -33,11 +33,11 @@ from Python_GUI.trackerToRoto.trackerToRoto import *
 # Tools -> Node Graph
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.connectNodes.connectNodes import *
-from Python_GUI.connectNodesList.connectNodesList import *
 from Python_GUI.nodeChangeColor.nodeChangeColor import *
 from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
 from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
 from Python_GUI.openLocation.openLocation import *
+from Python_GUI.selectSimilar.selectSimilar import *
 
 # Tools -> Other
 from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
@@ -63,31 +63,31 @@ from Python_GUI.flipbook.flipbook import *
 #																	#
 #####################################################################
 
-NatronGui.natron.addMenuCommand('Tools/Channel/Auto Alpha','autoAlpha')
+NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes List','connectNodesList', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.AltModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) Color','nodeChangeColor')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold Nodes <HTML>','nodeBold_HTML')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Open Location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) color','nodeChangeColor')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold nodes <HTML>','nodeBold_HTML')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic nodes <HTML>','nodeItalic_HTML')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Select similar','selectSimilar')
 
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
-NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
+NatronGui.natron.addMenuCommand('Tools/Time/Read frame range','nodeChangeFrameRange()')
 NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 
-NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
-NatronGui.natron.addMenuCommand('Tools/Utils/Replace Paths','replacePaths()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Collect files','collectFiles()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Replace paths','replacePaths()')
 
-NatronGui.natron.addMenuCommand('Tools/Render/Background Render','backgroundRender()')
-NatronGui.natron.addMenuCommand('Tools/Render/Disk Cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Render/Background render','backgroundRender()')
+NatronGui.natron.addMenuCommand('Tools/Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
 
@@ -106,22 +106,25 @@ print '   +'
 print '   + Tools/Generate/Roto to tracker'
 print '   + Tools/Generate/Tracker to roto'
 print '   +'
-print '   + Tools/Node Graph/Batch Rename'
+print '   + Tools/Node Graph/Batch rename'
+print '   + Tools/Node Graph/Connect nodes'
 print '   + Tools/Node Graph/Node(s) Color'
-print '   + Tools/Node Graph/Bold Nodes <HTML>'
-print '   + Tools/Node Graph/Italic Nodes <HTML>'
-print '   + Tools/Node Graph/Open Location'
+print '   + Tools/Node Graph/Bold nodes <HTML>'
+print '   + Tools/Node Graph/Italic nodes <HTML>'
+print '   + Tools/Node Graph/Open location'
+print '   + Tools/Node Graph/Select similar'
 print '   +'
 print '   + Tools/Other/Blending mode+'
 print '   + Tools/Other/Blending mode-'
 print '   +'
 print '   + Tools/Time/Read FPS'
-print '   + Tools/Time/Read Frame Range'
+print '   + Tools/Time/Read frame range'
 print '   +'
-print '   + Tools/Utils/Collect Files'
-print '   + Tools/Utils/Replace Paths'
+print '   + Tools/Utils/Collect files'
+print '   + Tools/Utils/Replace paths'
 print '   +'
-print '   + Tools/Render/Disk Cache'
+print '   + Tools/Render/Background render'
+print '   + Tools/Render/Disk cache'
 print '   + Tools/Render/Flipbook'
 
 

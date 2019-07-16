@@ -30,8 +30,6 @@ Restart Natron.
 
 - **[connectNodes](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
 
-- **[connectNodesList](/Python_GUI/connectNodesList)** : Connects nodes to one choosen in the list.
-
 - **[nodeChangeColor](/Python_GUI/nodeChangeColor)** : Sets node color for selected nodes.
 
 - **[nodeBold_HTML](/Python_GUI/nodeBold_HTML)** : Sets selected nodes to be displayed in bold in the Node Graph.
@@ -39,6 +37,8 @@ Restart Natron.
 - **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML)** : Sets selected nodes to be displayed in italic in the Node Graph.
 
 - **[openLocation](/Python_GUI/openLocation)** : Opens 'Read' or 'Write' location folder in explorer.
+
+- **[selectSimilar](/Python_GUI/selectSimilar)** : All nodes of the selected type will be selected in the Node Graph .
 
 ### Other
 - **[mergeBlendingDown](/Python_GUI/mergeBlendingDown)** : Cycles through 'Merge' blending modes downward.
