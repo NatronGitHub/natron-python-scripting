@@ -1,6 +1,6 @@
 # selectSimilar
 
-Sets timeline In/Out points.
+Select similar nodes.
 
 ### HOW TO USE IT
 
