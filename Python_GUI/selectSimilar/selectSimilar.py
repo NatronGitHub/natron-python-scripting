@@ -29,4 +29,4 @@ def selectSimilar():
 			currentID = currentNode.getPluginID()
 			
 			if currentID != referenceID:
-				deselectNode(currentNode)
+				app.deselectNode(currentNode)
