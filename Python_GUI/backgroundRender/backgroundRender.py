@@ -285,4 +285,3 @@ def backgroundRender():
 					# run batch file #
 					currentRender = subprocess.call(batchFileName)
 
-backgroundRender()
