@@ -5,7 +5,7 @@ Select similar nodes.
 ### HOW TO USE IT
 
 * Select a node
-* Tools -> Node Graph -> Select similar
+* Edit -> Select similar
 
 ### RESULT
 

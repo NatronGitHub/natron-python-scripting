@@ -5,7 +5,7 @@ Creates and process a 'DiskCache' node for the selected node.
 ### HOW TO USE IT
 
 * Select a node.
-* Tools -> Render -> Disk Cache
+* Render -> Disk Cache
 * Set In and Out.
 * Click 'OK.'
 

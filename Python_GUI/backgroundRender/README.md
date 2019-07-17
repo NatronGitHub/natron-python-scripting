@@ -4,7 +4,7 @@ Renders current project in background.
 
 ### HOW TO USE IT
 
-* Tools -> Render -> Background Render
+* Render -> Background Render
 
 ### RESULT
 

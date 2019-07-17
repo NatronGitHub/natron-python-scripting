@@ -5,7 +5,7 @@ Sets selected nodes to be displayed in bold in the Node Graph.
 ### HOW TO USE IT
 
 * Select nodes.
-* Tools -> Node Graph -> Bold Nodes <HTML>
+* Edit -> Bold Nodes <HTML>
 
 ### RESULT
 

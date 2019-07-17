@@ -6,7 +6,7 @@ Connects nodes to another one in the Node Graph.
 
 * Select many nodes.
 * Select a final node.
-* Tools -> Node Graph -> Connect nodes
+* Edit -> Connect nodes
 
 ### RESULT
 

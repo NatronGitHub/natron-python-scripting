@@ -5,7 +5,7 @@ Enable/disable force caching for selected nodes.
 ### HOW TO USE IT
 
 * Select node(s).
-* Tools -> Node Graph ->Force Caching
+* Edit -> Force Caching
 
 ### RESULT
 

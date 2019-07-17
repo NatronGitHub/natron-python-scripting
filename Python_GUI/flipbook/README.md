@@ -5,7 +5,7 @@ Renders and plays the selected node in an external viewer.
 ### HOW TO USE IT
 
 * Select a node.
-* Tools -> Render -> flipbook
+* Render -> flipbook
 * Set In and Out.
 * Select viewer app.
 * Click 'OK.'
