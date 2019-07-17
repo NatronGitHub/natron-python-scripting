@@ -21,6 +21,7 @@ def connectNodes():
 
 		if numNodes >1 :
 			if counter != lastIndex:
+				currentNode.disconnectInput(0)
 				if currentNode.canConnectInput(0,lastNode) == 1:
 					currentNode.connectInput(0,lastNode)
 
