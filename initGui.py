@@ -73,7 +73,7 @@ NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto'
 NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
-NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection')
+NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
 NatronGui.natron.addMenuCommand('Edit/Bold nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Edit/Italic nodes <HTML>','nodeItalic_HTML')
