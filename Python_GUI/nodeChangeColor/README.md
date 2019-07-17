@@ -20,5 +20,5 @@ Sets node color for selected nodes.
 
 ```
 from <path>.nodeColorChange.nodeColorChange import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) color','nodeChangeColor')
+NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
 ```

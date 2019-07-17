@@ -69,14 +69,14 @@ NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) color','nodeChangeColor')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold nodes <HTML>','nodeBold_HTML')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic nodes <HTML>','nodeItalic_HTML')
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Select similar','selectSimilar')
+NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
+NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
+NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
+NatronGui.natron.addMenuCommand('Edit/Bold nodes <HTML>','nodeBold_HTML')
+NatronGui.natron.addMenuCommand('Edit/Italic nodes <HTML>','nodeItalic_HTML')
+NatronGui.natron.addMenuCommand('Edit/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Edit/Select similar','selectSimilar')
 
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
@@ -88,9 +88,9 @@ NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 NatronGui.natron.addMenuCommand('Tools/Utils/Collect files','collectFiles()')
 NatronGui.natron.addMenuCommand('Tools/Utils/Replace paths','replacePaths()')
 
-NatronGui.natron.addMenuCommand('Tools/Render/Background render','backgroundRender()')
-NatronGui.natron.addMenuCommand('Tools/Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
-NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()', QtCore.Qt.Key.Key_R, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
 
 separator = ('------------------------------------------------------------')
@@ -108,14 +108,14 @@ print '   +'
 print '   + Tools/Generate/Roto to tracker'
 print '   + Tools/Generate/Tracker to roto'
 print '   +'
-print '   + Tools/Node Graph/Batch rename'
-print '   + Tools/Node Graph/Connect nodes'
-print '   + Tools/Node Graph/Force caching'
-print '   + Tools/Node Graph/Node(s) Color'
-print '   + Tools/Node Graph/Bold nodes <HTML>'
-print '   + Tools/Node Graph/Italic nodes <HTML>'
-print '   + Tools/Node Graph/Open location'
-print '   + Tools/Node Graph/Select similar'
+print '   + Edit/Batch rename'
+print '   + Edit/Connect nodes'
+print '   + Edit/Force caching'
+print '   + Edit/Node(s) Color'
+print '   + Edit/Bold nodes <HTML>'
+print '   + Edit/Italic nodes <HTML>'
+print '   + Edit/Open location'
+print '   + Edit/Select similar'
 print '   +'
 print '   + Tools/Other/Blending mode+'
 print '   + Tools/Other/Blending mode-'
@@ -126,9 +126,9 @@ print '   +'
 print '   + Tools/Utils/Collect files'
 print '   + Tools/Utils/Replace paths'
 print '   +'
-print '   + Tools/Render/Background render'
-print '   + Tools/Render/Disk cache'
-print '   + Tools/Render/Flipbook'
+print '   + Render/Background render'
+print '   + Render/Disk cache'
+print '   + Render/Flipbook'
 
 
 print '\n' + '\n' + separator

@@ -24,5 +24,5 @@ Creates and process a 'DiskCache' node for the selected node.
 
 ```
 from <path>.diskCache.diskCache import *
-NatronGui.natron.addMenuCommand('Tools/Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 ```

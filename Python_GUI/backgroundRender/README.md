@@ -17,5 +17,5 @@ Renders current project in background.
 
 ```
 from <path>.backgroundRender.backgroundRender import *
-NatronGui.natron.addMenuCommand('Tools/Render/Background render','backgroundRender()')
+NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()')
 ```

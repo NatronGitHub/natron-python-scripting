@@ -22,5 +22,5 @@ Enable/disable force caching for selected nodes.
 
 ```
 from <path>.forceCaching.forceCaching import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
+NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
 ```

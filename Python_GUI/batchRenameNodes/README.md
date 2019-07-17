@@ -20,5 +20,5 @@ Renames selected node.
 
 ```
 from <path>.batchRenameNodes.batchRenameNodes import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
+NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
 ```

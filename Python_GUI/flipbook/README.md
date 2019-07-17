@@ -53,5 +53,5 @@ Default folder is :
 
 ```
 from <path>.flipbook.flipbook import *
-NatronGui.natron.addMenuCommand('Tools/Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 ```
