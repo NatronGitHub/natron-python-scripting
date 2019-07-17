@@ -18,5 +18,5 @@ Invert selection in the Node Graph.
 
 ```
 from <path>.invertSelection.invertSelection import *
-NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection')
+NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 ```

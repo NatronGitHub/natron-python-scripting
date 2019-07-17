@@ -32,6 +32,8 @@ Restart Natron.
 
 - **[forceCaching](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
 
+- **[invertSelection](/Python_GUI/invertSelection)** : Invert selection in the Node Graph.
+
 - **[nodeChangeColor](/Python_GUI/forceCaching)** : Enable/disable force caching for selected nodes.
 
 - **[nodeBold_HTML](/Python_GUI/nodeBold_HTML)** : Sets selected nodes to be displayed in bold in the Node Graph.
