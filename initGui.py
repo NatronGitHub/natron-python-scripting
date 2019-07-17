@@ -39,6 +39,7 @@ from Python_GUI.nodeChangeColor.nodeChangeColor import *
 from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
 from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
 from Python_GUI.openLocation.openLocation import *
+from Python_GUI.removeInput.removeInput import *
 from Python_GUI.selectSimilar.selectSimilar import *
 
 # Tools -> Other
@@ -79,6 +80,7 @@ NatronGui.natron.addMenuCommand('Edit/Bold nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Edit/Italic nodes <HTML>','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Edit/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Select similar','selectSimilar')
+NatronGui.natron.addMenuCommand('Edit/Remove input','removeInput', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.ControlModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
@@ -119,6 +121,7 @@ print '   + Edit/Bold nodes <HTML>'
 print '   + Edit/Italic nodes <HTML>'
 print '   + Edit/Open location'
 print '   + Edit/Select similar'
+print '   + Edit/Remove input'
 print '   +'
 print '   + Tools/Other/Blending mode+'
 print '   + Tools/Other/Blending mode-'
