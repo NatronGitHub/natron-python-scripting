@@ -18,5 +18,5 @@ Select similar nodes.
 
 ```
 from <path>.selectSimilar.selectSimilar import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Select similar','selectSimilar()')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Select similar','selectSimilar')
 ```

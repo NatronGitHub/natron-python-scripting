@@ -19,4 +19,4 @@ Replace path in 'Read' nodes.
 
 ```
 from <path>.replacePaths.replacePaths import *
-NatronGui.natron.addMenuCommand('Tools/Utils/Replace Paths','replacePaths()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Replace paths','replacePaths()')

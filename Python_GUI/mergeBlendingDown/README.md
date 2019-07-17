@@ -18,4 +18,4 @@ Cycles through 'Merge' blending nodes.
 
 ```
 from <path>.mergeBlendingDown.mergeBlendingDown import *
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown')
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)

@@ -32,5 +32,5 @@ Opens new folder location.
 
 ```
 from <path>.collectFiles.collectFiles import *
-NatronGui.natron.addMenuCommand('Tools/Utils/Collect Files','collectFiles()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Collect files','collectFiles()')
 ```

@@ -18,4 +18,4 @@ Cycles through 'Merge' blending modes upward.
 
 ```
 from <path>.mergeBlendingUp.mergeBlendingUp import *
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingUp')
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)

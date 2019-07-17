@@ -22,4 +22,4 @@ Opens 'Read' or 'Write' location folder in explorer.
 
 ```
 from <path>.openLocation.openLocation import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Open Location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)

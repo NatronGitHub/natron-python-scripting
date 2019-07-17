@@ -20,5 +20,5 @@ Sets frame range for selected 'Read' nodes.
 
 ```
 from <path>.nodeChangeFrameRange.nodeChangeFrameRange import *
-NatronGui.natron.addMenuCommand('Tools/Time/Read Frame Range','nodeChangeFrameRange()')
+NatronGui.natron.addMenuCommand('Tools/Time/Read frame range','nodeChangeFrameRange()')
 ```

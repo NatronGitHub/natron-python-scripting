@@ -18,5 +18,5 @@ Sets selected nodes to be displayed in italic in the Node Graph.
 
 ```
 from <path>.nodeItalic_HTML.nodeItalic_HTML import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic Nodes <HTML>','nodeItalic_HTML')
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic nodes <HTML>','nodeItalic_HTML')
 ```

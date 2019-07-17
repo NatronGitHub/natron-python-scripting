@@ -33,6 +33,7 @@ from Python_GUI.trackerToRoto.trackerToRoto import *
 # Tools -> Node Graph
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.connectNodes.connectNodes import *
+from Python_GUI.forceCaching.forceCaching import *
 from Python_GUI.nodeChangeColor.nodeChangeColor import *
 from Python_GUI.nodeBold_HTML.nodeBold_HTML import *
 from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
@@ -70,6 +71,7 @@ NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto'
 
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Tools/Node Graph/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Node(s) color','nodeChangeColor')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Bold nodes <HTML>','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Italic nodes <HTML>','nodeItalic_HTML')
@@ -108,6 +110,7 @@ print '   + Tools/Generate/Tracker to roto'
 print '   +'
 print '   + Tools/Node Graph/Batch rename'
 print '   + Tools/Node Graph/Connect nodes'
+print '   + Tools/Node Graph/Force caching'
 print '   + Tools/Node Graph/Node(s) Color'
 print '   + Tools/Node Graph/Bold nodes <HTML>'
 print '   + Tools/Node Graph/Italic nodes <HTML>'
