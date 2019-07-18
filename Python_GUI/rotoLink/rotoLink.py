@@ -8,7 +8,7 @@ import NatronEngine
 from NatronGui import *
 
 
-# TRACKER TO ROTO #
+# LINK A ROTO TO A TRACKER #
 
 def rotoLink():
 
