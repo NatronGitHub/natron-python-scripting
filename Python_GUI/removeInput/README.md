@@ -1,6 +1,6 @@
 # removeInput
 
-Disconnect nodes in the Node Graph.
+Disconnect nodes input in the Node Graph.
 
 ### HOW TO USE IT
 
@@ -9,7 +9,7 @@ Disconnect nodes in the Node Graph.
 
 ### RESULT
 
-* Selected nodes get disconnected in the Node Graph.
+* Selected nodes get their input disconnected in the Node Graph.
 
 ### SHORTCUT
 

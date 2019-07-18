@@ -25,7 +25,7 @@ Restart Natron.
 
 - **[trackerToRoto](/Python_GUI/trackerToRoto)** : Generates a 'Roto' out of a selected 'Tracker' node(s).
 
-### Node Graph
+### Edit
 - **[batchRenameNodes](/Python_GUI/batchRenameNodes)** : Renames selected nodes.
 
 - **[connectNodes](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
@@ -41,6 +41,8 @@ Restart Natron.
 - **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML)** : Sets selected nodes to be displayed in italic in the Node Graph.
 
 - **[openLocation](/Python_GUI/openLocation)** : Opens 'Read' or 'Write' location folder in explorer.
+
+- **[removeInput](/Python_GUI/removeInput)** : Disconnect nodes input in the Node Graph.
 
 - **[selectSimilar](/Python_GUI/selectSimilar)** : All nodes of the selected type will be selected in the Node Graph .
 
