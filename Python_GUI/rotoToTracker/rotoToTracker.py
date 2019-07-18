@@ -1,7 +1,7 @@
 #This Source Code Form is subject to the terms of the Mozilla Public
 #License, v. 2.0. If a copy of the MPL was not distributed with this
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-#Created by Fabrice Fernandez on 28/06/2019.
+#Created by Fabrice Fernandez on 17/01/2018.
 
 import string
 from NatronEngine import*
@@ -104,6 +104,8 @@ def rotoToTracker():
 
 							# retrieve current 'Track' #
 							currentTrack = newTrackerContext.getTrackByName(trackName)
+
+							currentTrack.getParam('motionModel').set('Trans.+Rot.+Scale')
 							
 							# get 'currentBezier' all keyframes #
 							currentBezierKeyframes = currentBezier.getKeyframes()
