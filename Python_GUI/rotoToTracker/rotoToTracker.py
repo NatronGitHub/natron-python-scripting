@@ -3,7 +3,6 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 18/07/2018.
 
-import string
 from NatronEngine import*
 from NatronGui import *
 
