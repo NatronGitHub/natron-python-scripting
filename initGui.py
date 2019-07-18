@@ -45,6 +45,7 @@ from Python_GUI.selectSimilar.selectSimilar import *
 # Tools -> Other
 from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
 from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
+from Python_GUI.rotoLink.rotoLink import *
 
 # Tools -> Time
 from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
@@ -74,16 +75,17 @@ NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto'
 NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
-NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
-NatronGui.natron.addMenuCommand('Edit/Bold nodes <HTML>','nodeBold_HTML')
-NatronGui.natron.addMenuCommand('Edit/Italic nodes <HTML>','nodeItalic_HTML')
+NatronGui.natron.addMenuCommand('Edit/Bold node(s)','nodeBold_HTML')
+NatronGui.natron.addMenuCommand('Edit/Italic node(s)','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Edit/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Select similar','selectSimilar')
+NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Remove input','removeInput', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.ControlModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read frame range','nodeChangeFrameRange()')
@@ -117,14 +119,15 @@ print '   + Edit/Connect nodes'
 print '   + Edit/Force caching'
 print '   + Edit/Invert selection'
 print '   + Edit/Node(s) Color'
-print '   + Edit/Bold nodes <HTML>'
-print '   + Edit/Italic nodes <HTML>'
+print '   + Edit/Bold node(s)'
+print '   + Edit/Italic node(s)'
 print '   + Edit/Open location'
 print '   + Edit/Select similar'
 print '   + Edit/Remove input'
 print '   +'
 print '   + Tools/Other/Blending mode+'
 print '   + Tools/Other/Blending mode-'
+print '   + Tools/Other/Link roto to tracker'
 print '   +'
 print '   + Tools/Time/Read FPS'
 print '   + Tools/Time/Read frame range'

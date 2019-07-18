@@ -3,7 +3,6 @@
 #file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 #Created by Fabrice Fernandez on 23/06/2019.
 
-#from NatronEngine import*
 from NatronGui import *
 from PySide.QtGui import *
 import NatronEngine
