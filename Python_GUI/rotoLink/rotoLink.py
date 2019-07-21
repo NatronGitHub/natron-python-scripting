@@ -36,17 +36,18 @@ def rotoLink():
 				rotoContext = selectedNodes[0].getRotoContext()
 
 				# get base layer #
-				Layer1_layer = rotoContext.getBaseLayer()
+				rootLayer = rotoContext.getBaseLayer()
 
 				# create temp Bezier #
-				tempBezier = rotoContext.createRectangle(0.0,10.0,10.0,0)
-				tempBezier.setScriptName("Temp_Rectangle")
-				tempBezier.setLabel("Temp_Rectangle")
-				tempBezier.setLocked(False)
-				tempBezier.setVisible(False)
+				tempLayer = rotoContext.createLayer()
 
 				# add created temp temp Bezier to base layer #
-				#Layer1_layer.addItem(tempBezier)
+				rootLayer.addItem(tempLayer)
+
+				tempLayer.setScriptName("temp_Layer")
+				tempLayer.setLabel("temp_Layer")
+				tempLayer.setLocked(False)
+				tempLayer.setVisible(False)
 
 				# set Tracker Motion Type to Match-Move #
 				selectedNodes[1].getParam('motionType').set('Match-Move')
@@ -88,6 +89,17 @@ def rotoLink():
 
 
 
+				# SET TRACKS TO 'TRANS.+ROT.+SCALE' #
+
+				trackerContext = selectedNodes[1].getTrackerContext()
+
+				myTracks = trackerContext.getAllTracks()
+
+				for currentTrack in myTracks:
+
+					currentTrack.getParam('motionModel').set('Trans.+Rot.+Scale')
+
+
 				# LINKING PARAMETERS FROM TRACKER TO ROTO #
 
 				rotoTranslate.slaveTo(trackerTranslate,0,0)
@@ -105,8 +117,8 @@ def rotoLink():
 
 				# REMOVE TEMP BEZIER #
 
-				itemToDelete = rotoContext.getItemByName("Temp_Rectangle")
-				Layer1_layer.removeItem(itemToDelete)
+				itemToDelete = rotoContext.getItemByName("temp_Layer")
+				rootLayer.removeItem(itemToDelete)
 
 		# if first selected node is a Roto or a RotoPaint #
 		else :
