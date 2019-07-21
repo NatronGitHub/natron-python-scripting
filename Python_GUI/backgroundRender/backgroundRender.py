@@ -9,6 +9,7 @@
 
 import os
 import sys
+import stat
 import codecs
 import string
 import shutil
@@ -281,6 +282,27 @@ def backgroundRender():
 
 						batchRender.write('@echo off\n')
 						batchRender.write(str(renderInstruction))
+
+					# run batch file #
+					currentRender = subprocess.call(batchFileName)
+
+				# Linux/OSX #
+				if natron.isLinux() == 1 or natron.isMacOSX() == 1:
+
+					# set batch file name #
+					batchFileName = str(projectNameNoExt) + '_' + str(date) + '.bash'
+
+					# create batch file #
+					with codecs.open(batchFileName, 'w+', errors="ignore") as batchRender:
+
+						# write instruction in batch file #
+						renderInstruction = './' + str(natronFolder) + '/' + 'NatronRenderer ' + str(newProjectNewName) + ' -w ' + str(writeUserChoiceLabel) + ' ' + str(fileRenderPath) + ' ' + str(renderRange)
+
+						batchRender.write('#!/bin/bash\n')
+						batchRender.write(str(renderInstruction))
+
+						# make bash file executable #
+						os.chmod(batchFileName,stat.S_IRWXU)
 
 					# run batch file #
 					currentRender = subprocess.call(batchFileName)
