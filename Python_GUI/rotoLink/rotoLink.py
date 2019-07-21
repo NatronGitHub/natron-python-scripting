@@ -46,7 +46,7 @@ def rotoLink():
 				tempBezier.setVisible(False)
 
 				# add created temp temp Bezier to base layer #
-				Layer1_layer.addItem(tempBezier)
+				#Layer1_layer.addItem(tempBezier)
 
 				# set Tracker Motion Type to Match-Move #
 				selectedNodes[1].getParam('motionType').set('Match-Move')
