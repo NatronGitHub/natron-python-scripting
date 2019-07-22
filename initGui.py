@@ -50,8 +50,8 @@ from Python_GUI.rotoLink.rotoLink import *
 # Tools -> Roto
 from Python_GUI.fullCircle.fullCircle import *
 from Python_GUI.fullEllipse.fullEllipse import *
-from Python_GUI.fullRectangle.fullRectangle import *
 from Python_GUI.fullSquare.fullSquare import *
+from Python_GUI.fullRectangle.fullRectangle import *
 
 # Tools -> Time
 from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
@@ -93,10 +93,10 @@ NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown'
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
-NatronGui.natron.addMenuCommand('Tools/Roto/Full circle','fullCircle()')
-NatronGui.natron.addMenuCommand('Tools/Roto/Full ellipse','fullEllipse()')
-NatronGui.natron.addMenuCommand('Tools/Roto/Full rectangle','fullRectangle()')
-NatronGui.natron.addMenuCommand('Tools/Roto/Full square','fullSquare()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Circle','fullCircle()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Ellipse','fullEllipse()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Square','fullSquare()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Rectangle','fullRectangle()')
 
 NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read frame range','nodeChangeFrameRange()')
@@ -140,7 +140,10 @@ print '   + Tools/Other/Blending mode+'
 print '   + Tools/Other/Blending mode-'
 print '   + Tools/Other/Link roto to tracker'
 print '   +'
-print '   + Tools/Roto/Full rectangle'
+print '   + Tools/Roto/Circle'
+print '   + Tools/Roto/Ellipse'
+print '   + Tools/Roto/Square'
+print '   + Tools/Roto/Rectangle'
 print '   +'
 print '   + Tools/Time/Read FPS'
 print '   + Tools/Time/Read frame range'
