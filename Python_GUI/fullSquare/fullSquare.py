@@ -56,3 +56,7 @@ def fullSquare():
 	# set 4th point position
 	fullSquare.setPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)
 	fullSquare.setFeatherPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)
+
+	# set center position
+	myRoto.getParam('center').setValue(imageWidth/2,0)
+	myRoto.getParam('center').setValue(imageHeight/2,1)

@@ -34,5 +34,5 @@ def fullEllipse():
 	Layer1_layer = rotoContext.getBaseLayer()
 
 	# create ellipse
-	fullEllipse = rotoContext.createEllipse(imageWidth,imageHeight/2,imageHeight,True,1)
+	fullEllipse = rotoContext.createEllipse(imageWidth/2,imageHeight/2,imageWidth,True,1)
 	fullEllipse.setLabel('full_Ellipse')

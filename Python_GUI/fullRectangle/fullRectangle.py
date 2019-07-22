@@ -56,3 +56,7 @@ def fullRectangle():
 	# set 4th point position
 	fullRectangle.setPointAtIndex(3,1,0,0,0,0,0,0)
 	fullRectangle.setFeatherPointAtIndex(3,1,0,0,0,0,0,0)
+
+	# set center position
+	myRoto.getParam('center').setValue(imageWidth/2,0)
+	myRoto.getParam('center').setValue(imageHeight/2,1)
