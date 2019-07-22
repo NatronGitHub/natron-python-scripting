@@ -1,6 +1,6 @@
 # fullSquare
 
-Create a full frame size rectangle.
+Create a full frame size square.
 
 ### HOW TO USE IT
 
