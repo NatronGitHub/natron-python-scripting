@@ -41,7 +41,7 @@ def rotoLink():
 				# create temp Bezier #
 				tempLayer = rotoContext.createLayer()
 
-				# add created temp temp Bezier to base layer #
+				# add created temp layer to base layer #
 				rootLayer.addItem(tempLayer)
 
 				tempLayer.setScriptName("temp_Layer")
