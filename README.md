@@ -52,7 +52,7 @@ Restart Natron.
 - **[mergeBlendingUp](/Python_GUI/mergeBlendingUp)** : Cycles through 'Merge' blending modes upward.
 
 ### Roto
-- **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame sized rectangle.
+- **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame size rectangle.
 
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Sets FPS for selected 'Read' nodes.

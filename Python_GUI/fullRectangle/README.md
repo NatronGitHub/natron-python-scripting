@@ -1,6 +1,6 @@
 # fullRectangle
 
-Sets alpha to 1 (full white) for selected 'Read' nodes.
+Create a full frame size rectangle.
 
 ### HOW TO USE IT
 
@@ -8,7 +8,7 @@ Sets alpha to 1 (full white) for selected 'Read' nodes.
 
 ### RESULT
 
-* Selected 'Read' nodes have their alpha channel set to 1 (full white).
+* A Roto node with a full frame size rectangle is created.
 
 ### INSTALLATION
 
