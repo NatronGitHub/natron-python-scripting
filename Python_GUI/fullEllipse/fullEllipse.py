@@ -36,5 +36,3 @@ def fullEllipse():
 	# create ellipse
 	fullEllipse = rotoContext.createEllipse(imageWidth,imageHeight/2,imageHeight,True,1)
 	fullEllipse.setLabel('full_Ellipse')
-
-fullEllipse()
