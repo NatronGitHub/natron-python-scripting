@@ -49,6 +49,7 @@ from Python_GUI.rotoLink.rotoLink import *
 
 # Tools -> Roto
 from Python_GUI.fullRectangle.fullRectangle import *
+from Python_GUI.fullSquare.fullSquare import *
 
 # Tools -> Time
 from Python_GUI.nodeChangeFPS.nodeChangeFPS import *
@@ -91,6 +92,7 @@ NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', 
 NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Roto/Full rectangle','fullRectangle()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Full square','fullSquare()')
 
 NatronGui.natron.addMenuCommand('Tools/Time/Read FPS','nodeChangeFPS()')
 NatronGui.natron.addMenuCommand('Tools/Time/Read frame range','nodeChangeFrameRange()')
