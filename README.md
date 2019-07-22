@@ -54,6 +54,8 @@ Restart Natron.
 ### Roto
 - **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame size rectangle.
 
+- **[fullSquare](/Python_GUI/fullSquare)** : Create a full frame size square.
+
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Sets FPS for selected 'Read' nodes.
 
