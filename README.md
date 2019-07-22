@@ -18,27 +18,27 @@ Restart Natron.
 ## Natron tools
 
 ### Channel
-- **[autoAlpha](/Python_GUI/autoAlpha)** : Sets alpha to 1 (full white) for selected 'Read' nodes.
+- **[autoAlpha](/Python_GUI/autoAlpha)** : Set alpha to 1 (full white) for selected 'Read' nodes.
 
 ### Generate
-- **[rotoToTracker](/Python_GUI/rotoToTracker)** : Generates a 'Tracker' out of a selected 'Roto' node(s).
+- **[rotoToTracker](/Python_GUI/rotoToTracker)** : Generate a 'Tracker' out of a selected 'Roto' node(s).
 
-- **[trackerToRoto](/Python_GUI/trackerToRoto)** : Generates a 'Roto' out of a selected 'Tracker' node(s).
+- **[trackerToRoto](/Python_GUI/trackerToRoto)** : Generate a 'Roto' out of a selected 'Tracker' node(s).
 
 ### Edit
-- **[batchRenameNodes](/Python_GUI/batchRenameNodes)** : Renames selected nodes.
+- **[batchRenameNodes](/Python_GUI/batchRenameNodes)** : Rename selected nodes.
 
-- **[connectNodes](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
+- **[connectNodes](/Python_GUI/connectNodes)** : Connect nodes to another one in the Node Graph.
 
-- **[forceCaching](/Python_GUI/connectNodes)** : Connects nodes to another one in the Node Graph.
+- **[forceCaching](/Python_GUI/connectNodes)** : Connect nodes to another one in the Node Graph.
 
 - **[invertSelection](/Python_GUI/invertSelection)** : Invert selection in the Node Graph.
 
 - **[nodeChangeColor](/Python_GUI/forceCaching)** : Enable/disable force caching for selected nodes.
 
-- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML)** : Sets selected nodes to be displayed in bold in the Node Graph.
+- **[nodeBold_HTML](/Python_GUI/nodeBold_HTML)** : Set selected nodes to be displayed in bold in the Node Graph.
 
-- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML)** : Sets selected nodes to be displayed in italic in the Node Graph.
+- **[nodeItalic_HTML](/Python_GUI/nodeItalic_HTML)** : Set selected nodes to be displayed in italic in the Node Graph.
 
 - **[openLocation](/Python_GUI/openLocation)** : Opens 'Read' or 'Write' location folder in explorer.
 
@@ -51,6 +51,9 @@ Restart Natron.
 
 - **[mergeBlendingUp](/Python_GUI/mergeBlendingUp)** : Cycles through 'Merge' blending modes upward.
 
+### Roto
+- **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame sized rectangle.
+
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Sets FPS for selected 'Read' nodes.
 
@@ -62,26 +65,26 @@ Restart Natron.
 - **[replacePaths](/Python_GUI/replacePaths)** : Replace path in 'Read' nodes.
 
 ### Render
-- **[backgroundRender](/Python_GUI/backgroundRender)** : Renders current project in background.
+- **[backgroundRender](/Python_GUI/backgroundRender)** : Render current project in background.
 
-- **[diskCache](/Python_GUI/diskCache)** : Creates and process a 'DiskCache' node for the selected node.
+- **[diskCache](/Python_GUI/diskCache)** : Create and process a 'DiskCache' node for the selected node.
 
-- **[flipbook](/Python_GUI/flipbook)** : Renders and plays the selected node in an external viewer. (Win/Linux)
+- **[flipbook](/Python_GUI/flipbook)** : Render and plays the selected node in an external viewer. (Win/Linux)
 
 ## Natron snippets
-- **[addDeepLayer](/Python_INIT/addDeepLayer)** : Adds 'Deep' layer to Natron.
+- **[addDeepLayer](/Python_INIT/addDeepLayer)** : Add 'Deep' layer to Natron.
 
-- **[addDepthLayer](/Python_INIT/addDepthLayer)** : Adds 'Depth' layer to Natron.
+- **[addDepthLayer](/Python_INIT/addDepthLayer)** : Add 'Depth' layer to Natron.
 
-- **[addMaskLayer](/Python_INIT/addMaskLayer)** : Adds 'Mask' layer to Natron.
+- **[addMaskLayer](/Python_INIT/addMaskLayer)** : Add 'Mask' layer to Natron.
 
-- **[addMotionLayer](/Python_INIT/addMotionLayer)** : Adds 'Motion' layer to Natron.
+- **[addMotionLayer](/Python_INIT/addMotionLayer)** : Add 'Motion' layer to Natron.
 
-- **[listNatronPath](/Python_INIT/listNatronPath)** : Lists paths scanned by Natron at startup.
+- **[listNatronPath](/Python_INIT/listNatronPath)** : List paths scanned by Natron at startup.
 
-- **[listPyPlugs](/Python_INIT/listPyPlugs)** : Lists PyPlugs installed on the system.
+- **[listPyPlugs](/Python_INIT/listPyPlugs)** : List PyPlugs installed on the system.
 
-- **[natronLogo](/Python_INIT/natronLogo)** : Displays a nice Natron logo in the console. ;)
+- **[natronLogo](/Python_INIT/natronLogo)** : Display a nice Natron logo in the console. ;)
 
 - **[setPreferences](/Python_INIT/setPreferences)** : Setup Natron's preferences using an external text file.
 
