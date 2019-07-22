@@ -48,6 +48,7 @@ from Python_GUI.mergeBlendingUp.mergeBlendingUp import *
 from Python_GUI.rotoLink.rotoLink import *
 
 # Tools -> Roto
+from Python_GUI.fullCircle.fullCircle import *
 from Python_GUI.fullRectangle.fullRectangle import *
 from Python_GUI.fullSquare.fullSquare import *
 
@@ -91,6 +92,7 @@ NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown'
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
+NatronGui.natron.addMenuCommand('Tools/Roto/Full circle','fullCircle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Full rectangle','fullRectangle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Full square','fullSquare()')
 

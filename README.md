@@ -52,6 +52,8 @@ Restart Natron.
 - **[mergeBlendingUp](/Python_GUI/mergeBlendingUp)** : Cycles through 'Merge' blending modes upward.
 
 ### Roto
+- **[fullCircle](/Python_GUI/fullCircle)** : Create a full frame size circle.
+
 - **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame size rectangle.
 
 - **[fullSquare](/Python_GUI/fullSquare)** : Create a full frame size square.

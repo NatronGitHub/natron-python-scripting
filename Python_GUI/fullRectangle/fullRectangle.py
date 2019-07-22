@@ -20,9 +20,9 @@ def fullRectangle():
 
 	# get input image size
 	imageWidth = myRoto.getOutputFormat().width()
-	print str(imageWidth)
+
 	imageHeight = myRoto.getOutputFormat().height()
-	print imageHeight
+
 
 	# set 'Roto' label
 	myRoto.setLabel('full_Rectangle')
