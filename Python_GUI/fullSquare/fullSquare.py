@@ -38,21 +38,21 @@ def fullSquare():
 	# 2nd parameter : y position
 	# 3rd parameter : size
 	# 4th parameter : frame
-	fullRectangle = rotoContext.createRectangle(0,0,10,1)
-	fullRectangle.setLabel('full_Square')
+	fullSquare = rotoContext.createRectangle(0,0,10,1)
+	fullSquare.setLabel('full_Square')
 
 	# set 1st point position
-	fullRectangle.setPointAtIndex(0,1,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight)
-	fullRectangle.setFeatherPointAtIndex(0,1,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight)
+	fullSquare.setPointAtIndex(0,1,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight)
+	fullSquare.setFeatherPointAtIndex(0,1,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight)
 
 	# set 2nd point position
-	fullRectangle.setPointAtIndex(1,1,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight)
-	fullRectangle.setFeatherPointAtIndex(1,1,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight)
+	fullSquare.setPointAtIndex(1,1,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight)
+	fullSquare.setFeatherPointAtIndex(1,1,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight,(imageWidth/2)+(imageHeight/2),imageHeight)
 
 	# set 3rd point position
-	fullRectangle.setPointAtIndex(2,1,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0)
-	fullRectangle.setFeatherPointAtIndex(2,1,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0)
+	fullSquare.setPointAtIndex(2,1,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0)
+	fullSquare.setFeatherPointAtIndex(2,1,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0,(imageWidth/2)+(imageHeight/2),0)
 
 	# set 4th point position
-	fullRectangle.setPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)
-	fullRectangle.setFeatherPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)
+	fullSquare.setPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)
+	fullSquare.setFeatherPointAtIndex(3,1,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0,(imageWidth/2)-(imageHeight/2),0)

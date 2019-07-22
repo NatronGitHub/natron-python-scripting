@@ -10,7 +10,7 @@ from NatronGui import *
 
 # TRACKER TO ROTO #
 
-def fullCircle():
+def fullEllipse():
 
 	# get current Natron instance running in memory
 	app = natron.getGuiInstance(0)
@@ -25,7 +25,7 @@ def fullCircle():
 
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Circle')
+	myRoto.setLabel('full_Ellipse')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -33,6 +33,8 @@ def fullCircle():
 	# get 'Base Layer'
 	Layer1_layer = rotoContext.getBaseLayer()
 
-	# create square
-	fullCircle = rotoContext.createEllipse(imageWidth/2,imageHeight/2,imageHeight,True,1)
-	fullCircle.setLabel('full_Circle')
+	# create ellipse
+	fullEllipse = rotoContext.createEllipse(imageWidth,imageHeight/2,imageHeight,True,1)
+	fullEllipse.setLabel('full_Ellipse')
+
+fullEllipse()

@@ -1,6 +1,6 @@
 # fullCircle
 
-Create a full frame size circlee.
+Create a full frame size circle.
 
 ### HOW TO USE IT
 
