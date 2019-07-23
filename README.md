@@ -58,6 +58,8 @@ Restart Natron.
 
 - **[fullSquare](/Python_GUI/fullSquare)** : Create a full frame size square.
 
+- **[roundedSquare](/Python_GUI/roundedSquare)** : Create a full frame size rounded square.
+
 - **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame size rectangle.
 
 - **[roundedRectangle](/Python_GUI/roundedRectangle)** : Create a full frame size rounded rectangle.
