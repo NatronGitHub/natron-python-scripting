@@ -62,11 +62,11 @@ Restart Natron.
 
 - **[leftTriangle](/Python_GUI/leftTriangle)** : Create a left aligned triangle.
 
-- **[rightTriangle](/Python_GUI/leftTriangle)** : Create a right aligned triangle.
+- **[rightTriangle](/Python_GUI/rightTriangle)** : Create a right aligned triangle.
 
-- **[topTriangle](/Python_GUI/leftTriangle)** : Create a top aligned triangle.
+- **[topTriangle](/Python_GUI/topTriangle)** : Create a top aligned triangle.
 
-- **[bottomTriangle](/Python_GUI/leftTriangle)** : Create a bottom aligned triangle.
+- **[bottomTriangle](/Python_GUI/bottomTriangle)** : Create a bottom aligned triangle.
 
 ### Time
 - **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Sets FPS for selected 'Read' nodes.
