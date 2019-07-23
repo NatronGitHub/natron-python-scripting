@@ -130,3 +130,7 @@ def roundedRectangle():
 
 
 		newRectangle.setCurveFinished(1)
+
+		# set center position
+		myRoto.getParam('center').setValue(imageWidth/2,0)
+		myRoto.getParam('center').setValue(imageHeight/2,1)
