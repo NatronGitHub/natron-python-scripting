@@ -8,7 +8,7 @@ import NatronEngine
 from NatronGui import *
 
 
-# TRACKER TO ROTO #
+# CREATE A FULL FRAME ELLIPSE #
 
 def fullEllipse():
 

@@ -8,9 +8,9 @@ import NatronEngine
 from NatronGui import *
 
 
-# CREATE A FULL FRAME CIRCLE #
+# CREATE A LEFT ALIGNED TRIANGLE #
 
-def fullCircle():
+def leftTriangle():
 
 	# get current Natron instance running in memory
 	app = natron.getGuiInstance(0)
@@ -25,7 +25,7 @@ def fullCircle():
 
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Circle')
+	myRoto.setLabel('full_Rectangle')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -33,10 +33,7 @@ def fullCircle():
 	# get 'Base Layer'
 	Layer1_layer = rotoContext.getBaseLayer()
 
-	# create square
-	fullCircle = rotoContext.createEllipse(imageWidth/2,imageHeight/2,imageHeight,True,1)
-	fullCircle.setLabel('full_Circle')
+	# create a bezier
+	fullRectangle = rotoContext.createRectangle(0,0,10,1)
+	fullRectangle.setLabel('full_Rectangle')
 
-	# set center position
-	myRoto.getParam('center').setValue(imageWidth/2,0)
-	myRoto.getParam('center').setValue(imageHeight/2,1)
