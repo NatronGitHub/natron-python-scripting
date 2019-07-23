@@ -44,7 +44,7 @@ Restart Natron.
 
 - **[removeInput](/Python_GUI/removeInput)** : Disconnect nodes input in the Node Graph.
 
-- **[selectSimilar](/Python_GUI/selectSimilar)** : All nodes of the selected type will be selected in the Node Graph .
+- **[selectSimilar](/Python_GUI/selectSimilar)** : All nodes of the selected type will be selected in the Node Graph.
 
 ### Other
 - **[mergeBlendingDown](/Python_GUI/mergeBlendingDown)** : Cycles through 'Merge' blending modes downward.
