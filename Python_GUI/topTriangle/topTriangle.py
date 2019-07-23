@@ -53,3 +53,7 @@ def topTriangle():
 	newTriangle.addControlPoint( imageWidth , imageHeight )
 	newTriangle.addControlPoint( imageWidth/2 , imageHeight/2 )
 	newTriangle.setCurveFinished(1)
+
+	# set center position
+	myRoto.getParam('center').setValue(imageWidth/2,0)
+	myRoto.getParam('center').setValue(imageHeight/2,1)
