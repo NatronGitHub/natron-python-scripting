@@ -33,7 +33,9 @@ def leftTriangle():
 	# get 'Base Layer'
 	Layer1_layer = rotoContext.getBaseLayer()
 
-	# create a bezier
-	fullRectangle = rotoContext.createRectangle(0,0,10,1)
-	fullRectangle.setLabel('full_Rectangle')
+	# create one point bezier curve at frame 1 #
+	newTriangle = rotoContext.createBezier(0.0,0.0,1)
+
+
+leftTriangle()
 

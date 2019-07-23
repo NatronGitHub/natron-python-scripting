@@ -117,7 +117,7 @@ def trackerToRoto():
 					#   'BEZIER SPLINE' CREATION   #
 					# ---------------------------- #
 
-					# create one point bezier curve at frame 0 #
+					# create one point bezier curve at frame 1 #
 					newBezier = rotoContext.createBezier(0.0,0.0,1)
 					newBezier.setScriptName("Roto_from_track1")
 					newBezier.setLabel("Roto_from_track1")
