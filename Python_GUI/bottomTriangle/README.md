@@ -1,6 +1,6 @@
 # bottomTriangle
 
-Create a top aligned triangle.
+Create a bottom aligned triangle.
 
 ### HOW TO USE IT
 
