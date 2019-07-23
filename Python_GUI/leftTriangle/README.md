@@ -4,11 +4,11 @@ Create a left aligned triangle.
 
 ### HOW TO USE IT
 
-* Tools -> Roto -> Full rectangle
+* Tools -> Roto -> Left triangle
 
 ### RESULT
 
-* A Roto node with a full frame size rectangle is created.
+* A Roto node with a left aligned triangle is created.
 
 ### INSTALLATION
 

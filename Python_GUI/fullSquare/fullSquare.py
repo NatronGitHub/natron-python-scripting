@@ -25,7 +25,7 @@ def fullSquare():
 
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Square')
+	myRoto.setLabel('full_Square1')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -39,7 +39,7 @@ def fullSquare():
 	# 3rd parameter : size
 	# 4th parameter : frame
 	fullSquare = rotoContext.createRectangle(0,0,10,1)
-	fullSquare.setLabel('full_Square')
+	fullSquare.setLabel('full_Square1')
 
 	# set 1st point position
 	fullSquare.setPointAtIndex(0,1,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight,(imageWidth/2)-(imageHeight/2),imageHeight)

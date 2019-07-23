@@ -25,7 +25,7 @@ def fullRectangle():
 
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Rectangle')
+	myRoto.setLabel('full_Rectangle1')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -39,7 +39,7 @@ def fullRectangle():
 	# 3rd parameter : size
 	# 4th parameter : frame
 	fullRectangle = rotoContext.createRectangle(0,0,10,1)
-	fullRectangle.setLabel('full_Rectangle')
+	fullRectangle.setLabel('full_Rectangle1')
 
 	# set 1st point position
 	fullRectangle.setPointAtIndex(0,1,0,imageHeight,0,imageHeight,0,imageHeight)

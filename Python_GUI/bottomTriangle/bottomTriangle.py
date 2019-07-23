@@ -8,9 +8,9 @@ import NatronEngine
 from NatronGui import *
 
 
-# CREATE A LEFT ALIGNED TRIANGLE #
+# CREATE A BOTTOM ALIGNED TRIANGLE #
 
-def leftTriangle():
+def bottomTriangle():
 
 	# get current Natron instance running in memory
 	app = natron.getGuiInstance(0)
@@ -19,7 +19,7 @@ def leftTriangle():
 	myRoto = app.createNode("fr.inria.built-in.Roto")
 
 	# set 'Roto' label
-	myRoto.setLabel('left_Triangle1')
+	myRoto.setLabel('bottom_Triangle1')
 
 	# get input image size
 	imageWidth = myRoto.getOutputFormat().width()
@@ -41,8 +41,8 @@ def leftTriangle():
 	# create one point bezier curve at frame 1
 	newTriangle = rotoContext.createBezier( 0.0 , 0.0 , 1 )
 
-	newTriangle.setScriptName("left_Triangle1")
-	newTriangle.setLabel("left_Triangle1")
+	newTriangle.setScriptName("bottom_Triangle1")
+	newTriangle.setLabel("bottom_Triangle1")
 	newTriangle.setLocked(False)
 	newTriangle.setVisible(True)
 
@@ -50,6 +50,6 @@ def leftTriangle():
 	# add created bezier to 'Base Layer'
 	rootLayer.addItem(newTriangle)
 
-	newTriangle.addControlPoint( 0.0 , imageHeight )
+	newTriangle.addControlPoint( imageWidth , 0.0 )
 	newTriangle.addControlPoint( imageWidth/2 , imageHeight/2 )
 	newTriangle.setCurveFinished(1)

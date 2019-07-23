@@ -25,7 +25,7 @@ def fullCircle():
 
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Circle')
+	myRoto.setLabel('full_Circle1')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -35,7 +35,7 @@ def fullCircle():
 
 	# create square
 	fullCircle = rotoContext.createEllipse(imageWidth/2,imageHeight/2,imageHeight,True,1)
-	fullCircle.setLabel('full_Circle')
+	fullCircle.setLabel('full_Circle1')
 
 	# set center position
 	myRoto.getParam('center').setValue(imageWidth/2,0)

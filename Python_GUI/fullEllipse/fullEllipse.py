@@ -24,7 +24,7 @@ def fullEllipse():
 	imageHeight = myRoto.getOutputFormat().height()
 
 	# set 'Roto' label
-	myRoto.setLabel('full_Ellipse')
+	myRoto.setLabel('full_Ellipse1')
 
 	# get roto context
 	rotoContext = myRoto.getRotoContext()
@@ -36,7 +36,7 @@ def fullEllipse():
 
 	# create ellipse
 	fullEllipse = rotoContext.createEllipse(imageWidth/2, imageHeight/2, imageWidth, True, 1)
-	fullEllipse.setLabel('full_Ellipse')
+	fullEllipse.setLabel('full_Ellipse1')
 
 	# set center position
 	myRoto.getParam('center').setValue(imageWidth/2,0)
