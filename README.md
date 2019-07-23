@@ -60,6 +60,8 @@ Restart Natron.
 
 - **[fullRectangle](/Python_GUI/fullRectangle)** : Create a full frame size rectangle.
 
+- **[roundedRectangle](/Python_GUI/roundedRectangle)** : Create a full frame size rounded rectangle.
+
 - **[leftTriangle](/Python_GUI/leftTriangle)** : Create a left aligned triangle.
 
 - **[rightTriangle](/Python_GUI/rightTriangle)** : Create a right aligned triangle.
