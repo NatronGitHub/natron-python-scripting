@@ -1,6 +1,6 @@
 # selectSimilar
 
-Select similar nodes.
+Select nodes of the same class.
 
 ### HOW TO USE IT
 
