@@ -128,7 +128,7 @@ def roundedRectangle():
 		newRectangle.setPointAtIndex( 7 , 1 , 0 , roundness , 0 , roundness + tangentRoundness , 0 , roundness - tangentRoundness )
 		newRectangle.setFeatherPointAtIndex( 7 , 1 , 0 , roundness , 0 , roundness + tangentRoundness , 0 , roundness - tangentRoundness )
 
-
+		# close the curve
 		newRectangle.setCurveFinished(1)
 
 		# set center position

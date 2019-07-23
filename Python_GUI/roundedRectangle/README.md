@@ -1,6 +1,6 @@
 # roundedRectangle
 
-Create a full frame size rounded triangle.
+Create a full frame size rounded rectangle.
 
 ### HOW TO USE IT
 
@@ -9,7 +9,7 @@ Create a full frame size rounded triangle.
 
 ### RESULT
 
-* A Roto node with a full frame size rounded triangle.
+* A Roto node with a full frame size rounded rectangle.
 
 ### INSTALLATION
 
