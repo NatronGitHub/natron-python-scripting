@@ -4,7 +4,7 @@ Create a full frame size rounded square.
 
 ### HOW TO USE IT
 
-* Tools -> Roto -> Rounded rectangle
+* Tools -> Roto -> Rounded square
 * Enter hardness value
 
 ### RESULT
