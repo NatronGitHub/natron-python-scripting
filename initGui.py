@@ -52,6 +52,7 @@ from Python_GUI.fullCircle.fullCircle import *
 from Python_GUI.fullEllipse.fullEllipse import *
 from Python_GUI.fullSquare.fullSquare import *
 from Python_GUI.fullRectangle.fullRectangle import *
+from Python_GUI.roundedRectangle.roundedRectangle import *
 
 from Python_GUI.leftTriangle.leftTriangle import *
 from Python_GUI.rightTriangle.rightTriangle import *
@@ -102,6 +103,7 @@ NatronGui.natron.addMenuCommand('Tools/Roto/Circle','fullCircle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Ellipse','fullEllipse()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Square','fullSquare()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Rectangle','fullRectangle()')
+NatronGui.natron.addMenuCommand('Tools/Roto/Rounded rectangle','roundedRectangle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Left Triangle','leftTriangle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Right Triangle','rightTriangle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Top Triangle','topTriangle()')
@@ -153,6 +155,7 @@ print '   + Tools/Roto/Circle'
 print '   + Tools/Roto/Ellipse'
 print '   + Tools/Roto/Square'
 print '   + Tools/Roto/Rectangle'
+print '   + Tools/Roto/Rounded rectangle'
 print '   + Tools/Roto/Left triangle'
 print '   + Tools/Roto/Right triangle'
 print '   + Tools/Roto/Top triangle'
