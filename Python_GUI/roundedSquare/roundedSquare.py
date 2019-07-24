@@ -19,7 +19,7 @@ def roundedSquare():
 	dialog = app.createModalDialog()
 
 	# set dialog title #
-	dialog.setWindowTitle("Rounded rectangle")
+	dialog.setWindowTitle("Rounded square")
 
 	# set dialog margins #
 	dialog.setContentsMargins(0, 0, 10, 10)
@@ -57,7 +57,7 @@ def roundedSquare():
 		myRoto = app.createNode("fr.inria.built-in.Roto")
 
 		# set 'Roto' label
-		myRoto.setLabel('rounded_Rectangle1')
+		myRoto.setLabel('rounded_Square1')
 
 		# get input image size
 		imageWidth = myRoto.getOutputFormat().width()
@@ -85,8 +85,8 @@ def roundedSquare():
 		newSquare.setPointAtIndex( 0 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] - tangentRoundness , 0 , currentPoint[0] + tangentRoundness , 0 )
 		newSquare.setFeatherPointAtIndex( 0 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] - tangentRoundness , 0 , currentPoint[0] + tangentRoundness , 0 )
 
-		newSquare.setScriptName("rounded_Rectangle1")
-		newSquare.setLabel("rounded_Rectangle1")
+		newSquare.setScriptName("rounded_Square1")
+		newSquare.setLabel("rounded_Square1")
 		newSquare.setLocked(False)
 		newSquare.setVisible(True)
 
