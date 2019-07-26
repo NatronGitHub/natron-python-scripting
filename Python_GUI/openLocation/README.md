@@ -5,7 +5,7 @@ Opens 'Read' or 'Write' location folder in explorer.
 ### HOW TO USE IT
 
 * Select 'Read' nodes.
-* Tools -> Node Graph -> Open Location
+* Edit -> Open Location
 
 ### RESULT
 
