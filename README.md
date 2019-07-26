@@ -22,6 +22,8 @@ Restart Natron.
 ### Channel
 - **[autoAlpha](/Python_GUI/autoAlpha)** : Set alpha to 1 (full white) for selected 'Read' nodes.
 
+- **[extractExrLayers](/Python_GUI/extractExrLayers)** : Split EXR Read node into shuffle nodes.
+
 ### Generate
 - **[rotoToTracker](/Python_GUI/rotoToTracker)** : Generate a 'Tracker' out of a selected 'Roto' node(s).
 
