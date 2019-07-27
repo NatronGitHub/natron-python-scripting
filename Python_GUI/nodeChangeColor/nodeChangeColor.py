@@ -41,4 +41,4 @@ def nodeChangeColor():
 
 			currentNode.setColor(newColor[0],newColor[1],newColor[2])
 
-			os.write( 1, '\n' + str(curentNodeLabel) + ' color changed to [R :' + str(newColor[0]) + ' , G: ' + str(newColor[1]) + ' , B: ' + str(newColor[2]) +']\n' )
+			os.write( 1, '\n' + str(curentNodeLabel) + ' color changed to [r: ' + str(newColor[0]) + ' , g: ' + str(newColor[1]) + ' , b: ' + str(newColor[2]) +']\n' )
