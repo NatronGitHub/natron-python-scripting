@@ -51,9 +51,11 @@ Restart Natron.
 - **[selectSimilar](/Python_GUI/selectSimilar)** : All nodes of the selected type will be selected in the Node Graph.
 
 ### Other
-- **[mergeBlendingDown](/Python_GUI/mergeBlendingDown)** : Cycles through 'Merge' blending modes downward.
+- **[mergeBlendingDown](/Python_GUI/mergeBlendingDown)** : Cycle through 'Merge' blending modes downward.
 
-- **[mergeBlendingUp](/Python_GUI/mergeBlendingUp)** : Cycles through 'Merge' blending modes upward.
+- **[mergeBlendingUp](/Python_GUI/mergeBlendingUp)** : Cycle through 'Merge' blending modes upward.
+
+- **[rotoLink](/Python_GUI/rotoLink)** : Link a roto node to a tracker.
 
 ### Roto
 - **[fullCircle](/Python_GUI/fullCircle)** : Create a full frame size circle.
@@ -77,9 +79,9 @@ Restart Natron.
 - **[bottomTriangle](/Python_GUI/bottomTriangle)** : Create a bottom aligned triangle.
 
 ### Time
-- **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Sets FPS for selected 'Read' nodes.
+- **[nodeChangeFPS](/Python_GUI/nodeChangeFPS)** : Set FPS for selected 'Read' nodes.
 
-- **[nodeChangeFrameRange](/Python_GUI/nodeChangeFrameRange)** : Sets frame range for selected 'Read' nodes.
+- **[nodeChangeFrameRange](/Python_GUI/nodeChangeFrameRange)** : Set frame range for selected 'Read' nodes.
 
 ### Utils
 - **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp.

@@ -1,6 +1,6 @@
 # rotoLink
 
-Links a roto node to a tracker.
+Link a roto node to a tracker.
 
 ### HOW TO USE IT
 
@@ -10,6 +10,10 @@ Links a roto node to a tracker.
 ### RESULT
 
 * Roto is linked to the tracker.
+
+### NOTE
+
+* Roto must already contain an item.
 
 ### INSTALLATION
 
