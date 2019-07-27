@@ -60,6 +60,10 @@ def postageStamp():
 		hideCheckbox = postageStamp.createBooleanParam("hideCheckbox", "Hide input : ")
 		hideCheckbox.set(1)
 
+		previewCheckbox = postageStamp.createBooleanParam("previewCheckbox", "Enable preview : ")
+		previewCheckbox.setAddNewLine(False)
+		previewCheckbox.set(1)
+
 		line03 = postageStamp.createStringParam("line03","")
 		line03.setType(NatronEngine.StringParam.TypeEnum.eStringTypeLabel)
 		line04 = postageStamp.createStringParam("line04","")
@@ -70,3 +74,6 @@ def postageStamp():
 
 		# hide inputs #
 		postageStamp.getParam('hideInputs').setExpression( 'thisNode.hideCheckbox.get()' , False , 0)
+
+		# enable preview
+		postageStamp.getParam('enablePreview').setExpression( 'thisNode.previewCheckbox.get()' , False , 0)
