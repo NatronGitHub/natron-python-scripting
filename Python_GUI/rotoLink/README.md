@@ -5,6 +5,7 @@ Link a roto node to a tracker.
 ### HOW TO USE IT
 
 * Select a Roto node.
+* Select a Tracker node.
 * Tools -> Other -> Link roto to tracker
 
 ### RESULT
