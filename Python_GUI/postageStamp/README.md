@@ -11,6 +11,10 @@ Create a PostageStamp from any node.
 
 * Create a PostageStamp for any node.
 
+### SHORTCUT
+
+* Ctrl+Alt+P
+
 ### INSTALLATION
 
 * Copy 'postageStamp' folder in your .Natron folder.
@@ -18,4 +22,4 @@ Create a PostageStamp from any node.
 
 ```
 from <path>.postageStamp.postageStamp import *
-NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp')
+NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp', QtCore.Qt.Key.Key_P, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.AltModifier)
