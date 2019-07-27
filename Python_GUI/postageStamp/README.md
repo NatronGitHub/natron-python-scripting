@@ -4,6 +4,7 @@ Create a PostageStamp from any node.
 
 ### HOW TO USE IT
 
+* Select node(s)
 * Tools -> Generate -> PostageStamp
 
 ### RESULT
