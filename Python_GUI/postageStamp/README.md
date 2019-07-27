@@ -1,6 +1,6 @@
 # postageStamp
 
-Create a PostageStamp for any node.
+Create a PostageStamp from any node.
 
 ### HOW TO USE IT
 

@@ -77,3 +77,7 @@ def postageStamp():
 
 		# enable preview
 		postageStamp.getParam('enablePreview').setExpression( 'thisNode.previewCheckbox.get()' , False , 0)
+
+		# close pane that pops up at 'Group' creation time #
+		currentPane = app.getTabWidget('pane3')
+		currentPane.closeCurrentTab()

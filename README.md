@@ -25,6 +25,8 @@ Restart Natron.
 - **[extractExrLayers](/Python_GUI/extractExrLayers)** : Split EXR Read node into shuffle nodes.
 
 ### Generate
+- **[postageStamp](/Python_GUI/postageStamp)** : Create a PostageStamp from any node.
+
 - **[rotoToTracker](/Python_GUI/rotoToTracker)** : Generate a 'Tracker' out of a selected 'Roto' node(s).
 
 - **[trackerToRoto](/Python_GUI/trackerToRoto)** : Generate a 'Roto' out of a selected 'Tracker' node(s).

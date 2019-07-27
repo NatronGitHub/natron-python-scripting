@@ -28,6 +28,7 @@ from Python_GUI.autoAlpha.autoAlpha import *
 from Python_GUI.extractExrLayers.extractExrLayers import *
 
 # Tools -> Generate
+from Python_GUI.postageStamp.postageStamp import *
 from Python_GUI.rotoToTracker.rotoToTracker import *
 from Python_GUI.trackerToRoto.trackerToRoto import *
 
@@ -84,6 +85,7 @@ from Python_GUI.flipbook.flipbook import *
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 NatronGui.natron.addMenuCommand('Tools/Channel/Extract EXR layers','extractExrLayers')
 
+NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp')
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
@@ -138,6 +140,7 @@ print '\n'
 print '   + Tools/Channel/Auto Alpha'
 print '   + Tools/Channel/Extract EXR layers'
 print '   +'
+print '   + Tools/Generate/PostageStamp'
 print '   + Tools/Generate/Roto to tracker'
 print '   + Tools/Generate/Tracker to roto'
 print '   +'
