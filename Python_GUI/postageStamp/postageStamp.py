@@ -81,3 +81,6 @@ def postageStamp():
 		# close pane that pops up at 'Group' creation time #
 		currentPane = app.getTabWidget('pane3')
 		currentPane.closeCurrentTab()
+
+		# select postageStamp node #
+		app.selectNode(postageStamp , True)
