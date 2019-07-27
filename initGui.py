@@ -85,7 +85,7 @@ from Python_GUI.flipbook.flipbook import *
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 NatronGui.natron.addMenuCommand('Tools/Channel/Extract EXR layers','extractExrLayers')
 
-NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp')
+NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp', QtCore.Qt.Key.Key_P, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
