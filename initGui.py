@@ -35,6 +35,7 @@ from Python_GUI.trackerToRoto.trackerToRoto import *
 # Edit
 from Python_GUI.batchRenameNodes.batchRenameNodes import *
 from Python_GUI.connectNodes.connectNodes import *
+from Python_GUI.reconnectNodes.reconnectNodes import *
 from Python_GUI.forceCaching.forceCaching import *
 from Python_GUI.invertSelection.invertSelection import *
 from Python_GUI.nodeChangeColor.nodeChangeColor import *
@@ -92,6 +93,7 @@ NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto'
 
 NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Edit/Reconnect nodes','reconnectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
 NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
 NatronGui.natron.addMenuCommand('Edit/Bold node(s)','nodeBold_HTML')
@@ -148,6 +150,7 @@ print '   + Tools/Generate/Tracker to roto'
 print '   +'
 print '   + Edit/Batch rename'
 print '   + Edit/Connect nodes'
+print '   + Edit/Reconnect nodes'
 print '   + Edit/Force caching'
 print '   + Edit/Invert selection'
 print '   + Edit/Node(s) Color'

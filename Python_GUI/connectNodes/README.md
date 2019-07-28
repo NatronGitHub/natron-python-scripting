@@ -4,17 +4,17 @@ Connects nodes to another one in the Node Graph.
 
 ### HOW TO USE IT
 
-* Select many nodes.
+* Select node(s).
 * Select a final node.
 * Edit -> Connect nodes
 
 ### RESULT
 
-* Selected nodes get connected to the last one.
+* Selected node(s) get connected to the last selected one.
 
 ### SHORTCUT
 
-* Alt+Y
+* Y
 
 ### INSTALLATION
 
