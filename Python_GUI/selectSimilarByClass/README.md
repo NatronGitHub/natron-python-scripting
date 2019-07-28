@@ -5,7 +5,7 @@ All nodes of the selected type will be selected in the Node Graph.
 ### HOW TO USE IT
 
 * Select a node
-* Tools -> Edit -> Select similar -> Class
+* Edit -> Select similar -> Class
 
 ### RESULT
 
