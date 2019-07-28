@@ -38,7 +38,7 @@ Restart Natron.
 
 - **[reconnectNodes](/Python_GUI/reconnectNodes)** : Reconnect nodes to another one in the Node Graph.
 
-- **[forceCaching](/Python_GUI/connectNodes)** : Force caching for selected nodes.
+- **[forceCaching](/Python_GUI/forceCaching)** : Enable/disable force caching for selected nodes.
 
 - **[invertSelection](/Python_GUI/invertSelection)** : Invert selection in the Node Graph.
 
