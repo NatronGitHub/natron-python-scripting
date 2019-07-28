@@ -1,11 +1,11 @@
 # selectSimilarByClass
 
-Sets timeline In/Out points.
+All nodes of the selected type will be selected in the Node Graph.
 
 ### HOW TO USE IT
 
 * Select a node
-* Tools -> Node Graph -> Select similar -> Class
+* Tools -> Edit -> Select similar -> Class
 
 ### RESULT
 
