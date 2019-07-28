@@ -43,7 +43,7 @@ from Python_GUI.nodeItalic_HTML.nodeItalic_HTML import *
 from Python_GUI.openLocation.openLocation import *
 from Python_GUI.removeInput.removeInput import *
 from Python_GUI.selectSimilarByClass.selectSimilarByClass import *
-from Python_GUI.selectSimilarByClass.selectSimilarByColor import *
+from Python_GUI.selectSimilarByColor.selectSimilarByColor import *
 
 # Tools -> Other
 from Python_GUI.mergeBlendingDown.mergeBlendingDown import *
