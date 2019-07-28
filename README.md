@@ -52,6 +52,8 @@ Restart Natron.
 
 - **[selectSimilarByClass](/Python_GUI/selectSimilarByClass)** : All nodes of the selected type will be selected in the Node Graph.
 
+- **[selectSimilarByColor](/Python_GUI/selectSimilarByColor)** : All nodes of the selected color will be selected in the Node Graph.
+
 ### Other
 - **[mergeBlendingDown](/Python_GUI/mergeBlendingDown)** : Cycle through 'Merge' blending modes downward.
 
