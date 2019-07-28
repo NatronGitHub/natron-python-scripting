@@ -9,7 +9,7 @@ All nodes of the selected type will be selected in the Node Graph.
 
 ### RESULT
 
-* All nodes of the same type in the Node Graph will be selected.
+* All nodes of the same type will be selected in the Node Graph.
 
 ### INSTALLATION
 
