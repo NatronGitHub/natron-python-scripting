@@ -9,7 +9,7 @@ from NatronGui import *
 
 # SELECT SIMILAR NODES #
 
-def selectSimilar():
+def selectSimilarByClass():
 
 	# get current Natron instance running in memory #
 	app = natron.getGuiInstance(0)
