@@ -7,7 +7,7 @@ import NatronEngine
 from NatronGui import *
 
 
-# SELECT SIMILAR NODES #
+# SELECT SIMILAR NODES BY CLASS #
 
 def selectSimilarByClass():
 
