@@ -95,9 +95,9 @@ NatronGui.natron.addMenuCommand('Edit/Batch rename','batchRenameNodes')
 NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier)
 NatronGui.natron.addMenuCommand('Edit/Reconnect nodes','reconnectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
-NatronGui.natron.addMenuCommand('Edit/Node(s) color','nodeChangeColor')
-NatronGui.natron.addMenuCommand('Edit/Bold node(s)','nodeBold_HTML')
-NatronGui.natron.addMenuCommand('Edit/Italic node(s)','nodeItalic_HTML')
+NatronGui.natron.addMenuCommand('Edit/Node color','nodeChangeColor')
+NatronGui.natron.addMenuCommand('Edit/Bold node','nodeBold_HTML')
+NatronGui.natron.addMenuCommand('Edit/Italic node','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Edit/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Select similar/Class','selectSimilarByClass')
 NatronGui.natron.addMenuCommand('Edit/Select similar/Color','selectSimilarByColor')
@@ -153,9 +153,9 @@ print '   + Edit/Connect nodes'
 print '   + Edit/Reconnect nodes'
 print '   + Edit/Force caching'
 print '   + Edit/Invert selection'
-print '   + Edit/Node(s) Color'
-print '   + Edit/Bold node(s)'
-print '   + Edit/Italic node(s)'
+print '   + Edit/Node Color'
+print '   + Edit/Bold node'
+print '   + Edit/Italic node'
 print '   + Edit/Open location'
 print '   + Edit/Select similar/Class'
 print '   + Edit/Select similar/Color'
