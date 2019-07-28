@@ -43,8 +43,3 @@ def selectSimilarByColor():
 			if currentColor[0] == referenceColor[0] and currentColor[1] == referenceColor[1] and currentColor[2] == referenceColor[2]:
 
 				app.selectNode(currentNode,False)
-
-
-
-
-selectSimilarByColor()
