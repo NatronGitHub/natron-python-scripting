@@ -1,6 +1,6 @@
 # nodeBold_HTML
 
-Sets selected nodes to be displayed in bold in the Node Graph.
+Set selected nodes to be displayed in bold in the Node Graph.
 
 ### HOW TO USE IT
 
@@ -18,5 +18,5 @@ Sets selected nodes to be displayed in bold in the Node Graph.
 
 ```
 from <path>.nodeBold_HTML.nodeBold_HTML import *
-NatronGui.natron.addMenuCommand('Edit/Bold nodes <HTML>','nodeBold_HTML')
+NatronGui.natron.addMenuCommand('Edit/Bold node','nodeBold_HTML')
 ```
