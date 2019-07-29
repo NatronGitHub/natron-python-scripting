@@ -52,13 +52,24 @@ def reconnectNodes():
 
 		selectedNodes = app.getSelectedNodes()
 
+		tempList = []
+
 		for currentNode in selectedNodes:
 			currentID = currentNode.getPluginID()
 
 			if currentID != 'fr.inria.built-in.Viewer':
 
 				currentLabel = currentNode.getScriptName()
-				nodeList.addOption(str(currentLabel),'')
+				tempList.append(currentLabel)
+
+		# sort list alphabetically #
+		list.sort(tempList)
+				
+
+		for item in tempList:
+			nodeList.addOption(str(item),'')
+
+
 
 
 		# deselect all nodes #
