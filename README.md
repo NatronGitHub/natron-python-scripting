@@ -42,7 +42,7 @@ Restart Natron.
 
 - **[invertSelection](/Python_GUI/invertSelection)** : Invert selection in the Node Graph.
 
-- **[nodeChangeColor](/Python_GUI/forceCaching)** : Enable/disable force caching for selected nodes.
+- **[nodeChangeColor](/Python_GUI/nodeChangeColor)** : Set color for selected nodes.
 
 - **[nodeBold_HTML](/Python_GUI/nodeBold_HTML)** : Set selected nodes to be displayed in bold in the Node Graph.
 

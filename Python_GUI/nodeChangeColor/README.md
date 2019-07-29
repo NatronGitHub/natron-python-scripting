@@ -1,11 +1,11 @@
 # nodeColorChange
 
-Sets node color for selected nodes.
+Set color for selected nodes.
 
 ### HOW TO USE IT
 
 * Select nodes.
-* Edit -> Node(s) Color
+* Edit -> Node Color
 * Choose a color in the color dialog box.
 * Click 'OK'.
 
