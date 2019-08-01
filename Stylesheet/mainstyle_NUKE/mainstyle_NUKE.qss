@@ -14,7 +14,8 @@ QWidget
 /**********************************  widgets border  ***************************************/
 QFrame
 {
-   color: black;
+   /*color: black;*/
+   color: %2;
 }
 
 /*QLabel inherits QFrame so we put it afterwards, otherwise the label text will be black too.*/
@@ -32,14 +33,14 @@ Label[altered="false"] { color: %5; }
 
 
 NodeSettingsPanel[_selected="true"] {
-    background-color: %3;
+    background-color: %5;
     border: 0px solid white;
     border-radius : 0px;
     padding: 2px;
 }
 
 NodeSettingsPanel[_selected="false"] {
-    background-color: %3;
+    background-color: %2;
     border: 0px solid black;
     border-radius: 0px;
     padding: 2px;
