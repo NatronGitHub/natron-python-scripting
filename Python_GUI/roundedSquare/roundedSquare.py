@@ -123,13 +123,13 @@ def roundedSquare():
 		newSquare.setFeatherPointAtIndex( 5 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] + tangentRoundness , imageHeight , currentPoint[0] - tangentRoundness , imageHeight )
 
 		# point 6
-		newSquare.addControlPoint( (imageHeight/2) - roundness , imageHeight - roundness )
+		newSquare.addControlPoint( (imageWidth / 2) - (imageHeight/2) , imageHeight - roundness )
 		currentPoint = newSquare.getControlPointPosition( 6 , 1 )
 		newSquare.setPointAtIndex( 6 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] , currentPoint[1] + tangentRoundness , currentPoint[0] , currentPoint[1] - tangentRoundness )
 		newSquare.setFeatherPointAtIndex( 6 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] , currentPoint[1] + tangentRoundness , currentPoint[0] , currentPoint[1] - tangentRoundness )
 
 		# point 7
-		newSquare.addControlPoint( (imageHeight/2) - roundness , roundness )
+		newSquare.addControlPoint( (imageWidth / 2) - (imageHeight/2) , roundness )
 		currentPoint = newSquare.getControlPointPosition( 7 , 1 )
 		newSquare.setPointAtIndex( 7 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] , currentPoint[1] + tangentRoundness , currentPoint[0] , currentPoint[1] - tangentRoundness )
 		newSquare.setFeatherPointAtIndex( 7 , 1 , currentPoint[0] , currentPoint[1] , currentPoint[0] , currentPoint[1] + tangentRoundness , currentPoint[0] , currentPoint[1] - tangentRoundness )
