@@ -18,7 +18,7 @@ def autoAlpha():
 	for n in selectedNodes:
 		myID = n.getPluginID()
 
-		if myID == "fr.inria.built-in.Read" :
+		if myID == "fr.inria.built-in.Read" or nodeID == 'fr.inria.openfx.ReadOIIO':
 
 			newComponents = n.getParam("outputComponents")
 			newComponents.set(0)

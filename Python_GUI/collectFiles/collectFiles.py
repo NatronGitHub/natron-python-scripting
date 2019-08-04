@@ -212,6 +212,10 @@ def collectFiles():
 
 		# we save the project #
 		rootFolder = str(localizeFolderPath) + str(projectName) + '_COLLECT' + '/'
+
+		if not os.path.exists(rootFolder):
+			os.makedirs(rootFolder)
+
 		newProjectName = str(projectName) + '_COLLECT'
 
 
@@ -229,7 +233,7 @@ def collectFiles():
 		# ----------------------- Linux ---------------------- #
 		# ---------------------------------------------------- #
 		if natron.isLinux() == 1 :
-			subprocess.Popen( ['thunar', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+			subprocess.Popen( ['nautilus', rootFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
 
 		# ---------------------------------------------------- #
 		# ------------------------ OSX ----------------------- #
