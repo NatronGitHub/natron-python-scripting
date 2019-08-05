@@ -36,7 +36,7 @@ Restart Natron.
 
 - **[connectNodes](/Python_GUI/connectNodes)** : Connect nodes to another one in the Node Graph.
 
-- **[reconnectNodes](/Python_GUI/reconnectNodes)** : Reconnect nodes to another one in the Node Graph.
+- **[reconnectNodes](/Python_GUI/reconnectNodes)** : Reconnect nodes to another one in the Node Graph. (Windows only)
 
 - **[forceCaching](/Python_GUI/forceCaching)** : Enable/disable force caching for selected nodes.
 
@@ -90,7 +90,7 @@ Restart Natron.
 - **[nodeChangeFrameRange](/Python_GUI/nodeChangeFrameRange)** : Set frame range for selected 'Read' nodes.
 
 ### Utils
-- **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp.
+- **[collectFiles](/Python_GUI/collectFiles)** : Identical to After Effects 'Collect Files' feature. Used to backup a comp. (Windows only)
 
 - **[replacePaths](/Python_GUI/replacePaths)** : Replace path in 'Read' nodes.
 
