@@ -120,7 +120,7 @@ def extractPSDLayers():
 						# create a 'Backdrop' #
 						newBackdrop = app.createNode('fr.inria.built-in.BackDrop')
 						newBackdrop.setPosition(rootDotPosition[0] - 200 , rootDotPosition[1] - 120)
-						newBackdrop.setSize( (backdropLength -1 )*400, 500 )
+						newBackdrop.setSize( (backdropLength)*400, 500 )
 						newBackdrop.setColor(0.5, 0.35, 0.12)
 
 
