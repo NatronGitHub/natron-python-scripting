@@ -106,8 +106,8 @@ NatronGui.natron.addMenuCommand('Edit/Select similar/Color','selectSimilarByColo
 NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Remove input','removeInput', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.ControlModifier)
 
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Roto/Circle','fullCircle()')
