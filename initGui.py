@@ -26,6 +26,7 @@ from PySide.QtGui import *
 # Tools -> Channel
 from Python_GUI.autoAlpha.autoAlpha import *
 from Python_GUI.extractExrLayers.extractExrLayers import *
+from Python_GUI.extractPSDLayers.extractPSDLayers import *
 
 # Tools -> Generate
 from Python_GUI.postageStamp.postageStamp import *
@@ -86,6 +87,7 @@ from Python_GUI.flipbook.flipbook import *
 
 NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 NatronGui.natron.addMenuCommand('Tools/Channel/Extract EXR layers','extractExrLayers')
+NatronGui.natron.addMenuCommand('Tools/Channel/Extract PSD or XCF layers','extractPSDLayers')
 
 NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp', QtCore.Qt.Key.Key_P, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
@@ -104,8 +106,8 @@ NatronGui.natron.addMenuCommand('Edit/Select similar/Color','selectSimilarByColo
 NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Remove input','removeInput', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.ControlModifier)
 
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.KeyboardModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Roto/Circle','fullCircle()')
@@ -143,6 +145,7 @@ print '- \'Tools\' user menu added'
 print '\n'
 print '   + Tools/Channel/Auto Alpha'
 print '   + Tools/Channel/Extract EXR layers'
+print '   + Tools/Channel/Extract PSD/XCF layers'
 print '   +'
 print '   + Tools/Generate/PostageStamp'
 print '   + Tools/Generate/Roto to tracker'
