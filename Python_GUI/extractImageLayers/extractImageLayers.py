@@ -9,9 +9,9 @@ import NatronEngine
 from NatronGui import *
 
 
-# EXTRACT PSD LAYERS #
+# EXTRACT IMAGE LAYERS #
 
-def extractPSDLayers():
+def extractImageLayers():
 
 	# get current Natron instance running in memory #
 	app = natron.getGuiInstance(0)
@@ -50,20 +50,26 @@ def extractPSDLayers():
 			# get root dot position #
 			rootDotPosition = rootDot.getPosition()
 
+			rootShuffle = app.createNode('net.sf.openfx.ShufflePlugin')
+			rootShuffle.setLabel('tempshuffle')
+			rootShuffle.connectInput(0, currentNode)
 
 
-
-
-			# get all available layers in PSD #
-			if hasattr(currentNode.getParam('layer'),'getOptions'):
-				layersList = currentNode.getParam('layer').getOptions()
-			else:
-				layersList = currentNode.getParam('outputLayer').getOptions()
+			# get all available layers in Image #
+			layersList = rootShuffle.getParam('outputLayer').getOptions()
 
 			# sort list alphabetically #
 			list.sort(layersList)
 
-			backdropLength = len(layersList)
+			#Hard coded. May be there is a better way?
+			abandonlist = ['uk.co.thefoundry.OfxImagePlaneColour',
+			'uk.co.thefoundry.OfxImagePlaneStereoDisparityLeft',
+			'uk.co.thefoundry.OfxImagePlaneStereoDisparityRight',
+			'uk.co.thefoundry.OfxImagePlaneBackMotionVector',
+			'uk.co.thefoundry.OfxImagePlaneForwardMotionVector',
+			'Deep','Depth','Mask','Motion']
+
+			backdropLength = len(layersList)-len(abandonlist)
 
 			# initialize counter #
 			channelCounter = 0
@@ -71,13 +77,13 @@ def extractPSDLayers():
 			# cycle through every layer #
 			for choice in layersList:
 
-				if choice != 'Default' or 'Color.RGBA':
+				if choice not in abandonlist:
 
 					# full layer name #
 					LayerName = choice
 
 					# layer name #
-					layerName = os.path.splitext(choice)[0]
+					layerName = choice
 
 					print layerName
 
@@ -86,7 +92,6 @@ def extractPSDLayers():
 
 					# remove '.' from channels #
 					layerChannels = layerChannels.replace('.','')
-
 
 
 
@@ -103,11 +108,6 @@ def extractPSDLayers():
 						# set 'Shuffle' label #
 						newShuffle.setLabel(str(layerName))
 
-						# enable preview #
-						newShuffle.getParam('enablePreview').setValue(1)
-						newShuffle.getParam('enablePreview').setValue(0)
-						newShuffle.getParam('enablePreview').setValue(1)
-
 						# set 'Shuffle' node position #
 						newShuffle.setPosition(rootDotPosition[0] - 45 , rootDotPosition[1] + 200)
 
@@ -120,7 +120,7 @@ def extractPSDLayers():
 						# create a 'Backdrop' #
 						newBackdrop = app.createNode('fr.inria.built-in.BackDrop')
 						newBackdrop.setPosition(rootDotPosition[0] - 200 , rootDotPosition[1] - 120)
-						newBackdrop.setSize( (backdropLength)*400, 500 )
+						newBackdrop.setSize( (backdropLength )*400, 500 )
 						newBackdrop.setColor(0.5, 0.35, 0.12)
 
 
@@ -150,11 +150,6 @@ def extractPSDLayers():
 
 						# set 'Shuffle' label #
 						newShuffle.setLabel(str(layerName))
-
-						# enable preview #
-						newShuffle.getParam('enablePreview').setValue(1)
-						newShuffle.getParam('enablePreview').setValue(0)
-						newShuffle.getParam('enablePreview').setValue(1)
 
 						# set 'Shuffle' node position #
 						newShuffle.setPosition(rootDotPosition[0] - 45 , rootDotPosition[1] + 200)
