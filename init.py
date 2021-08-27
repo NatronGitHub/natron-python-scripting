@@ -37,13 +37,13 @@ from Python_INIT.addMotionLayer.addMotionLayer import *
 
 # SET UP DEFAULT PROJECT SETTINGS #
 #------------------------------#
-def setProjectSettings(app):
-	app.getProjectParam('outputFormat').setValue("HD 1920x1080")
-	app.getProjectParam('autoPreviews').setValue(True)
-	app.getProjectParam('frameRange').set(1, 25)
-	app.getProjectParam('lockRange').setValue(True)
-	app.getProjectParam('frameRate').setValue(25)
-	app.getProjectParam('gpuRendering').setValue('Enabled')
+# def setProjectSettings(app):
+# 	app.getProjectParam('outputFormat').setValue("HD 1920x1080")
+# 	app.getProjectParam('autoPreviews').setValue(True)
+# 	app.getProjectParam('frameRange').set(1, 25)
+# 	app.getProjectParam('lockRange').setValue(True)
+# 	app.getProjectParam('frameRate').setValue(25)
+# 	app.getProjectParam('gpuRendering').setValue('Enabled')
 
 
 # DEFINES WHAT HAPPENS AFTER SPECIFIC NODES CREATION #
