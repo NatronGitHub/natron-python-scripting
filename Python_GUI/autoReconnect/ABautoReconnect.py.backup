@@ -1,0 +1,43 @@
+import NatronEngine
+from NatronGui import *
+from PySide.QtGui import *
+
+
+def ABautoReconnect():
+
+	# get current Natron instance running in memory #
+	#myapp = natron.getGuiInstance(0)
+	myNoGUIApp = natron.getActiveInstance()
+	myNoGUIAppID = natron.getActiveInstance().getAppID()
+	myapp = natron.getGuiInstance(myNoGUIAppID)
+	# get user selected nodes #
+	selectedNodes = myapp.getSelectedNodes()
+
+	# check if at least one node has been selected #
+	if len(selectedNodes) == 0:
+		warning = natron.warningDialog("Warning","Select at least one node.")
+
+	else :
+		# process #
+		originalNodes = myapp.getSelectedNodes()
+		myapp.selectAllNodes()
+		allNodes = myapp.getSelectedNodes()
+		# mycount = 0
+		for currentNode in originalNodes:
+			mysplit = currentNode.getParam("userTextArea").getValue().split(">")[1].split("<")[0]
+			if mysplit !="" and mysplit != None :
+				mytext = mysplit
+				if mytext[0]== "_" and currentNode.getInput(0) == None :	# test if currentNode should be reconnected
+					print("search:"+mytext)
+					for testNode in allNodes :
+						if testNode.getLabel() == mytext :
+							if currentNode.canConnectInput(0,testNode):
+								currentNode.connectInput(0,testNode)
+								break
+
+
+
+		# reselect user selected nodes #
+		myapp.setSelection(originalNodes)
+
+# ABautoReconnect()
