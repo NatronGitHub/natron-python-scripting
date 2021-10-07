@@ -134,6 +134,9 @@ NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()',
 NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
+# snapNodes
+from Python_GUI.snapNodes.snapNodes import *
+NatronGui.natron.addMenuCommand('Tools/Node Graph/snap Nodes','snapNodes',  QtCore.Qt.Key.Key_A,QtCore.Qt.KeyboardModifier)
 
 separator = ('------------------------------------------------------------')
 print '\n' + '\n' + separator
