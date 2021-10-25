@@ -9,7 +9,7 @@ Reconnects nodes to another one in the Node Graph.
 
 ### RESULT
 
-* Reconnect selected node(s).
+* Connect selected node(s) to the one chosen in the popup window
 
 ### SHORTCUT
 
