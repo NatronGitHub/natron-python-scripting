@@ -59,12 +59,17 @@ def batchSelectedNodes():
 			userChoice = actionListParam.getValue()
 			# intValue = dialog.getParam("choice01").get()
 			for currentNode in originalNodes :
+				currentNode.beginChanges()
 				if userChoice == 0 : # disable Preview
 					myknob = currentNode.getParam('enablePreview')
 					myknob.setValue(False)
+					print 'testfalse'
+					currentNode.refreshUserParamsGUI()
 				if userChoice == 1 : # enable Preview
 					myknob = currentNode.getParam('enablePreview')
 					myknob.setValue(True)
+					print 'testtrue'
+					currentNode.refreshUserParamsGUI()
 				elif userChoice == 2 : # disable Node
 					myknob = currentNode.getParam('disableNode')
 					myknob.setValue(True)
@@ -77,6 +82,7 @@ def batchSelectedNodes():
 				elif userChoice == 5 : # enable Node
 					myknob = currentNode.getParam('hideInputs')
 					myknob.setValue(False)
+				currentNode.endChanges()
 
 
 		# reselect user selected nodes #
