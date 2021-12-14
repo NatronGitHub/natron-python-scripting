@@ -74,6 +74,7 @@ from Python_GUI.timelineInOut.timelineInOut import *
 # Tools -> Utils
 from Python_GUI.collectFiles.collectFiles import *
 from Python_GUI.replacePaths.replacePaths import *
+from Python_GUI.batchSelectedNodes.batchSelectedNodes import *
 
 # Render
 from Python_GUI.backgroundRender.backgroundRender import *
@@ -129,6 +130,7 @@ NatronGui.natron.addMenuCommand('Tools/Time/Timeline IO','timelineInOut()')
 
 NatronGui.natron.addMenuCommand('Tools/Utils/Collect files','collectFiles()')
 NatronGui.natron.addMenuCommand('Tools/Utils/Replace paths','replacePaths()')
+NatronGui.natron.addMenuCommand('Tools/Utils/Batch Selected Nodes','batchSelectedNodes')
 
 NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()', QtCore.Qt.Key.Key_R, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
