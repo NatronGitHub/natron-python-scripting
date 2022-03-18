@@ -37,7 +37,8 @@ def openLocation():
 			# ---------------------------------------------------- #
 			if natron.isLinux() == 1 :
 				print (myFolder)
-				subprocess.Popen( ['thunar', myFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+				# subprocess.Popen( ['thunar', myFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+				subprocess.Popen(['xdg-open',myFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE) # dont depend on a specific explorer
 
 			# ---------------------------------------------------- #
 			# ------------------------ OSX ----------------------- #
