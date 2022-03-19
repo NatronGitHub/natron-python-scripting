@@ -45,4 +45,4 @@ def openLocation():
 			# ---------------------------------------------------- #
 			if natron.isMacOSX() == 1 :
 				print (myFolder)
-				subprocess.Popen( ['explorer', myFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
+				subprocess.Popen( ['open', myFolder] , stdin = subprocess.PIPE, stdout = subprocess.PIPE)
