@@ -63,12 +63,12 @@ def batchSelectedNodes():
 				if userChoice == 0 : # disable Preview
 					myknob = currentNode.getParam('enablePreview')
 					myknob.setValue(False)
-					print 'testfalse'
+					print ('testfalse')
 					currentNode.refreshUserParamsGUI()
 				if userChoice == 1 : # enable Preview
 					myknob = currentNode.getParam('enablePreview')
 					myknob.setValue(True)
-					print 'testtrue'
+					print ('testtrue')
 					currentNode.refreshUserParamsGUI()
 				elif userChoice == 2 : # disable Node
 					myknob = currentNode.getParam('disableNode')

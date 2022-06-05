@@ -137,7 +137,7 @@ def extractExrLayers():
 							# layer name #
 							layerName = os.path.splitext(choice)[0]
 
-							print layerName
+							print (layerName)
 
 							# layer channels (RGBA,RGB,XYZ,UV,A,Z) #
 							layerChannels = os.path.splitext(choice)[1]
