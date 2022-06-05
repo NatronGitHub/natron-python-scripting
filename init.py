@@ -114,30 +114,30 @@ NatronEngine.natron.setOnProjectLoadedCallback("Project_Callback")
 
 
 separator = ('------------------------------------------------------------')
-print '\n' + '\n' + separator
-print separator
-print '\n'
+print ('\n' + '\n' + separator)
+print (separator)
+print ('\n')
 
-natronLogo()
+# natronLogo()
 
 
-print '\n' + '\n' + separator
-print separator
-print '--------------------     INIT.PY     -----------------------'
-print separator
-print separator
+print ('\n' + '\n' + separator)
+print (separator)
+print ('--------------------     INIT.PY     -----------------------')
+print (separator)
+print (separator)
 
 # loading user preferences #
 #--------------------------#
 
-print '\n'
+print ('\n')
 setPreferences()
-print '\n'
-print separator
+print ('\n')
+print (separator)
 
 # check Natron's version status, version number, x32 or x64 version #
 #-------------------------------------------------------------------#
-print '\n'
+print ('\n')
 NatronStatus = natron.getNatronDevelopmentStatus()
 NatronVersion = natron.getNatronVersionString()
 binary = 'x64'
@@ -145,23 +145,23 @@ x32_64 = natron.is64Bit()
 if x32_64 == 0 :
 	binary = 'x32'
 
-print ('- NATRON ') + 'version ' + NatronVersion + ' ' + str(NatronStatus) + ' (' + binary + ')'
-print '\n'
-print separator
+# print ('- NATRON ') + 'version ' + NatronVersion + ' ' + str(NatronStatus) + ' (' + binary + ')'
+print ('\n')
+print (separator)
 
-print '\n'
+print ('\n')
 CPUs = natron.getNumCpus()
-print ('- ') + str(CPUs) + (' CPUs available on the system')
-print '\n'
-print separator
+# print ('- ') + str(CPUs) + (' CPUs available on the system')
+print ('\n')
+print (separator)
 
-print '\n'
-print '- Deep layer added to the viewer'
-print '- Depth layer added to the viewer'
-print '- Mask layer added to the viewer'
-print '- Motion layer added to the viewer'
-print '\n'
-print separator
+print ('\n')
+print ('- Deep layer added to the viewer')
+print ('- Depth layer added to the viewer')
+print ('- Mask layer added to the viewer')
+print ('- Motion layer added to the viewer')
+print ('\n')
+print (separator)
 
 
 ##################################################################
@@ -172,14 +172,14 @@ print ('\n' + PathMessage + '\n')
 #################### print NATRON search path ####################
 listNatronPath()
 
-print '\n' + separator
+print ('\n' + separator)
 
 PyPlugMessage = ("- PYPLUG(S) LOADED :")
-print separator
-print '\n' + PyPlugMessage
+print (separator)
+print ('\n' + PyPlugMessage)
 
 #################### print PYPLUG list ####################
 listPyPlugs()
 
-print '\n' + separator
-print separator
+print ('\n' + separator)
+print (separator)

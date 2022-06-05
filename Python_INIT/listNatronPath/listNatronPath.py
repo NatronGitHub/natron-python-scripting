@@ -15,5 +15,5 @@ def listNatronPath():
 	listIndex = 0
 
 	for p in myPath:
-		print '   ' + myPath[listIndex]
+		print ('   ' + myPath[listIndex])
 		listIndex +=1

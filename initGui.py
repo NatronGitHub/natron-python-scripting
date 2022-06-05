@@ -14,7 +14,10 @@ import os
 import sys
 from NatronEngine import *
 from NatronGui import *
-from PySide.QtGui import *
+try:
+    from qtpy.QtGui import *
+except ImportError:
+    from PySide.QtGui import *
 
 
 #####################################################################
@@ -144,61 +147,61 @@ NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes X','spreadNodesX'
 NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes Y','spreadNodesY' )
 
 separator = ('------------------------------------------------------------')
-print '\n' + '\n' + separator
-print separator
-print '-------------------     INITGUI.PY     ---------------------'
-print separator
-print separator
-print '\n'
+print ('\n' + '\n' + separator)
+print (separator)
+print ('-------------------     INITGUI.PY     ---------------------')
+print (separator)
+print (separator)
+print ('\n')
 
-print '- \'Tools\' user menu added'
-print '\n'
-print '   + Tools/Channel/Auto Alpha'
-print '   + Tools/Channel/Extract EXR layers'
-print '   + Tools/Channel/Extract Image layers'
-print '   +'
-print '   + Tools/Generate/PostageStamp'
-print '   + Tools/Generate/Roto to tracker'
-print '   + Tools/Generate/Tracker to roto'
-print '   +'
-print '   + Edit/Batch rename'
-print '   + Edit/Connect nodes'
-print '   + Edit/Reconnect nodes'
-print '   + Edit/Force caching'
-print '   + Edit/Invert selection'
-print '   + Edit/Node Color'
-print '   + Edit/Bold node'
-print '   + Edit/Italic node'
-print '   + Edit/Open location'
-print '   + Edit/Select similar/Class'
-print '   + Edit/Select similar/Color'
-print '   + Edit/Remove input'
-print '   +'
-print '   + Tools/Other/Blending mode+'
-print '   + Tools/Other/Blending mode-'
-print '   + Tools/Other/Link roto to tracker'
-print '   +'
-print '   + Tools/Roto/Circle'
-print '   + Tools/Roto/Ellipse'
-print '   + Tools/Roto/Square'
-print '   + Tools/Roto/Rounded square'
-print '   + Tools/Roto/Rectangle'
-print '   + Tools/Roto/Rounded rectangle'
-print '   + Tools/Roto/Left triangle'
-print '   + Tools/Roto/Right triangle'
-print '   + Tools/Roto/Top triangle'
-print '   + Tools/Roto/Bottom triangle'
-print '   +'
-print '   + Tools/Time/Read FPS'
-print '   + Tools/Time/Read frame range'
-print '   +'
-print '   + Tools/Utils/Collect files'
-print '   + Tools/Utils/Replace paths'
-print '   +'
-print '   + Render/Background render'
-print '   + Render/Disk cache'
-print '   + Render/Flipbook'
+print ('- \'Tools\' user menu added')
+print ('\n')
+print ('   + Tools/Channel/Auto Alpha')
+print ('   + Tools/Channel/Extract EXR layers')
+print ('   + Tools/Channel/Extract Image layers')
+print ('   +')
+print ('   + Tools/Generate/PostageStamp')
+print ('   + Tools/Generate/Roto to tracker')
+print ('   + Tools/Generate/Tracker to roto')
+print ('   +')
+print ('   + Edit/Batch rename')
+print ('   + Edit/Connect nodes')
+print ('   + Edit/Reconnect nodes')
+print ('   + Edit/Force caching')
+print ('   + Edit/Invert selection')
+print ('   + Edit/Node Color')
+print ('   + Edit/Bold node')
+print ('   + Edit/Italic node')
+print ('   + Edit/Open location')
+print ('   + Edit/Select similar/Class')
+print ('   + Edit/Select similar/Color')
+print ('   + Edit/Remove input')
+print ('   +')
+print ('   + Tools/Other/Blending mode+')
+print ('   + Tools/Other/Blending mode-')
+print ('   + Tools/Other/Link roto to tracker')
+print ('   +')
+print ('   + Tools/Roto/Circle')
+print ('   + Tools/Roto/Ellipse')
+print ('   + Tools/Roto/Square')
+print ('   + Tools/Roto/Rounded square')
+print ('   + Tools/Roto/Rectangle')
+print ('   + Tools/Roto/Rounded rectangle')
+print ('   + Tools/Roto/Left triangle')
+print ('   + Tools/Roto/Right triangle')
+print ('   + Tools/Roto/Top triangle')
+print ('   + Tools/Roto/Bottom triangle')
+print ('   +')
+print ('   + Tools/Time/Read FPS')
+print ('   + Tools/Time/Read frame range')
+print ('   +')
+print ('   + Tools/Utils/Collect files')
+print ('   + Tools/Utils/Replace paths')
+print ('   +')
+print ('   + Render/Background render')
+print ('   + Render/Disk cache')
+print ('   + Render/Flipbook')
 
 
-print '\n' + '\n' + separator
-print separator + '\n'
+print ('\n' + '\n' + separator)
+print (separator + '\n')
