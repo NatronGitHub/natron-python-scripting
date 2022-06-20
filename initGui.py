@@ -139,12 +139,12 @@ NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()',
 NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
-from Python_GUI.snapNodes.snapNodes import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/snap Nodes','snapNodes',  QtCore.Qt.Key.Key_A,QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes X','alignNodesX' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes Y','alignNodesY' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes X','spreadNodesX' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes Y','spreadNodesY' )
+# from Python_GUI.snapNodes.snapNodes import *
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/snap Nodes','snapNodes',  QtCore.Qt.Key.Key_A,QtCore.Qt.KeyboardModifier)
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes X','alignNodesX' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes Y','alignNodesY' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes X','spreadNodesX' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes Y','spreadNodesY' )
 
 separator = ('------------------------------------------------------------')
 print ('\n' + '\n' + separator)
