@@ -80,9 +80,9 @@ def replacePaths():
 				newPathParamValue = newPath.getValue()
 
 				currentPath = str(currentNode.getParam('filename').get())
-				print 'Old path : ' + currentPath
+				print ('Old path : ' + currentPath)
 
 				currentPath = currentPath.replace(oldPathParamValue,newPathParamValue)
-				print 'New path : ' + currentPath
+				print ('New path : ' + currentPath)
 				
 				oldReadPath = currentNode.getParam('filename').set(currentPath)

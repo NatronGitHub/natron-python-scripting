@@ -85,7 +85,7 @@ def extractImageLayers():
 					# layer name #
 					layerName = choice
 
-					print layerName
+					print (layerName)
 
 					# layer channels (RGBA,RGB,XYZ,UV,A,Z) #
 					layerChannels = os.path.splitext(choice)[1]

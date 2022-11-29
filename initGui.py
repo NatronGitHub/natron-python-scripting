@@ -14,7 +14,10 @@ import os
 import sys
 from NatronEngine import *
 from NatronGui import *
-from PySide.QtGui import *
+try:
+    from qtpy.QtGui import *
+except ImportError:
+    from PySide.QtGui import *
 
 
 #####################################################################
@@ -91,7 +94,7 @@ NatronGui.natron.addMenuCommand('Tools/Channel/Auto alpha','autoAlpha')
 NatronGui.natron.addMenuCommand('Tools/Channel/Extract EXR layers','extractExrLayers')
 NatronGui.natron.addMenuCommand('Tools/Channel/Extract Image layers','extractImageLayers')
 
-NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp', QtCore.Qt.Key.Key_P, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.AltModifier)
+NatronGui.natron.addMenuCommand('Tools/Generate/PostageStamp','postageStamp', QtCore.Qt.Key.Key_P, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Generate/Roto to tracker','rotoToTracker')
 NatronGui.natron.addMenuCommand('Tools/Generate/Tracker to roto','trackerToRoto')
 
@@ -100,18 +103,18 @@ NatronGui.natron.addMenuCommand('Edit/Connect nodes','connectNodes', QtCore.Qt.K
 NatronGui.natron.addMenuCommand('Edit/Reconnect nodes','reconnectNodes', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/auto Reconnect Nodes','autoReconnect', QtCore.Qt.Key.Key_Y, QtCore.Qt.KeyboardModifier.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Force caching','forceCaching', QtCore.Qt.Key.Key_B, QtCore.Qt.KeyboardModifier.ControlModifier)
-NatronGui.natron.addMenuCommand('Edit/Color...','nodeChangeColor', QtCore.Qt.Key.Key_C, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
+NatronGui.natron.addMenuCommand('Edit/Color...','nodeChangeColor', QtCore.Qt.Key.Key_C, QtCore.Qt.KeyboardModifier.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Bold node','nodeBold_HTML')
 NatronGui.natron.addMenuCommand('Edit/Italic node','nodeItalic_HTML')
 NatronGui.natron.addMenuCommand('Edit/Open location','openLocation', QtCore.Qt.Key.Key_O, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Edit/Select similar/Class','selectSimilarByClass')
 NatronGui.natron.addMenuCommand('Edit/Select similar/Color','selectSimilarByColor')
-NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
+NatronGui.natron.addMenuCommand('Edit/Invert selection','invertSelection', QtCore.Qt.Key.Key_I, QtCore.Qt.KeyboardModifier.ShiftModifier)
 NatronGui.natron.addMenuCommand('Edit/Remove input','removeInput', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.ControlModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode+','mergeBlendingDown', QtCore.Qt.Key.Key_Down, QtCore.Qt.AltModifier)
 NatronGui.natron.addMenuCommand('Tools/Other/Blending mode-','mergeBlendingUp', QtCore.Qt.Key.Key_Up, QtCore.Qt.AltModifier)
-NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ControlModifier | QtCore.Qt.ShiftModifier)
+NatronGui.natron.addMenuCommand('Tools/Other/Link roto to tracker','rotoLink', QtCore.Qt.Key.Key_L, QtCore.Qt.KeyboardModifier.ShiftModifier)
 
 NatronGui.natron.addMenuCommand('Tools/Roto/Circle','fullCircle()')
 NatronGui.natron.addMenuCommand('Tools/Roto/Ellipse','fullEllipse()')
@@ -136,69 +139,69 @@ NatronGui.natron.addMenuCommand('Render/Background render','backgroundRender()',
 NatronGui.natron.addMenuCommand('Render/Disk cache','diskCache()', QtCore.Qt.Key.Key_D, QtCore.Qt.KeyboardModifier.AltModifier)
 NatronGui.natron.addMenuCommand('Render/Flipbook','flipbook()', QtCore.Qt.Key.Key_F, QtCore.Qt.KeyboardModifier.AltModifier)
 
-from Python_GUI.snapNodes.snapNodes import *
-NatronGui.natron.addMenuCommand('Tools/Node Graph/snap Nodes','snapNodes',  QtCore.Qt.Key.Key_A,QtCore.Qt.KeyboardModifier)
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes X','alignNodesX' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes Y','alignNodesY' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes X','spreadNodesX' )
-NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes Y','spreadNodesY' )
+# from Python_GUI.snapNodes.snapNodes import *
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/snap Nodes','snapNodes',  QtCore.Qt.Key.Key_A,QtCore.Qt.KeyboardModifier)
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes X','alignNodesX' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Align Nodes Y','alignNodesY' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes X','spreadNodesX' )
+# NatronGui.natron.addMenuCommand('Tools/Node Graph/Spread Nodes Y','spreadNodesY' )
 
 separator = ('------------------------------------------------------------')
-print '\n' + '\n' + separator
-print separator
-print '-------------------     INITGUI.PY     ---------------------'
-print separator
-print separator
-print '\n'
+print ('\n' + '\n' + separator)
+print (separator)
+print ('-------------------     INITGUI.PY     ---------------------')
+print (separator)
+print (separator)
+print ('\n')
 
-print '- \'Tools\' user menu added'
-print '\n'
-print '   + Tools/Channel/Auto Alpha'
-print '   + Tools/Channel/Extract EXR layers'
-print '   + Tools/Channel/Extract Image layers'
-print '   +'
-print '   + Tools/Generate/PostageStamp'
-print '   + Tools/Generate/Roto to tracker'
-print '   + Tools/Generate/Tracker to roto'
-print '   +'
-print '   + Edit/Batch rename'
-print '   + Edit/Connect nodes'
-print '   + Edit/Reconnect nodes'
-print '   + Edit/Force caching'
-print '   + Edit/Invert selection'
-print '   + Edit/Node Color'
-print '   + Edit/Bold node'
-print '   + Edit/Italic node'
-print '   + Edit/Open location'
-print '   + Edit/Select similar/Class'
-print '   + Edit/Select similar/Color'
-print '   + Edit/Remove input'
-print '   +'
-print '   + Tools/Other/Blending mode+'
-print '   + Tools/Other/Blending mode-'
-print '   + Tools/Other/Link roto to tracker'
-print '   +'
-print '   + Tools/Roto/Circle'
-print '   + Tools/Roto/Ellipse'
-print '   + Tools/Roto/Square'
-print '   + Tools/Roto/Rounded square'
-print '   + Tools/Roto/Rectangle'
-print '   + Tools/Roto/Rounded rectangle'
-print '   + Tools/Roto/Left triangle'
-print '   + Tools/Roto/Right triangle'
-print '   + Tools/Roto/Top triangle'
-print '   + Tools/Roto/Bottom triangle'
-print '   +'
-print '   + Tools/Time/Read FPS'
-print '   + Tools/Time/Read frame range'
-print '   +'
-print '   + Tools/Utils/Collect files'
-print '   + Tools/Utils/Replace paths'
-print '   +'
-print '   + Render/Background render'
-print '   + Render/Disk cache'
-print '   + Render/Flipbook'
+print ('- \'Tools\' user menu added')
+print ('\n')
+print ('   + Tools/Channel/Auto Alpha')
+print ('   + Tools/Channel/Extract EXR layers')
+print ('   + Tools/Channel/Extract Image layers')
+print ('   +')
+print ('   + Tools/Generate/PostageStamp')
+print ('   + Tools/Generate/Roto to tracker')
+print ('   + Tools/Generate/Tracker to roto')
+print ('   +')
+print ('   + Edit/Batch rename')
+print ('   + Edit/Connect nodes')
+print ('   + Edit/Reconnect nodes')
+print ('   + Edit/Force caching')
+print ('   + Edit/Invert selection')
+print ('   + Edit/Node Color')
+print ('   + Edit/Bold node')
+print ('   + Edit/Italic node')
+print ('   + Edit/Open location')
+print ('   + Edit/Select similar/Class')
+print ('   + Edit/Select similar/Color')
+print ('   + Edit/Remove input')
+print ('   +')
+print ('   + Tools/Other/Blending mode+')
+print ('   + Tools/Other/Blending mode-')
+print ('   + Tools/Other/Link roto to tracker')
+print ('   +')
+print ('   + Tools/Roto/Circle')
+print ('   + Tools/Roto/Ellipse')
+print ('   + Tools/Roto/Square')
+print ('   + Tools/Roto/Rounded square')
+print ('   + Tools/Roto/Rectangle')
+print ('   + Tools/Roto/Rounded rectangle')
+print ('   + Tools/Roto/Left triangle')
+print ('   + Tools/Roto/Right triangle')
+print ('   + Tools/Roto/Top triangle')
+print ('   + Tools/Roto/Bottom triangle')
+print ('   +')
+print ('   + Tools/Time/Read FPS')
+print ('   + Tools/Time/Read frame range')
+print ('   +')
+print ('   + Tools/Utils/Collect files')
+print ('   + Tools/Utils/Replace paths')
+print ('   +')
+print ('   + Render/Background render')
+print ('   + Render/Disk cache')
+print ('   + Render/Flipbook')
 
 
-print '\n' + '\n' + separator
-print separator + '\n'
+print ('\n' + '\n' + separator)
+print (separator + '\n')
