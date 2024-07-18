@@ -2,6 +2,8 @@
 
 Mimics Nuke look.
 
+**Note:** This stylesheet is outdated and will probably break if used with Natron v2.5+ and/or Qt5+.
+
 ## Windows : 
 open Natron
 >Edit > Preferences > Appearance
